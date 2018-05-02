@@ -1,0 +1,14 @@
+/******************************************************************
+Theme Name: Advanced Neurosciences Institute
+Theme URI: localhost:8200
+Description: Custom theme for ANI
+Author: Dan Brown
+Author URI: http://thesplitpixel.com
+Version: 0.0.1
+Tags: fluid-layout, responsive-layout, accessibility-ready, translation-ready, microformats, rtl-language-support
+GitHub Theme URI: https://github.com/warofthesun/ani
+*/
+
+.sticky {}          /* DO NOT EDIT THIS */
+.gallery-caption {} /* THESE ARE USELESS */
+.bypostauthor {}    /* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */
