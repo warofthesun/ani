@@ -51,34 +51,33 @@
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 				<div id="inner-header" class="wrap cf row">
+					<div class="col-xs-12 col-sm-4 header__logo">
+						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/ani-logo-horiz.png"</img></a></p>
 
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
+					</div>
+					<div class="col-xs-12 col-sm-8 header__navigation">
+						<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+							<?php wp_nav_menu(array(
+	    					         'container' => false,                           // remove nav container
+	    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+	    					         'menu' => __( 'The Main Menu', 'startertheme' ),  // nav name
+	    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
+	    					         'theme_location' => 'main-nav',                 // where it's located in the theme
+	    					         'before' => '',                                 // before the menu
+	        			               'after' => '',                                  // after the menu
+	        			               'link_before' => '',                            // before each link
+	        			               'link_after' => '',                             // after each link
+	        			               'depth' => 0,                                   // limit the depth of the nav
+	    					         'fallback_cb' => ''                             // fallback function (if there is one)
+							)); ?>
 
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
+						</nav>
+					</div>
 
 
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<?php wp_nav_menu(array(
-    					         'container' => false,                           // remove nav container
-    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'startertheme' ),  // nav name
-    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					         'theme_location' => 'main-nav',                 // where it's located in the theme
-    					         'before' => '',                                 // before the menu
-        			               'after' => '',                                  // after the menu
-        			               'link_before' => '',                            // before each link
-        			               'link_after' => '',                             // after each link
-        			               'depth' => 0,                                   // limit the depth of the nav
-    					         'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
 
-					</nav>
 					<div id="mobile-nav">
 						Menu
 					</div>
 				</div>
-
 			</header>

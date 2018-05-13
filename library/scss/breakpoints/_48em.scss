@@ -29,14 +29,34 @@ NAVIGATION STYLES
 #mobile-nav {
 	display: none;
 }
+#inner-header {
+	flex-direction: row;
+}
+
+.header {
+	&__logo {
+
+	}
+
+	&__navigation {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+}
 
 .nav {
 	flex-direction: row;
 	height: auto;
 	opacity: 1;
+	justify-content: flex-end;
 
 	li {
 		border-bottom: 0;
+
+		&:hover, &:focus {
+			color: $link-hover;
+		}
 	}
 }
 
@@ -54,7 +74,7 @@ NAVIGATION STYLES
 					has the possibility of being a mobile device.
 					*/
 					&:hover, &:focus {
-
+						color: $link-hover;
 					}
 				}
 

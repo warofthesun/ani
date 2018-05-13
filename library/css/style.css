@@ -1361,7 +1361,7 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.blue-btn, .comment-reply-link, #submit {
+.accent-btn, .comment-reply-link, #submit {
   display: inline-block;
   position: relative;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1377,11 +1377,11 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   cursor: pointer;
   -webkit-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out; }
-  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+  .accent-btn:hover, .comment-reply-link:hover, #submit:hover, .accent-btn:focus, .comment-reply-link:focus, #submit:focus {
     color: #fff;
     text-decoration: none;
     outline: none; }
-  .blue-btn:active, .comment-reply-link:active, #submit:active {
+  .accent-btn:active, .comment-reply-link:active, #submit:active {
     top: 1px; }
 
 /*
@@ -1389,12 +1389,12 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.blue-btn, .comment-reply-link, #submit {
-  background-color: #2980b9; }
-  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
-    background-color: #2574a8; }
-  .blue-btn:active, .comment-reply-link:active, #submit:active {
-    background-color: #2472a4; }
+.accent-btn, .comment-reply-link, #submit {
+  background-color: #F82F5D; }
+  .accent-btn:hover, .comment-reply-link:hover, #submit:hover, .accent-btn:focus, .comment-reply-link:focus, #submit:focus {
+    background-color: #f71b4e; }
+  .accent-btn:active, .comment-reply-link:active, #submit:active {
+    background-color: #f7164a; }
 
 /******************************************************************
 Site Name:
@@ -1787,12 +1787,12 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #f01d4f;
+  color: #475691;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #d10e3c; }
+    color: #384472; }
   a:link, a:visited:link {
     /*
 		this highlights links on iPhones/iPads.
@@ -1841,10 +1841,13 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #000; }
+  background-color: #fff; }
 
 #logo {
-  margin: 0.75em 0; }
+  margin: 0; }
+  #logo img {
+    max-width: 200px;
+    height: auto; }
   #logo a {
     color: #fff; }
 
@@ -1914,7 +1917,7 @@ and more scalable.
 		*/ }
     .nav li a {
       display: block;
-      color: #fff;
+      color: #475691;
       text-decoration: none;
       padding: 0.75em;
       /*
@@ -2008,7 +2011,7 @@ POSTS & CONTENT STYLES
   .entry-content blockquote {
     margin: 0 0 1.5em 0.75em;
     padding: 0 0 0 0.75em;
-    border-left: 3px solid #2980b9;
+    border-left: 3px solid #F82F5D;
     font-style: italic;
     color: #9fa6b4; }
   .entry-content dd {
@@ -2028,7 +2031,7 @@ POSTS & CONTENT STYLES
     max-width: 100%;
     height: auto; }
   .entry-content pre {
-    background: #000;
+    background: #052A38;
     color: #f8f9fa;
     font-size: 0.9em;
     padding: 1.5em;
@@ -2123,9 +2126,9 @@ PAGE NAVI STYLES
     padding: 0.75em;
     min-width: 1em;
     display: block;
-    color: #2980b9; }
+    color: #F82F5D; }
     .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
-      background-color: #2980b9;
+      background-color: #F82F5D;
       color: #fff; }
   .pagination .current {
     cursor: default;
@@ -2292,7 +2295,7 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #000;
+  background-color: #052A38;
   color: #f8f9fa; }
 
 /*
@@ -2339,15 +2342,35 @@ NAVIGATION STYLES
 *********************/
   #mobile-nav {
     display: none; }
+  #inner-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .header__navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
   .nav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     height: auto;
-    opacity: 1; }
+    opacity: 1;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
     .nav li {
       border-bottom: 0; }
+      .nav li:hover, .nav li:focus {
+        color: #384472; }
   /* .menu is clearfixed inside mixins.scss */
   .menu {
     /* end .menu ul */ }
@@ -2365,6 +2388,8 @@ NAVIGATION STYLES
 					you can use hover styles here even though this size
 					has the possibility of being a mobile device.
 					*/ }
+          .menu ul li a:hover, .menu ul li a:focus {
+            color: #384472; }
   /* end .menu */
   /*********************
 POSTS & CONTENT STYLES
@@ -2435,7 +2460,7 @@ NAVIGATION STYLES
     /* highlight current page */
     /* end current highlighters */ }
     .nav ul {
-      background: #000;
+      background: #052A38;
       margin-top: 0; }
     .nav li {
       /*
@@ -2449,7 +2474,7 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/ }
         .nav li a:hover, .nav li a:focus {
-          color: #fff;
+          color: #384472;
           text-decoration: underline; }
       .nav li ul.sub-menu,
       .nav li ul.children {

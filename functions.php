@@ -65,8 +65,8 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'starter-thumb-600', 600, 150, true );
-add_image_size( 'starter-thumb-300', 300, 100, true );
+add_image_size( 'ani-thumb-600', 600, 150, true );
+add_image_size( 'ani-thumb-300', 300, 100, true );
 add_image_size( 'gallery-image', 680, 450, true );
 
 /*
@@ -94,8 +94,8 @@ add_filter( 'image_size_names_choose', 'starter_custom_image_sizes' );
 function starter_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'gallery-image' => __('Gallery Image'),
-        'starter-thumb-600' => __('600px by 150px'),
-        'starter-thumb-300' => __('300px by 100px'),
+        'ani-thumb-600' => __('600px by 150px'),
+        'ani-thumb-300' => __('300px by 100px'),
     ) );
 }
 
@@ -240,32 +240,6 @@ function starter_fonts() {
 }
 
 add_action('wp_enqueue_scripts', 'starter_fonts');
-
-
-/* Load ScrollMagic Scripts */
-
-function scrollmagic_scripts() {
-
-		wp_register_script( 'greensock', get_stylesheet_directory_uri() . '/library/js/libs/greensock/TweenMax.min.js', array(), '', true );
-
-    wp_register_script( 'scrollmagic', get_stylesheet_directory_uri() . '/library/scrollmagic/uncompressed/ScrollMagic.js', array(), '', true );
-
-    wp_register_script( 'animation', get_stylesheet_directory_uri() . '/library/scrollmagic/uncompressed/plugins/animation.gsap.js', array(), '', true );
-
-    wp_register_script( 'indicators', get_stylesheet_directory_uri() . '/library/scrollmagic/uncompressed/plugins/debug.addIndicators.js', array(), '', true );
-
-
-
-		// enqueue styles and scripts
-		wp_enqueue_script( 'greensock' );
-		wp_enqueue_script( 'scrollmagic' );
-		wp_enqueue_script( 'animation' );
-    wp_enqueue_script( 'indicators' );
-}
-
-add_action( 'wp_enqueue_scripts', 'scrollmagic_scripts' );
-
-
 
 /**
  * Register the required plugins for this theme.

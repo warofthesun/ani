@@ -166,15 +166,37 @@ NAVIGATION STYLES
 #mobile-nav {
   display: none; }
 
+#inner-header {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.header__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
 .nav {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   height: auto;
-  opacity: 1; }
+  opacity: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
   .nav li {
     border-bottom: 0; }
+    .nav li:hover, .nav li:focus {
+      color: #384472; }
 
 /* .menu is clearfixed inside mixins.scss */
 .menu {
@@ -193,6 +215,8 @@ NAVIGATION STYLES
 					you can use hover styles here even though this size
 					has the possibility of being a mobile device.
 					*/ }
+        .menu ul li a:hover, .menu ul li a:focus {
+          color: #384472; }
 
 /* end .menu */
 /*********************
@@ -258,7 +282,7 @@ NAVIGATION STYLES
   /* highlight current page */
   /* end current highlighters */ }
   .nav ul {
-    background: #000;
+    background: #052A38;
     margin-top: 0; }
   .nav li {
     /*
@@ -272,7 +296,7 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/ }
       .nav li a:hover, .nav li a:focus {
-        color: #fff;
+        color: #384472;
         text-decoration: underline; }
     .nav li ul.sub-menu,
     .nav li ul.children {
