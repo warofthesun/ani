@@ -441,14 +441,43 @@ POSTS & CONTENT STYLES
 		}
 
 		&--boxes {
+
 			&:nth-child(1) {
 				background-color: $primary;
+				border-radius: 10px 0 0 0;
+
 			}
 			&:nth-child(2) {
 				background-color: lighten($primary, 10%);
 			}
 			&:nth-child(3) {
 				background-color: $primary-lt;
+				border-radius: 0 10px 0 0;
+			}
+
+			&-header {
+				display: flex;
+				flex-direction: row;
+
+				span {
+					padding: 0;
+					margin: 0;
+					color: $white;
+					font-family: $display;
+					font-size: 1.2em;
+					line-height: 1;
+					text-shadow: 1px 1px 1px rgba($primary-dk, 0.3);
+					display: flex;
+					align-items: center;
+				}
+
+				a {
+					margin-left: auto;
+				}
+			}
+
+			&-content {
+				float: left;
 			}
 		}
 	}

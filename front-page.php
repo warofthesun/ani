@@ -35,9 +35,27 @@
 			</div>
 			<div class="wrap cf secondary">
 				<div class="secondary__content row wrap">
-					<div class="col-xs-12 col-sm-4 secondary__content--boxes">one</div>
-					<div class="col-xs-12 col-sm-4 secondary__content--boxes">two</div>
-					<div class="col-xs-12 col-sm-4 secondary__content--boxes">three</div>
+					<div class="col-xs-12 col-sm-4 secondary__content--boxes">
+						<div class="secondary__content--boxes-header">
+							<span>Contact</span>
+							<a href="#">See All</a>
+						</div>
+						<div class="secondary__content--boxes-content">this is the content</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 secondary__content--boxes">
+						<div class="secondary__content--boxes-header">
+							<span>Contact</span>
+							<a href="#">See All</a>
+						</div>
+						<div class="secondary__content--boxes-content">this is the content</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 secondary__content--boxes">
+						<div class="secondary__content--boxes-header">
+							<span>Contact</span>
+							<a href="#">See All</a>
+						</div>
+						<div class="secondary__content--boxes-content">this is the content</div>
+					</div>
 				</div>
 			</div>
 
