@@ -1364,7 +1364,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 .accent-btn, .comment-reply-link, #submit {
   display: inline-block;
   position: relative;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   color: #fff;
   font-size: 0.9em;
@@ -1447,7 +1447,7 @@ textarea,
   border: 0;
   width: 100%;
   max-width: 400px;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #f7f8fa;
   -webkit-transition: background-color 0.24s ease-in-out;
   transition: background-color 0.24s ease-in-out; }
@@ -1708,11 +1708,11 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 body {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #5c6b80;
-  background-color: #eaedf2;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1934,6 +1934,102 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.hero__image--full {
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("../images/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1600px;
+  margin: 0 auto; }
+
+.hero__content--left {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: -10vh; }
+
+.hero__content--boxes {
+  margin-top: -15vh; }
+  .hero__content--boxes-header {
+    padding: 0 1em;
+    height: 4.7em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .hero__content--boxes-header p {
+      padding: 0;
+      margin: 0;
+      color: #fff;
+      font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.2em;
+      line-height: 1;
+      text-shadow: 1px 1px 1px rgba(6, 120, 161, 0.3);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .hero__content--boxes-header p:before {
+        float: left;
+        margin-right: 0.2em;
+        font-family: fontawesome;
+        font-size: 2em;
+        text-shadow: 0px 0px 0px; }
+  .hero__content--boxes-content {
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 80%;
+    padding: 1em;
+    border-top: 1px solid #fff;
+    -webkit-box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6);
+            box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6); }
+  .hero__content--boxes > div:nth-child(1) {
+    background-color: #00bcff;
+    border-radius: 10px 0 0 0; }
+    .hero__content--boxes > div:nth-child(1) .hero__content--boxes-header p:before {
+      content: "\f073";
+      color: #66D7FF; }
+  .hero__content--boxes > div:nth-child(2) {
+    background-color: #1ac3ff; }
+    .hero__content--boxes > div:nth-child(2) .hero__content--boxes-header p:before {
+      content: "\f075";
+      color: #66D7FF; }
+  .hero__content--boxes > div:nth-child(3) {
+    background-color: #33caff; }
+    .hero__content--boxes > div:nth-child(3) .hero__content--boxes-header p:before {
+      content: "\f041";
+      color: #16BBF7; }
+  .hero__content--boxes > div:nth-child(4) {
+    background-color: #66D7FF;
+    border-radius: 0px 10px 0 0; }
+    .hero__content--boxes > div:nth-child(4) .hero__content--boxes-header p:before {
+      content: "\f0f8";
+      color: #16BBF7; }
+  .hero__content--boxes > div {
+    padding: 0; }
+
+.secondary__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .secondary__content > div {
+    padding: 0; }
+  .secondary__content--boxes:nth-child(1) {
+    background-color: #16BBF7; }
+  .secondary__content--boxes:nth-child(2) {
+    background-color: #47c9f9; }
+  .secondary__content--boxes:nth-child(3) {
+    background-color: #66D7FF; }
+
 #content {
   margin-top: 1.5em; }
 
@@ -2394,6 +2490,18 @@ NAVIGATION STYLES
   /*********************
 POSTS & CONTENT STYLES
 *********************/
+  .hero {
+    height: 80vh; }
+    .hero__content--boxes {
+      height: 30vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      border-radius: 10px 10px 0 0; }
   /* entry content */
   .entry-content {
     /* at this larger size, we can start to align images */ }

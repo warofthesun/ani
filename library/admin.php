@@ -135,7 +135,7 @@ you like.
 
 // Custom Backend Footer
 function starter_custom_admin_footer() {
-	_e( '<span id="footer-thankyou">Developed by <a href="http://yoursite.com" target="_blank">Your Site Name</a></span>. Built using <a href="http://themble.com/starter" target="_blank">starter</a>.', 'startertheme' );
+	_e( '<span id="footer-thankyou">Developed by <a href="http://thesplitpixel.com" target="_blank">The SplitPixel</a></span>.', 'startertheme' );
 }
 
 // adding it to the admin area

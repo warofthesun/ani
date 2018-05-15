@@ -1,57 +1,44 @@
 <!--front page-->
 <?php get_header(); ?>
-<div class="hero">
-	<div class="hero__image--full row">
-		<div class="hero__content--left row">
-			this will be the title
-		</div>
-	</div>
-	<div class="hero__content--boxes">
-		
-	</div>
-</div>
-			<div id="content">
-
-				<div id="inner-content" class="wrap cf row">
-
-						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-
-								<header class="article-header">
-
-									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-
-									<p class="byline vcard">
-										<?php printf( __( 'Posted', 'startertheme').' <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> '.__( 'by',  'startertheme').' <span class="author">%3$s</span>', get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
-
-								</header> <?php // end article header ?>
-
-								<section class="entry-content cf" itemprop="articleBody">
-
-									<?php the_content(); ?>
-
-								</section> <?php // end article section ?>
-
-								<footer class="article-footer cf">
-
-								</footer>
-
-								<?php comments_template(); ?>
-
-							</article>
-
-							<?php endwhile; endif; ?>
-
-						</main>
-
-						<?php get_sidebar(); ?>
-
+			<div class="hero">
+				<div class="hero__image--full">
+					<div class="hero__content--left wrap">
+						Your Brain &amp; Nerve Neurology Experts
+					</div>
 				</div>
-
+				<div class="hero__content--boxes row wrap">
+					<div class="col-xs-12 col-sm-3">
+						<div class="hero__content--boxes-header">
+							<p>Making an<br />Appointment</p>
+						</div>
+						<div class="hero__content--boxes-content">this is the content</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<div class="hero__content--boxes-header">
+							<p>Contact</p>
+						</div>
+						<div class="hero__content--boxes-content">this is the content</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<div class="hero__content--boxes-header">
+							<p>Directions</p>
+						</div>
+						<div class="hero__content--boxes-content">this is the content</div>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<div class="hero__content--boxes-header">
+							<p>In-House<br />Procedures</p>
+						</div>
+						<div class="hero__content--boxes-content">this is the content</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrap cf secondary">
+				<div class="secondary__content row wrap">
+					<div class="col-xs-12 col-sm-4 secondary__content--boxes">one</div>
+					<div class="col-xs-12 col-sm-4 secondary__content--boxes">two</div>
+					<div class="col-xs-12 col-sm-4 secondary__content--boxes">three</div>
+				</div>
 			</div>
 
 <?php get_footer(); ?>

@@ -236,7 +236,7 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function starter_fonts() {
-  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Lora:400,400i|Roboto:300,300i,400,400i,500,700,900');
+  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Fira+Sans:300,400,700|Montserrat:300,400,700');
 }
 
 add_action('wp_enqueue_scripts', 'starter_fonts');

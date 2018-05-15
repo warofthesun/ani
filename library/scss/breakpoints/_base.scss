@@ -20,7 +20,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $gray;
+	background-color: $white;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -324,6 +324,135 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 
+.hero {
+
+		&__image {
+			&--full {
+				height: 60vh;
+				display: flex;
+				background-image: url('../images/header.jpg');
+				background-size: cover;
+				background-repeat: no-repeat;
+				max-width: 1600px;
+				margin:0 auto;
+			}
+		}
+
+		&__content {
+
+			&--left {
+				align-self: center;
+				margin-top: -10vh;
+			}
+
+			&--boxes {
+				margin-top: -15vh;
+
+				&-header {
+					padding: 0 1em;
+					height: 4.7em;
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+
+					p {
+						padding: 0;
+						margin: 0;
+						color: $white;
+						font-family: $display;
+						font-size: 1.2em;
+						line-height: 1;
+						text-shadow: 1px 1px 1px rgba($primary-dk, 0.3);
+						display: flex;
+						align-items: center;
+
+						&:before {
+							float: left;
+							margin-right: 0.2em;
+							font-family: fontawesome;
+							font-size: 2em;
+							text-shadow: 0px 0px 0px;
+						}
+					}
+				}
+
+				&-content {
+					background-color: rgba($white, 0.3);
+					height: 80%;
+					padding: 1em;
+					border-top: 1px solid $white;
+					box-shadow: 0px -3px 5px -3px rgba($primary-dk, 0.6);
+				}
+
+				>div:nth-child(1) {
+					background-color: darken($primary-lt, 20%);
+					border-radius: 10px 0 0 0;
+					.hero__content--boxes-header {
+						p:before {
+							content: "\f073";
+							color: $primary-lt;
+						}
+					}
+				}
+
+				>div:nth-child(2) {
+					background-color: darken($primary-lt,15%);
+					.hero__content--boxes-header {
+						p:before {
+							content: "\f075";
+							color: $primary-lt;
+						}
+					}
+				}
+
+				>div:nth-child(3) {
+					background-color: darken($primary-lt, 10%);
+					.hero__content--boxes-header {
+						p:before {
+							content: "\f041";
+							color: $primary;
+						}
+					}
+				}
+
+				>div:nth-child(4) {
+					background-color: $primary-lt;
+					border-radius: 0px 10px 0 0;
+					.hero__content--boxes-header {
+						p:before {
+							content: "\f0f8";
+							color: $primary;
+						}
+					}
+				}
+
+				&>div {
+					padding: 0;
+				}
+			}
+		}
+}
+
+.secondary {
+	&__content {
+		display: flex;
+		&>div {
+			padding: 0;
+		}
+
+		&--boxes {
+			&:nth-child(1) {
+				background-color: $primary;
+			}
+			&:nth-child(2) {
+				background-color: lighten($primary, 10%);
+			}
+			&:nth-child(3) {
+				background-color: $primary-lt;
+			}
+		}
+	}
+}
 #content {
 	margin-top: 1.5em;
 }

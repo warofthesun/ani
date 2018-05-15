@@ -222,6 +222,19 @@ NAVIGATION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.hero {
+  height: 80vh; }
+  .hero__content--boxes {
+    height: 30vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-radius: 10px 10px 0 0; }
+
 /* entry content */
 .entry-content {
   /* at this larger size, we can start to align images */ }
