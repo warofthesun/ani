@@ -114,7 +114,8 @@ POSTS & CONTENT STYLES
 	height: 80vh;
 
 	&__content {
-		&--boxes {
+		
+		.content-boxes {
 			height: 30vh;
 			display: flex;
 			flex-direction: row;

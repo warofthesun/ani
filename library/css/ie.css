@@ -224,7 +224,7 @@ POSTS & CONTENT STYLES
 *********************/
 .hero {
   height: 80vh; }
-  .hero__content--boxes {
+  .hero__content .content-boxes {
     height: 30vh;
     display: -webkit-box;
     display: -ms-flexbox;

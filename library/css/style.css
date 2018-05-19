@@ -1807,6 +1807,8 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   font-weight: 500;
+  font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #16BBF7;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1817,7 +1819,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 h1, .h1 {
   font-size: 2.5em;
-  line-height: 1.333em; }
+  line-height: 1.333em;
+  font-weight: 700; }
 
 h2, .h2 {
   font-size: 1.75em;
@@ -1950,9 +1953,9 @@ POSTS & CONTENT STYLES
       align-self: center;
   margin-top: -10vh; }
 
-.hero__content--boxes {
+.hero__content .content-boxes {
   margin-top: -15vh; }
-  .hero__content--boxes-header {
+  .hero__content .content-boxes__header {
     padding: 0 1em;
     height: 4.7em;
     display: -webkit-box;
@@ -1965,7 +1968,7 @@ POSTS & CONTENT STYLES
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-    .hero__content--boxes-header p {
+    .hero__content .content-boxes__header p {
       padding: 0;
       margin: 0;
       color: #fff;
@@ -1979,67 +1982,65 @@ POSTS & CONTENT STYLES
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      .hero__content--boxes-header p:before {
+      .hero__content .content-boxes__header p:before {
         float: left;
         margin-right: 0.2em;
         font-family: fontawesome;
         font-size: 2em;
         text-shadow: 0px 0px 0px; }
-  .hero__content--boxes-content {
+  .hero__content .content-boxes__content {
     background-color: rgba(255, 255, 255, 0.3);
     height: 80%;
     padding: 1em;
     border-top: 1px solid #fff;
     -webkit-box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6);
             box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6); }
-  .hero__content--boxes > div:nth-child(1) {
-    background-color: #00bcff;
-    border-radius: 10px 0 0 0; }
-    .hero__content--boxes > div:nth-child(1) .hero__content--boxes-header p:before {
+  .hero__content .content-boxes > div:first-child {
+    border-radius: 10px 0px 0 0; }
+  .hero__content .content-boxes > div:last-child {
+    border-radius: 0px 10px 0 0; }
+  .hero__content .content-boxes > div:nth-child(1) {
+    background-color: #00bcff; }
+    .hero__content .content-boxes > div:nth-child(1) .content-boxes__header p:before {
       content: "\f073";
       color: #66D7FF; }
-  .hero__content--boxes > div:nth-child(2) {
+  .hero__content .content-boxes > div:nth-child(2) {
     background-color: #1ac3ff; }
-    .hero__content--boxes > div:nth-child(2) .hero__content--boxes-header p:before {
+    .hero__content .content-boxes > div:nth-child(2) .content-boxes__header p:before {
       content: "\f075";
       color: #66D7FF; }
-  .hero__content--boxes > div:nth-child(3) {
+  .hero__content .content-boxes > div:nth-child(3) {
     background-color: #33caff; }
-    .hero__content--boxes > div:nth-child(3) .hero__content--boxes-header p:before {
+    .hero__content .content-boxes > div:nth-child(3) .content-boxes__header p:before {
       content: "\f041";
       color: #16BBF7; }
-  .hero__content--boxes > div:nth-child(4) {
-    background-color: #66D7FF;
-    border-radius: 0px 10px 0 0; }
-    .hero__content--boxes > div:nth-child(4) .hero__content--boxes-header p:before {
+  .hero__content .content-boxes > div:nth-child(4) {
+    background-color: #66D7FF; }
+    .hero__content .content-boxes > div:nth-child(4) .content-boxes__header p:before {
       content: "\f0f8";
       color: #16BBF7; }
-  .hero__content--boxes > div {
+  .hero__content .content-boxes > div {
     padding: 0; }
 
-.secondary__content {
+.content--secondary {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-  .secondary__content > div {
-    padding: 0; }
-  .secondary__content--boxes:nth-child(1) {
-    background-color: #16BBF7;
-    border-radius: 10px 0 0 0; }
-  .secondary__content--boxes:nth-child(2) {
-    background-color: #47c9f9; }
-  .secondary__content--boxes:nth-child(3) {
-    background-color: #66D7FF;
-    border-radius: 0 10px 0 0; }
-  .secondary__content--boxes-header {
+  display: flex;
+  margin-bottom: 2em; }
+  .content--secondary .content-boxes__header {
+    padding: 0 1em;
+    height: 2.7em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row; }
-    .secondary__content--boxes-header span {
+    .content--secondary .content-boxes__header p {
       padding: 0;
       margin: 0;
       color: #fff;
@@ -2053,10 +2054,69 @@ POSTS & CONTENT STYLES
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-    .secondary__content--boxes-header a {
-      margin-left: auto; }
-  .secondary__content--boxes-content {
-    float: left; }
+    .content--secondary .content-boxes__header a {
+      color: #475691;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-left: auto;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-decoration: none;
+      font-size: .9em;
+      font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      -webkit-transition: all 1s;
+      transition: all 1s; }
+      .content--secondary .content-boxes__header a:after {
+        content: "\f0a9";
+        font-family: fontawesome;
+        margin-left: .2em; }
+    .content--secondary .content-boxes__header a:hover:after {
+      content: "\f061";
+      font-family: fontawesome;
+      margin-left: .2em; }
+  .content--secondary .content-boxes__content {
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 80%;
+    padding: 1em;
+    border-top: 1px solid #fff;
+    -webkit-box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6);
+            box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6); }
+  .content--secondary .content-boxes > div:first-child {
+    border-radius: 10px 0px 0 0; }
+  .content--secondary .content-boxes > div:last-child {
+    border-radius: 0px 10px 0 0; }
+  .content--secondary .content-boxes > div:nth-child(1) {
+    background-color: #00bcff; }
+  .content--secondary .content-boxes > div:nth-child(2) {
+    background-color: #1ac3ff; }
+  .content--secondary .content-boxes > div:nth-child(3) {
+    background-color: #33caff; }
+  .content--secondary .content-boxes > div {
+    padding: 0; }
+
+.content__full-width {
+  background-color: rgba(102, 215, 255, 0.1);
+  padding: 2em 0; }
+  .content__full-width--centered > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .content__full-width--centered > div h1 {
+      text-align: center; }
+    .content__full-width--centered > div p {
+      max-width: 660px;
+      -ms-flex-item-align: center;
+          align-self: center; }
 
 #content {
   margin-top: 1.5em; }
@@ -2520,7 +2580,7 @@ POSTS & CONTENT STYLES
 *********************/
   .hero {
     height: 80vh; }
-    .hero__content--boxes {
+    .hero__content .content-boxes {
       height: 30vh;
       display: -webkit-box;
       display: -ms-flexbox;

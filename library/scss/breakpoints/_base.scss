@@ -131,6 +131,8 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
 	font-weight: 500;
+	font-family: $display;
+	color: $primary;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -145,6 +147,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 h1, .h1 {
 	font-size: 2.5em;
 	line-height: 1.333em;
+	font-weight: 700;
 }
 
 h2, .h2 {
@@ -327,6 +330,7 @@ POSTS & CONTENT STYLES
 .hero {
 
 		&__image {
+
 			&--full {
 				height: 60vh;
 				display: flex;
@@ -345,10 +349,10 @@ POSTS & CONTENT STYLES
 				margin-top: -10vh;
 			}
 
-			&--boxes {
+			.content-boxes {
 				margin-top: -15vh;
 
-				&-header {
+				&__header {
 					padding: 0 1em;
 					height: 4.7em;
 					display: flex;
@@ -376,7 +380,7 @@ POSTS & CONTENT STYLES
 					}
 				}
 
-				&-content {
+				&__content {
 					background-color: rgba($white, 0.3);
 					height: 80%;
 					padding: 1em;
@@ -384,10 +388,16 @@ POSTS & CONTENT STYLES
 					box-shadow: 0px -3px 5px -3px rgba($primary-dk, 0.6);
 				}
 
+				>div:first-child {
+					border-radius: 10px 0px 0 0;
+				}
+				>div:last-child {
+					border-radius: 0px 10px 0 0;
+				}
+
 				>div:nth-child(1) {
 					background-color: darken($primary-lt, 20%);
-					border-radius: 10px 0 0 0;
-					.hero__content--boxes-header {
+					.content-boxes__header {
 						p:before {
 							content: "\f073";
 							color: $primary-lt;
@@ -397,7 +407,7 @@ POSTS & CONTENT STYLES
 
 				>div:nth-child(2) {
 					background-color: darken($primary-lt,15%);
-					.hero__content--boxes-header {
+					.content-boxes__header {
 						p:before {
 							content: "\f075";
 							color: $primary-lt;
@@ -407,7 +417,7 @@ POSTS & CONTENT STYLES
 
 				>div:nth-child(3) {
 					background-color: darken($primary-lt, 10%);
-					.hero__content--boxes-header {
+					.content-boxes__header {
 						p:before {
 							content: "\f041";
 							color: $primary;
@@ -417,8 +427,8 @@ POSTS & CONTENT STYLES
 
 				>div:nth-child(4) {
 					background-color: $primary-lt;
-					border-radius: 0px 10px 0 0;
-					.hero__content--boxes-header {
+
+					.content-boxes__header {
 						p:before {
 							content: "\f0f8";
 							color: $primary;
@@ -433,33 +443,22 @@ POSTS & CONTENT STYLES
 		}
 }
 
-.secondary {
-	&__content {
+.content {
+
+	&--secondary {
 		display: flex;
-		&>div {
-			padding: 0;
-		}
+		margin-bottom: 2em;
 
-		&--boxes {
+		.content-boxes {
 
-			&:nth-child(1) {
-				background-color: $primary;
-				border-radius: 10px 0 0 0;
-
-			}
-			&:nth-child(2) {
-				background-color: lighten($primary, 10%);
-			}
-			&:nth-child(3) {
-				background-color: $primary-lt;
-				border-radius: 0 10px 0 0;
-			}
-
-			&-header {
+			&__header {
+				padding: 0 1em;
+				height: 2.7em;
 				display: flex;
+				justify-content: flex-start;
 				flex-direction: row;
 
-				span {
+				p {
 					padding: 0;
 					margin: 0;
 					color: $white;
@@ -472,16 +471,92 @@ POSTS & CONTENT STYLES
 				}
 
 				a {
+					color: $link-color;
+					display: flex;
 					margin-left: auto;
+					align-items: center;
+					text-decoration: none;
+					font-size: .9em;
+					font-family: $display;
+					font-weight: bold;
+					transition: all 1s;
+
+					&:after {
+						content: "\f0a9";
+						font-family: fontawesome;
+						margin-left: .2em;
+
+					}
+				}
+
+				a:hover {
+					&:after {
+						content: "\f061";
+						font-family: fontawesome;
+						margin-left: .2em;
+
+					}
 				}
 			}
 
-			&-content {
-				float: left;
+			&__content {
+				background-color: rgba($white, 0.3);
+				height: 80%;
+				padding: 1em;
+				border-top: 1px solid $white;
+				box-shadow: 0px -3px 5px -3px rgba($primary-dk, 0.6);
+			}
+
+			>div:first-child {
+				border-radius: 10px 0px 0 0;
+			}
+			>div:last-child {
+				border-radius: 0px 10px 0 0;
+			}
+
+			>div:nth-child(1) {
+				background-color: darken($primary-lt, 20%);
+			}
+
+			>div:nth-child(2) {
+				background-color: darken($primary-lt,15%);
+			}
+
+			>div:nth-child(3) {
+				background-color: darken($primary-lt, 10%);
+			}
+
+			&>div {
+				padding: 0;
 			}
 		}
 	}
+
+	&__full-width {
+		background-color: rgba($primary-lt, 0.1);
+		padding: 2em 0;
+
+		&--centered {
+			>div {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+
+				h1 {
+					text-align: center;
+				}
+
+				p {
+					max-width: 660px;
+					align-self: center;
+				}
+			}
+
+		}
+	}
 }
+
+
 #content {
 	margin-top: 1.5em;
 }
