@@ -8,7 +8,7 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf row">
+				<div id="inner__content" class="wrap cf row">
 
 						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
@@ -16,7 +16,7 @@
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								<header class="article-header">
+								<header class="article__header">
 
 									<h1 class="page-title"><?php the_title(); ?></h1>
 
@@ -27,7 +27,7 @@
 
 								</header>
 
-								<section class="entry-content cf" itemprop="articleBody">
+								<section class="entry__content cf" itemprop="articleBody">
 
 									<?php	the_content(); ?>
 

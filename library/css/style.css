@@ -1730,13 +1730,13 @@ body {
 img {
   image-rendering: -webkit-optimize-contrast; }
 
-#inner-header, #inner-footer {
+#inner__header, #inner__footer {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
 
-#inner-footer .nav {
+#inner__footer .nav {
   opacity: 1;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -1745,7 +1745,7 @@ img {
   height: auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  #inner-footer .nav li {
+  #inner__footer .nav li {
     border-bottom: 0px; }
 
 /********************
@@ -1843,7 +1843,8 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: 1.1em;
-  font-weight: 700; }
+  font-weight: regular;
+  color: #052A38; }
 
 h5, .h5 {
   font-size: 0.846em;
@@ -2197,6 +2198,41 @@ POSTS & CONTENT STYLES
         max-width: 660px;
         -ms-flex-item-align: center;
             align-self: center; }
+    .content__full-width--centered.sample-page ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .content__full-width--centered.sample-page ul li {
+        margin-bottom: 2em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; }
+        .content__full-width--centered.sample-page ul li:hover:before {
+          content: "\f019";
+          -webkit-transition: all .5s;
+          transition: all .5s;
+          font-size: 1.5em; }
+        .content__full-width--centered.sample-page ul li:before {
+          content: "\f0f6";
+          font-family: fontawesome;
+          color: #16BBF7;
+          font-size: 1.5em;
+          -webkit-transition: all .5s;
+          transition: all .5s;
+          width: 1.1em; }
+        .content__full-width--centered.sample-page ul li > div, .content__full-width--centered.sample-page ul li > a {
+          margin: 0 1em;
+          text-decoration: none; }
+          .content__full-width--centered.sample-page ul li > div p, .content__full-width--centered.sample-page ul li > a p {
+            color: #5c6b80; }
+    .content__full-width--centered.sample-page h4, .content__full-width--centered.sample-page .h4, .content__full-width--centered.sample-page p {
+      margin: 0; }
   .content.staff > a {
     color: #475691;
     text-align: right;
@@ -2286,13 +2322,24 @@ POSTS & CONTENT STYLES
     font-size: 1em; }
 
 #content {
-  margin-top: 1.5em; }
+  margin-top: 0em; }
+  #content .article__header {
+    border-bottom: 1px solid rgba(6, 120, 161, 0.3);
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em; }
+    #content .article__header .sample-page:before {
+      content: "\f073"; }
+  #content h1, #content .h1 {
+    text-align: center; }
+    #content h1:before, #content .h1:before {
+      font-family: fontawesome;
+      font-weight: 100;
+      margin-right: .5em; }
 
 .hentry {
   background-color: #fff;
   border-radius: 3px;
-  margin-bottom: 1.5em;
-  border: 1px solid #ccc; }
+  margin-bottom: 1.5em; }
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }
@@ -2324,7 +2371,7 @@ POSTS & CONTENT STYLES
   margin: 0; }
 
 /* entry content */
-.entry-content {
+.entry__content {
   padding: 1.5em 1.5em 0;
   /*
 			image alignment on a screen this size may be
@@ -2332,56 +2379,56 @@ POSTS & CONTENT STYLES
 			and floating images at the next breakpoint,
 			but it's up to you. Feel free to change it up.
 			*/ }
-  .entry-content p {
+  .entry__content p {
     margin: 0 0 1.5em; }
-  .entry-content table {
+  .entry__content table {
     width: 100%;
     border: 1px solid #eaedf2;
     margin-bottom: 1.5em; }
-    .entry-content table caption {
+    .entry__content table caption {
       margin: 0 0 7px;
       font-size: 0.75em;
       color: #9fa6b4;
       text-transform: uppercase;
       letter-spacing: 1px; }
-  .entry-content tr {
+  .entry__content tr {
     border-bottom: 1px solid #eaedf2; }
-    .entry-content tr:nth-child(even) {
+    .entry__content tr:nth-child(even) {
       background-color: #f8f9fa; }
-  .entry-content td {
+  .entry__content td {
     padding: 7px;
     border-right: 1px solid #eaedf2; }
-    .entry-content td:last-child {
+    .entry__content td:last-child {
       border-right: 0; }
-  .entry-content th {
+  .entry__content th {
     background-color: #f8f9fa;
     border-bottom: 1px solid #eaedf2;
     border-right: 1px solid #eaedf2; }
-    .entry-content th:last-child {
+    .entry__content th:last-child {
       border-right: 0; }
-  .entry-content blockquote {
+  .entry__content blockquote {
     margin: 0 0 1.5em 0.75em;
     padding: 0 0 0 0.75em;
     border-left: 3px solid #F82F5D;
     font-style: italic;
     color: #9fa6b4; }
-  .entry-content dd {
+  .entry__content dd {
     margin-left: 0;
     font-size: 0.9em;
     color: #787878;
     margin-bottom: 1.5em; }
-  .entry-content img {
+  .entry__content img {
     margin: 0 0 1.5em 0;
     max-width: 100%;
     height: auto; }
-  .entry-content .size-auto,
-  .entry-content .size-full,
-  .entry-content .size-large,
-  .entry-content .size-medium,
-  .entry-content .size-thumbnail {
+  .entry__content .size-auto,
+  .entry__content .size-full,
+  .entry__content .size-large,
+  .entry__content .size-medium,
+  .entry__content .size-thumbnail {
     max-width: 100%;
     height: auto; }
-  .entry-content pre {
+  .entry__content pre {
     background: #052A38;
     color: #f8f9fa;
     font-size: 0.9em;
@@ -2693,7 +2740,7 @@ NAVIGATION STYLES
 *********************/
   #mobile-nav {
     display: none; }
-  #inner-header {
+  #inner__header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2771,17 +2818,17 @@ POSTS & CONTENT STYLES
               flex-direction: row;
       border-radius: 10px 10px 0 0; }
   /* entry content */
-  .entry-content {
+  .entry__content {
     /* at this larger size, we can start to align images */ }
-    .entry-content .alignleft, .entry-content img.alignleft {
+    .entry__content .alignleft, .entry__content img.alignleft {
       margin-right: 1.5em;
       display: inline;
       float: left; }
-    .entry-content .alignright, .entry-content img.alignright {
+    .entry__content .alignright, .entry__content img.alignright {
       margin-left: 1.5em;
       display: inline;
       float: right; }
-    .entry-content .aligncenter, .entry-content img.aligncenter {
+    .entry__content .aligncenter, .entry__content img.aligncenter {
       margin-right: auto;
       margin-left: auto;
       display: block;

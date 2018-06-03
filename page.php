@@ -2,46 +2,82 @@
 <?php get_header(); ?>
 
 			<div id="content">
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<header class="article article__header wrap">
 
-				<div id="inner-content" class="wrap cf row">
 
-						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<h1 class="page-title <?php echo sanitize_title_with_dashes(get_the_title()); ?>" itemprop="headline"><?php the_title(); ?></h1>
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					</header>
+				<div id="inner__content" class="wrap cf row">
+
+						<main id="main" class="col-xs-12 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+
+
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								<header class="article-header">
 
-									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
-									<p class="byline vcard">
-										<?php printf( __( 'Posted', 'startertheme').' <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> '.__( 'by',  'startertheme').' <span class="author">%3$s</span>', get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
-
-								</header> <?php // end article header ?>
-
-								<section class="entry-content cf" itemprop="articleBody">
+								<section class="entry__content cf" itemprop="articleBody">
 
 									<?php the_content(); ?>
 
 								</section> <?php // end article section ?>
 
-								<footer class="article-footer cf">
 
-								</footer>
 
 								<?php comments_template(); ?>
 
 							</article>
 
-							<?php endwhile; endif; ?>
 
 						</main>
 
-						<?php get_sidebar(); ?>
-
 				</div>
+				<section class="content__full-width content__full-width--lt-blue content__full-width--centered <?php echo sanitize_title_with_dashes(get_the_title()); ?>">
+					<div class="wrap">
+						<h1>Section Title</h1>
+						<ul class="col-xs-12">
+							<li class="col-xs-12 col-sm-6">
+								<a href="#">
+									<h4>ANI Current Medical Information Form</h4>
+									<p>
+										Form for release of health history from another provider to ANI
+									</p>
+								</a>
+							</li>
+							<li class="col-xs-12 col-sm-6">
+								<a href="#">
+									<h4>ANI Current Medical Information Form</h4>
+									<p>
+										Form for release of health history from another provider to ANI
+									</p>
+								</a>
+							</li>
+							<li class="col-xs-12 col-sm-6">
+								<a href="#">
+									<h4>ANI Current Medical Information Form</h4>
+									<p>
+										Form for release of health history from another provider to ANI
+									</p>
+								</a>
+							</li>
+							<li class="col-xs-12 col-sm-6">
+								<a href="#">
+									<h4>ANI Current Medical Information Form</h4>
+									<p>
+										Form for release of health history from another provider to ANI
+									</p>
+								</a>
+							</li>
+
+
+						</ul>
+					</div>
+				</section>
+
+				<?php endwhile; endif; ?>
 
 			</div>
 

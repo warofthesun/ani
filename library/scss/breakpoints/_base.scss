@@ -29,11 +29,11 @@ img {
 	image-rendering: -webkit-optimize-contrast;
 }
 
-#inner-header, #inner-footer {
+#inner__header, #inner__footer {
 	flex-direction: column;
 }
 
-#inner-footer {
+#inner__footer {
 	.nav {
 		opacity: 1;
 		flex-direction: row;
@@ -162,7 +162,8 @@ h3, .h3 {
 
 h4, .h4 {
 	font-size: 1.1em;
-	font-weight: 700;
+	font-weight: regular;
+	color: $black;
 }
 
 h5, .h5 {
@@ -659,6 +660,50 @@ POSTS & CONTENT STYLES
 				}
 			}
 
+			&.sample-page {
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+
+					li {
+						margin-bottom: 2em;
+						display: flex;
+						flex-direction: row;
+
+						&:hover {
+							&:before {
+								content: "\f019";
+								transition: all .5s;
+								font-size: 1.5em;
+							}
+						}
+
+						&:before {
+							content: "\f0f6";
+							font-family: fontawesome;
+							color: $primary;
+							font-size: 1.5em;
+							transition: all .5s;
+							width: 1.1em;
+						}
+
+						>div, >a {
+							margin: 0 1em;
+							text-decoration: none;
+
+							p {
+								color: $text-color;
+							}
+
+						}
+					}
+				}
+
+				h4, .h4, p {
+					margin: 0;
+				}
+			}
+
 		}
 	}
 
@@ -776,15 +821,41 @@ POSTS & CONTENT STYLES
 }
 
 
+
 #content {
-	margin-top: 1.5em;
+	margin-top: 0em;
+
+	.article {
+		&__header {
+			border-bottom: 1px solid rgba($primary-dk, 0.3);
+	    margin-bottom: 1.5em;
+	    padding-bottom: 1.5em;
+
+			& .sample-page {
+				&:before {
+					content: "\f073";
+				}
+			}
+		}
+	}
+
+
+
+	h1, .h1 {
+		text-align: center;
+
+		&:before {
+			font-family: fontawesome;
+			font-weight: 100;
+			margin-right: .5em;
+		}
+	}
 }
 
 		.hentry {
 			background-color: $white;
 			border-radius: 3px;
 			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
 
 			header {
 				border-bottom: 1px solid $light-gray;
@@ -836,7 +907,7 @@ POSTS & CONTENT STYLES
 		}
 
 		/* entry content */
-		.entry-content {
+		.entry__content {
 			padding: 1.5em 1.5em 0;
 
 			p {

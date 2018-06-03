@@ -166,7 +166,7 @@ NAVIGATION STYLES
 #mobile-nav {
   display: none; }
 
-#inner-header {
+#inner__header {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -249,17 +249,17 @@ POSTS & CONTENT STYLES
     border-radius: 10px 10px 0 0; }
 
 /* entry content */
-.entry-content {
+.entry__content {
   /* at this larger size, we can start to align images */ }
-  .entry-content .alignleft, .entry-content img.alignleft {
+  .entry__content .alignleft, .entry__content img.alignleft {
     margin-right: 1.5em;
     display: inline;
     float: left; }
-  .entry-content .alignright, .entry-content img.alignright {
+  .entry__content .alignright, .entry__content img.alignright {
     margin-left: 1.5em;
     display: inline;
     float: right; }
-  .entry-content .aligncenter, .entry-content img.aligncenter {
+  .entry__content .aligncenter, .entry__content img.aligncenter {
     margin-right: auto;
     margin-left: auto;
     display: block;
