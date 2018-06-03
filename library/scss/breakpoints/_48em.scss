@@ -29,7 +29,7 @@ NAVIGATION STYLES
 #mobile-nav {
 	display: none;
 }
-#inner-header {
+#inner__header {
 	flex-direction: row;
 }
 
@@ -147,25 +147,28 @@ POSTS & CONTENT STYLES
 	}
 }
 /* entry content */
-.entry-content {
+.entry {
 
+	&__content {
 
-	/* at this larger size, we can start to align images */
-	.alignleft, img.alignleft {
-		margin-right: 1.5em;
-		display: inline;
-		float: left;
-	}
-	.alignright, img.alignright {
-		margin-left: 1.5em;
-		display: inline;
-		float: right;
-	}
-	.aligncenter, img.aligncenter {
-		margin-right: auto;
-		margin-left: auto;
-		display: block;
-		clear: both;
+		/* at this larger size, we can start to align images */
+		.alignleft, img.alignleft {
+			margin-right: 1.5em;
+			display: inline;
+			float: left;
+		}
+		.alignright, img.alignright {
+			margin-left: 1.5em;
+			display: inline;
+			float: right;
+		}
+		.aligncenter, img.aligncenter {
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+			clear: both;
+		}
+
 	}
 
 } /* end .entry-content */
