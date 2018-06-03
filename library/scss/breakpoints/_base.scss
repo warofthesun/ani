@@ -830,10 +830,17 @@ POSTS & CONTENT STYLES
 			border-bottom: 1px solid rgba($primary-dk, 0.3);
 	    margin-bottom: 1.5em;
 	    padding-bottom: 1.5em;
+			text-transform: capitalize;
 
 			& .sample-page {
 				&:before {
 					content: "\f073";
+				}
+			}
+
+			& .blog-page {
+				&:before {
+					content: "\f1ea";
 				}
 			}
 		}
