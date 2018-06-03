@@ -2287,12 +2287,19 @@ POSTS & CONTENT STYLES
 
 #content {
   margin-top: 1.5em; }
+  #content.sample-page h1:before {
+    content: "\f073"; }
+  #content h1, #content .h1 {
+    text-align: center; }
+    #content h1:before, #content .h1:before {
+      font-family: fontawesome;
+      font-weight: 100;
+      margin-right: .5em; }
 
 .hentry {
   background-color: #fff;
   border-radius: 3px;
-  margin-bottom: 1.5em;
-  border: 1px solid #ccc; }
+  margin-bottom: 1.5em; }
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }

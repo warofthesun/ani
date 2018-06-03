@@ -1,25 +1,23 @@
 <!--page-->
 <?php get_header(); ?>
 
-			<div id="content">
+			<div id="content" class="<?php echo sanitize_title_with_dashes(get_the_title()); ?>">
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<header class="article-header">
 
+
+						<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+
+					</header>
 				<div id="inner-content" class="wrap cf row">
 
-						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="col-xs-12 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								<header class="article-header">
 
-									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-
-									<p class="byline vcard">
-										<?php printf( __( 'Posted', 'startertheme').' <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> '.__( 'by',  'startertheme').' <span class="author">%3$s</span>', get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
-
-								</header> <?php // end article header ?>
 
 								<section class="entry-content cf" itemprop="articleBody">
 
@@ -38,8 +36,6 @@
 							<?php endwhile; endif; ?>
 
 						</main>
-
-						<?php get_sidebar(); ?>
 
 				</div>
 
