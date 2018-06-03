@@ -178,7 +178,18 @@ HEADER STYLES
 
 .header {
 	background-color: $white;
-}
+
+
+	&__navigation {
+		ul {
+			li {
+				a {
+					text-transform: uppercase;
+					font-weight: normal;
+				}
+			}
+		}
+	}
 
 	#logo {
 		margin: 0;
@@ -192,10 +203,12 @@ HEADER STYLES
 			color: $white;
 		}
 	}
-
+}
 /*********************
 NAVIGATION STYLES
 *********************/
+
+
 
 /*
 all navs have a .nav class applied via
@@ -344,6 +357,15 @@ POSTS & CONTENT STYLES
 
 		&__content {
 
+			p {
+				font-family: $display;
+				font-weight: 100;
+				font-size: 4em;
+				line-height: 1;
+				color: white;
+				text-shadow: 1px 1px 0 rgba($primary-dk,0.8);
+			}
+
 			&--left {
 				align-self: center;
 				margin-top: -10vh;
@@ -354,10 +376,14 @@ POSTS & CONTENT STYLES
 
 				&__header {
 					padding: 0 1em;
-					height: 4.7em;
+					$header-height:4.7em;
+					height: $header-height;
 					display: flex;
 					justify-content: center;
 					flex-direction: column;
+					text-decoration: none;
+
+
 
 					p {
 						padding: 0;
@@ -369,6 +395,20 @@ POSTS & CONTENT STYLES
 						text-shadow: 1px 1px 1px rgba($primary-dk, 0.3);
 						display: flex;
 						align-items: center;
+						text-decoration: none;
+						font-weight: normal;
+
+						&:hover {
+							&:after {
+								content: "\f061";
+								font-family: fontawesome;
+								width: 100%;
+								text-align: right;
+								text-shadow: 1px 1px 1px $primary-lt;
+								color: $primary-dk;
+								transition: all .5s;
+							}
+						}
 
 						&:before {
 							float: left;
@@ -376,13 +416,25 @@ POSTS & CONTENT STYLES
 							font-family: fontawesome;
 							font-size: 2em;
 							text-shadow: 0px 0px 0px;
+							transition: all .5s;
 						}
+
+						&:after {
+							content: "\f0a9";
+							font-family: fontawesome;
+							width: 100%;
+							text-align: right;
+							text-shadow: 0px 0px 0px;
+							color: rgba($primary-dk, 0.2);
+						}
+
 					}
 				}
 
 				&__content {
 					background-color: rgba($white, 0.3);
-					height: 80%;
+					$header-height:4.7em;
+					height: unquote(" calc(100% - #{$header-height})");
 					padding: 1em;
 					border-top: 1px solid $white;
 					box-shadow: 0px -3px 5px -3px rgba($primary-dk, 0.6);
@@ -443,7 +495,49 @@ POSTS & CONTENT STYLES
 		}
 }
 
+.flex-direction {
+	display:flex;
+
+	&--row {
+		flex-direction: row;
+	}
+
+	&--column {
+		flex-direction: column;
+	}
+}
+
+.collapse {
+	&--bottom {
+		margin-bottom: 0 !important;
+	}
+
+	&--top {
+		margin-top: 0 !important;
+	}
+}
+
+.wpcf7 {
+	br {
+		display: none;
+	}
+
+	.option-fields {
+		background-color: $primary-lt;
+		border-radius: 4px;
+		padding: .5em;
+
+		label, p {
+			color: $primary-dk;
+		}
+	}
+}
+
 .content {
+	margin-top:2em;
+	margin-bottom: 2em;
+
+
 
 	&--secondary {
 		display: flex;
@@ -452,8 +546,9 @@ POSTS & CONTENT STYLES
 		.content-boxes {
 
 			&__header {
+				$header-height: 2.7em;
 				padding: 0 1em;
-				height: 2.7em;
+				height: $header-height;
 				display: flex;
 				justify-content: flex-start;
 				flex-direction: row;
@@ -501,7 +596,8 @@ POSTS & CONTENT STYLES
 
 			&__content {
 				background-color: rgba($white, 0.3);
-				height: 80%;
+				$header-height:2.7em;
+				height: unquote(" calc(100% - #{$header-height})");
 				padding: 1em;
 				border-top: 1px solid $white;
 				box-shadow: 0px -3px 5px -3px rgba($primary-dk, 0.6);
@@ -533,8 +629,19 @@ POSTS & CONTENT STYLES
 	}
 
 	&__full-width {
-		background-color: rgba($primary-lt, 0.1);
 		padding: 2em 0;
+
+		&--lt-blue {
+			background-color: rgba($primary-lt, 0.1);
+		}
+
+		&--dk-blue {
+			background-color: $black;
+
+			p, label {
+				color: #EBFAFF;
+			}
+		}
 
 		&--centered {
 			>div {
@@ -553,6 +660,118 @@ POSTS & CONTENT STYLES
 			}
 
 		}
+	}
+
+	&.staff {
+
+		>a {
+			color: $link-color;
+			text-align: right;
+			text-decoration: none;
+			font-size: .9em;
+			font-family: $display;
+			font-weight: bold;
+			transition: all 1s;
+
+			&:after {
+				content: "\f0a9";
+				font-family: fontawesome;
+				margin-left: .2em;
+
+			}
+
+			&:hover {
+				&:after {
+					content: "\f061";
+					font-family: fontawesome;
+					margin-left: .2em;
+
+				}
+			}
+		}
+
+		>div {
+			background-color: $primary-lt;
+			height: 400px;
+			display: flex;
+			justify-content: flex-end;
+			flex-direction: column;
+			margin-bottom: 1em;
+
+			>div {
+				background-color: white;
+				height: 100%;
+				justify-content: flex-end;
+				display: flex;
+				flex-direction: column;
+				padding: 1em;
+			}
+		}
+
+		.staff__name {
+			font-size: 2.5em;
+			color: $black;
+			font-weight: bold;
+			line-height: 1;
+			font-family: $display;
+		}
+
+		.staff__role {
+			color: $primary;
+			font-style: italic;
+			font-size: .9em;
+			font-family: $sans-serif;
+		}
+
+		.staff__qualifications {
+			color: $black;
+			font-size: .9em;
+			font-family: $sans-serif;
+		}
+	}
+
+	.recent-news {
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		&__category {
+			color: $primary;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 0.8em;
+
+		}
+
+		&__title {
+			font-size: 1.5em;
+			font-family: $display;
+			color: $black;
+			font-weight: bold;
+			margin-top: 1em;
+			margin-bottom: .1em;
+			line-height: 1;
+		}
+
+		&__date {
+			font-size: .9em;
+			color: $primary;
+			font-style: italic;
+			margin-top: 0;
+			margin-bottom: 1.5em;
+			font-family: $sans-serif;
+		}
+
+		p {
+			color: $black;
+			font-family: $sans-serif;
+			font-size: 1em;
+		}
+	}
+
+	.contact {
+
 	}
 }
 
@@ -1214,7 +1433,7 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
+	background-color: $primary;
 	color: $light-gray;
 }
 

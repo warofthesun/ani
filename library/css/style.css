@@ -1361,28 +1361,34 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.accent-btn, .comment-reply-link, #submit {
+.accent-btn, .comment-reply-link, #submit, .wpcf7-submit {
   display: inline-block;
   position: relative;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
-  font-size: 0.9em;
-  font-size: 34px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2em;
   line-height: 34px;
-  font-weight: normal;
+  font-weight: bold;
   padding: 0 24px;
-  border-radius: 4px;
+  -webkit-box-shadow: inset 0 -2px 0 0 #079cd3, inset 0 2px 0 0 #99e4ff;
+          box-shadow: inset 0 -2px 0 0 #079cd3, inset 0 2px 0 0 #99e4ff;
+  border-radius: 6px;
   border: 0;
   cursor: pointer;
-  -webkit-transition: background-color 0.14s ease-in-out;
-  transition: background-color 0.14s ease-in-out; }
-  .accent-btn:hover, .comment-reply-link:hover, #submit:hover, .accent-btn:focus, .comment-reply-link:focus, #submit:focus {
+  -webkit-transition: all 0.14s ease-in-out;
+  transition: all 0.14s ease-in-out; }
+  .accent-btn:hover, .comment-reply-link:hover, #submit:hover, .wpcf7-submit:hover, .accent-btn:focus, .comment-reply-link:focus, #submit:focus, .wpcf7-submit:focus {
     color: #fff;
     text-decoration: none;
-    outline: none; }
-  .accent-btn:active, .comment-reply-link:active, #submit:active {
-    top: 1px; }
+    outline: none;
+    -webkit-box-shadow: inset 0 2px 0 0 #079cd3, inset 0 -2px 0 0 #99e4ff;
+            box-shadow: inset 0 2px 0 0 #079cd3, inset 0 -2px 0 0 #99e4ff; }
+  .accent-btn:active, .comment-reply-link:active, #submit:active, .wpcf7-submit:active {
+    top: 1px;
+    -webkit-box-shadow: inset 0 0px 0 0 #B9E9FB;
+            box-shadow: inset 0 0px 0 0 #B9E9FB; }
 
 /*
 An example button.
@@ -1395,6 +1401,11 @@ and it will create a button dependant on those variables.
     background-color: #f71b4e; }
   .accent-btn:active, .comment-reply-link:active, #submit:active {
     background-color: #f7164a; }
+
+.wpcf7-submit {
+  background-color: #16BBF7;
+  min-width: 200px;
+  min-height: 50px; }
 
 /******************************************************************
 Site Name:
@@ -1845,14 +1856,16 @@ HEADER STYLES
 *********************/
 .header {
   background-color: #fff; }
-
-#logo {
-  margin: 0; }
-  #logo img {
-    max-width: 200px;
-    height: auto; }
-  #logo a {
-    color: #fff; }
+  .header__navigation ul li a {
+    text-transform: uppercase;
+    font-weight: normal; }
+  .header #logo {
+    margin: 0; }
+    .header #logo img {
+      max-width: 200px;
+      height: auto; }
+    .header #logo a {
+      color: #fff; }
 
 /*********************
 NAVIGATION STYLES
@@ -1948,6 +1961,14 @@ POSTS & CONTENT STYLES
   max-width: 1600px;
   margin: 0 auto; }
 
+.hero__content p {
+  font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 4em;
+  line-height: 1;
+  color: white;
+  text-shadow: 1px 1px 0 rgba(6, 120, 161, 0.8); }
+
 .hero__content--left {
   -ms-flex-item-align: center;
       align-self: center;
@@ -1967,7 +1988,8 @@ POSTS & CONTENT STYLES
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    text-decoration: none; }
     .hero__content .content-boxes__header p {
       padding: 0;
       margin: 0;
@@ -1981,16 +2003,36 @@ POSTS & CONTENT STYLES
       display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      text-decoration: none;
+      font-weight: normal; }
+      .hero__content .content-boxes__header p:hover:after {
+        content: "\f061";
+        font-family: fontawesome;
+        width: 100%;
+        text-align: right;
+        text-shadow: 1px 1px 1px #66D7FF;
+        color: #0678a1;
+        -webkit-transition: all .5s;
+        transition: all .5s; }
       .hero__content .content-boxes__header p:before {
         float: left;
         margin-right: 0.2em;
         font-family: fontawesome;
         font-size: 2em;
-        text-shadow: 0px 0px 0px; }
+        text-shadow: 0px 0px 0px;
+        -webkit-transition: all .5s;
+        transition: all .5s; }
+      .hero__content .content-boxes__header p:after {
+        content: "\f0a9";
+        font-family: fontawesome;
+        width: 100%;
+        text-align: right;
+        text-shadow: 0px 0px 0px;
+        color: rgba(6, 120, 161, 0.2); }
   .hero__content .content-boxes__content {
     background-color: rgba(255, 255, 255, 0.3);
-    height: 80%;
+    height:  calc(100% - 4.7em);
     padding: 1em;
     border-top: 1px solid #fff;
     -webkit-box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6);
@@ -2022,101 +2064,226 @@ POSTS & CONTENT STYLES
   .hero__content .content-boxes > div {
     padding: 0; }
 
-.content--secondary {
+.flex-direction {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 2em; }
-  .content--secondary .content-boxes__header {
-    padding: 0 1em;
-    height: 2.7em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+  display: flex; }
+  .flex-direction--row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row; }
-    .content--secondary .content-boxes__header p {
-      padding: 0;
-      margin: 0;
-      color: #fff;
-      font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 1.2em;
-      line-height: 1;
-      text-shadow: 1px 1px 1px rgba(6, 120, 161, 0.3);
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-    .content--secondary .content-boxes__header a {
-      color: #475691;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      margin-left: auto;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      text-decoration: none;
-      font-size: .9em;
-      font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: bold;
-      -webkit-transition: all 1s;
-      transition: all 1s; }
-      .content--secondary .content-boxes__header a:after {
-        content: "\f0a9";
-        font-family: fontawesome;
-        margin-left: .2em; }
-    .content--secondary .content-boxes__header a:hover:after {
-      content: "\f061";
-      font-family: fontawesome;
-      margin-left: .2em; }
-  .content--secondary .content-boxes__content {
-    background-color: rgba(255, 255, 255, 0.3);
-    height: 80%;
-    padding: 1em;
-    border-top: 1px solid #fff;
-    -webkit-box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6);
-            box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6); }
-  .content--secondary .content-boxes > div:first-child {
-    border-radius: 10px 0px 0 0; }
-  .content--secondary .content-boxes > div:last-child {
-    border-radius: 0px 10px 0 0; }
-  .content--secondary .content-boxes > div:nth-child(1) {
-    background-color: #00bcff; }
-  .content--secondary .content-boxes > div:nth-child(2) {
-    background-color: #1ac3ff; }
-  .content--secondary .content-boxes > div:nth-child(3) {
-    background-color: #33caff; }
-  .content--secondary .content-boxes > div {
-    padding: 0; }
-
-.content__full-width {
-  background-color: rgba(102, 215, 255, 0.1);
-  padding: 2em 0; }
-  .content__full-width--centered > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .flex-direction--column {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-    .content__full-width--centered > div h1 {
-      text-align: center; }
-    .content__full-width--centered > div p {
-      max-width: 660px;
-      -ms-flex-item-align: center;
-          align-self: center; }
+
+.collapse--bottom {
+  margin-bottom: 0 !important; }
+
+.collapse--top {
+  margin-top: 0 !important; }
+
+.wpcf7 br {
+  display: none; }
+
+.wpcf7 .option-fields {
+  background-color: #66D7FF;
+  border-radius: 4px;
+  padding: .5em; }
+  .wpcf7 .option-fields label, .wpcf7 .option-fields p {
+    color: #0678a1; }
+
+.content {
+  margin-top: 2em;
+  margin-bottom: 2em; }
+  .content--secondary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 2em; }
+    .content--secondary .content-boxes__header {
+      padding: 0 1em;
+      height: 2.7em;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+      .content--secondary .content-boxes__header p {
+        padding: 0;
+        margin: 0;
+        color: #fff;
+        font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.2em;
+        line-height: 1;
+        text-shadow: 1px 1px 1px rgba(6, 120, 161, 0.3);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+      .content--secondary .content-boxes__header a {
+        color: #475691;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-left: auto;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        text-decoration: none;
+        font-size: .9em;
+        font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        -webkit-transition: all 1s;
+        transition: all 1s; }
+        .content--secondary .content-boxes__header a:after {
+          content: "\f0a9";
+          font-family: fontawesome;
+          margin-left: .2em; }
+      .content--secondary .content-boxes__header a:hover:after {
+        content: "\f061";
+        font-family: fontawesome;
+        margin-left: .2em; }
+    .content--secondary .content-boxes__content {
+      background-color: rgba(255, 255, 255, 0.3);
+      height:  calc(100% - 2.7em);
+      padding: 1em;
+      border-top: 1px solid #fff;
+      -webkit-box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6);
+              box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6); }
+    .content--secondary .content-boxes > div:first-child {
+      border-radius: 10px 0px 0 0; }
+    .content--secondary .content-boxes > div:last-child {
+      border-radius: 0px 10px 0 0; }
+    .content--secondary .content-boxes > div:nth-child(1) {
+      background-color: #00bcff; }
+    .content--secondary .content-boxes > div:nth-child(2) {
+      background-color: #1ac3ff; }
+    .content--secondary .content-boxes > div:nth-child(3) {
+      background-color: #33caff; }
+    .content--secondary .content-boxes > div {
+      padding: 0; }
+  .content__full-width {
+    padding: 2em 0; }
+    .content__full-width--lt-blue {
+      background-color: rgba(102, 215, 255, 0.1); }
+    .content__full-width--dk-blue {
+      background-color: #052A38; }
+      .content__full-width--dk-blue p, .content__full-width--dk-blue label {
+        color: #EBFAFF; }
+    .content__full-width--centered > div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .content__full-width--centered > div h1 {
+        text-align: center; }
+      .content__full-width--centered > div p {
+        max-width: 660px;
+        -ms-flex-item-align: center;
+            align-self: center; }
+  .content.staff > a {
+    color: #475691;
+    text-align: right;
+    text-decoration: none;
+    font-size: .9em;
+    font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    -webkit-transition: all 1s;
+    transition: all 1s; }
+    .content.staff > a:after {
+      content: "\f0a9";
+      font-family: fontawesome;
+      margin-left: .2em; }
+    .content.staff > a:hover:after {
+      content: "\f061";
+      font-family: fontawesome;
+      margin-left: .2em; }
+  .content.staff > div {
+    background-color: #66D7FF;
+    height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 1em; }
+    .content.staff > div > div {
+      background-color: white;
+      height: 100%;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 1em; }
+  .content.staff .staff__name {
+    font-size: 2.5em;
+    color: #052A38;
+    font-weight: bold;
+    line-height: 1;
+    font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .content.staff .staff__role {
+    color: #16BBF7;
+    font-style: italic;
+    font-size: .9em;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .content.staff .staff__qualifications {
+    color: #052A38;
+    font-size: .9em;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .content .recent-news img {
+    width: 100%;
+    height: auto; }
+  .content .recent-news__category {
+    color: #16BBF7;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8em; }
+  .content .recent-news__title {
+    font-size: 1.5em;
+    font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #052A38;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: .1em;
+    line-height: 1; }
+  .content .recent-news__date {
+    font-size: .9em;
+    color: #16BBF7;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .content .recent-news p {
+    color: #052A38;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em; }
 
 #content {
   margin-top: 1.5em; }
@@ -2479,7 +2646,7 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #052A38;
+  background-color: #16BBF7;
   color: #f8f9fa; }
 
 /*
@@ -2541,6 +2708,19 @@ NAVIGATION STYLES
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
+    .header__navigation ul li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .header__navigation ul li:after {
+        content: " |"; }
+      .header__navigation ul li:last-child::after {
+        display: none; }
+      .header__navigation ul li a:hover {
+        text-decoration: none; }
   .nav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

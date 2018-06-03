@@ -42,6 +42,29 @@ NAVIGATION STYLES
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
+
+		ul {
+			li {
+				display: flex;
+				align-items: center;
+
+				&:after {
+					content: " |";
+				}
+
+				&:last-child {
+					&::after {
+						display: none;
+					}
+				}
+
+				a {
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -114,7 +137,7 @@ POSTS & CONTENT STYLES
 	height: 80vh;
 
 	&__content {
-		
+
 		.content-boxes {
 			height: 30vh;
 			display: flex;
