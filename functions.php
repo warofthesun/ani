@@ -66,6 +66,7 @@ if ( ! isset( $content_width ) ) {
 
 // Thumbnail sizes
 add_image_size( 'featured-image', 1400, 900, true );
+add_image_size( 'featured-half', 700, 450, true );
 add_image_size( 'ani-thumb-600', 600, 150, true );
 add_image_size( 'ani-thumb-300', 300, 100, true );
 add_image_size( 'gallery-image', 680, 450, true );

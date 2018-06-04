@@ -37,51 +37,46 @@
 								</header>
 
 								<section class="post post__content cf">
-									<?php echo wp_trim_words( get_the_excerpt(), 50, '...' ); ?>
+									<?php
+									$content = get_the_excerpt();
+									echo wp_trim_words( $content , '55' );
+									?>
+									<a href="<?php the_permalink() ?>" class="read-more">Read more &raquo;</a>
 								</section>
-
 							</article>
 						<?php endwhile;?>
+						<!-- all the rest -->
 						<?php $the_query = new WP_Query( 'offset=1' ); ?>
-					<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-						<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf single-post' ); ?> role="article">
+						<ul class="row articles__secondary">
+							<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+								<li class="col-xs-12 col-md-6">
+									<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf single-post' ); ?> role="article">
 
-							<header class="article-header">
+										<header class="post post__header">
 
-								<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-								<p class="byline entry-meta vcard">
-											<?php printf( __( 'Posted', 'startertheme' ).' %1$s %2$s',
-											/* the time the post was published */
-											'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-											/* the author of the post */
-											'<span class="by">'.__( 'by', 'startertheme').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-									); ?>
-								</p>
+											<?php printf( '<p class="category">' . __('', 'startertheme' ) . '%1$s</p>' , get_the_category_list(', ') ); ?>
 
-							</header>
+											<?php the_post_thumbnail('featured-half'); ?>
 
-							<section class="entry-content cf">
-								<?php the_excerpt(); ?>
-							</section>
+											<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+											<p class="byline entry-meta vcard">
+												<?php printf( '<p class="byline entry-meta vcard">' . __( '', 'startertheme' ).' %1$s', '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time></p>'); ?>
+											</p>
 
-							<footer class="article-footer cf">
-								<p class="footer-comment-count">
-									<?php comments_number( __( '<span>No</span> Comments', 'startertheme' ), __( '<span>One</span> Comment', 'startertheme' ), __( '<span>%</span> Comments', 'startertheme' ) );?>
-								</p>
+										</header>
 
+										<section class="entry-content cf">
+											<?php
+											$content = get_the_excerpt();
+											echo wp_trim_words( $content , '10' );
+											?>
+											<a href="<?php the_permalink() ?>" class="read-more">Read more &raquo;</a>
+										</section>
 
-								<?php printf( '<p class="footer-category">' . __('filed under', 'startertheme' ) . ': %1$s</p>' , get_the_category_list(', ') ); ?>
-
-								<?php the_tags( '<p class="footer-tags tags"><span class="tags-title">' . __( 'Tags:', 'startertheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-
-							</footer>
-
-						</article>
-					<?php endwhile;?>
-
-
-
+									</article>
+								</li>
+							<?php endwhile;?>
+						</ul>
 
 						</main>
 

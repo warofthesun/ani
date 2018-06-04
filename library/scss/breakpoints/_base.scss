@@ -861,7 +861,11 @@ POSTS & CONTENT STYLES
 		}
 	}
 
-
+	.read-more {
+		text-decoration: none;
+		display: block;
+		padding-top: 1em;
+	}
 
 	h1, .h1 {
 		text-align: center;
