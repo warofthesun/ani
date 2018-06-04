@@ -248,6 +248,9 @@ POSTS & CONTENT STYLES
             flex-direction: row;
     border-radius: 10px 10px 0 0; }
 
+.article-info {
+  text-align: right; }
+
 /* entry content */
 .entry__content {
   /* at this larger size, we can start to align images */ }

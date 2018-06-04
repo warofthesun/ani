@@ -2332,6 +2332,13 @@ POSTS & CONTENT STYLES
       content: "\f073"; }
     #content .article__header .blog-page:before {
       content: "\f1ea"; }
+  #content .post__header > div {
+    padding: 0 1em; }
+  #content .post__content {
+    padding: 0 1em;
+    border-bottom: 1px solid rgba(6, 120, 161, 0.3);
+    margin-bottom: 2em;
+    padding-bottom: 2em; }
   #content h1, #content .h1 {
     text-align: center; }
     #content h1:before, #content .h1:before {
@@ -2344,8 +2351,11 @@ POSTS & CONTENT STYLES
   border-radius: 3px;
   margin-bottom: 1.5em; }
   .hentry header {
-    border-bottom: 1px solid #f8f9fa;
-    padding: 1.5em; }
+    border-bottom: 1px solid #f8f9fa; }
+    .hentry header img {
+      max-width: 100%;
+      height: auto;
+      border-top: 2px solid #16BBF7; }
   .hentry footer {
     padding: 1.5em;
     border-top: 1px solid #f8f9fa; }
@@ -2358,6 +2368,14 @@ POSTS & CONTENT STYLES
 .entry-title {
   margin: 0; }
 
+.entry-title {
+  font-weight: bold;
+  font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: left !important;
+  font-size: 2.5em; }
+  .entry-title a {
+    color: #052A38; }
+
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
 /* general post style */
@@ -2369,9 +2387,17 @@ POSTS & CONTENT STYLES
 /* style by tag (i.e. tag-news) */
 /* post meta */
 .byline {
-  color: #9fa6b4;
+  color: #16BBF7;
   font-style: italic;
   margin: 0; }
+
+p.category {
+  margin: 0; }
+  p.category a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #16BBF7;
+    font-size: 0.9em; }
 
 /* entry content */
 .entry__content {
@@ -2820,6 +2846,8 @@ POSTS & CONTENT STYLES
           -ms-flex-direction: row;
               flex-direction: row;
       border-radius: 10px 10px 0 0; }
+  .article-info {
+    text-align: right; }
   /* entry content */
   .entry__content {
     /* at this larger size, we can start to align images */ }

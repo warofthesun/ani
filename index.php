@@ -21,40 +21,24 @@
 				<div id="inner-content" class="wrap cf row">
 
 						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-							<?php $the_query = new WP_Query( 'showposts=1&offset=1' ); ?>
+							<?php $the_query = new WP_Query( 'showposts=1' ); ?>
 						<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf single-post' ); ?> role="article">
 
-								<header class="article-header">
-
-									<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-									<p class="byline entry-meta vcard">
-												<?php printf( __( 'Posted', 'startertheme' ).' %1$s %2$s',
-												/* the time the post was published */
-												'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-												/* the author of the post */
-												'<span class="by">'.__( 'by', 'startertheme').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-										); ?>
-									</p>
-
+								<header class="post post__header">
+									<div class="row">
+										<h1 class="h2 entry-title col-xs-12 col-md-8"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+										<div class="col-xs-12 col-md-4 article-info">
+											<?php printf( '<p class="byline entry-meta vcard">' . __( '', 'startertheme' ).' %1$s', '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time></p>'); ?>
+											<?php printf( '<p class="category">' . __('', 'startertheme' ) . '%1$s</p>' , get_the_category_list(', ') ); ?>
+										</div>
+									</div>
+									<?php the_post_thumbnail('featured-image'); ?>
 								</header>
 
-								<section class="entry-content cf">
-									<?php the_excerpt(); ?>
+								<section class="post post__content cf">
+									<?php echo wp_trim_words( get_the_excerpt(), 50, '...' ); ?>
 								</section>
-
-								<footer class="article-footer cf">
-									<p class="footer-comment-count">
-										<?php comments_number( __( '<span>No</span> Comments', 'startertheme' ), __( '<span>One</span> Comment', 'startertheme' ), __( '<span>%</span> Comments', 'startertheme' ) );?>
-									</p>
-
-
-									<?php printf( '<p class="footer-category">' . __('filed under', 'startertheme' ) . ': %1$s</p>' , get_the_category_list(', ') ); ?>
-
-									<?php the_tags( '<p class="footer-tags tags"><span class="tags-title">' . __( 'Tags:', 'startertheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-
-								</footer>
 
 							</article>
 						<?php endwhile;?>

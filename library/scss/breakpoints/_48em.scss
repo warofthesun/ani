@@ -146,6 +146,12 @@ POSTS & CONTENT STYLES
 		}
 	}
 }
+
+.article {
+	&-info {
+		text-align: right;
+	}
+}
 /* entry content */
 .entry {
 
