@@ -1519,11 +1519,52 @@ SIDEBARS & ASIDES
 
 .sidebar {}
 
-	.widgettitle {}
+.widgettitle {
+	&:before {
+		font-family: fontawesome;
+		color: $primary-lt;
+		margin-right: .5em;
+	}
+}
 
 	.widget {
 
+
+
+		&.widget_recent_entries {
+			.widgettitle {
+				&:before {
+					content: "\f1ea";
+				}
+			}
+		}
+
+		&.widget_recent_comments {
+			.widgettitle {
+				&:before {
+					content: "\f0e5";
+				}
+			}
+		}
+
+		&.widget_archive {
+			.widgettitle {
+				&:before {
+					content: "\f187";
+				}
+			}
+		}
+
+		&.widget_categories {
+			.widgettitle {
+				&:before {
+					content: "\f142";
+				}
+			}
+		}
+
 		ul {
+			margin-left: 1em;
 
 			li {
 
@@ -1531,7 +1572,9 @@ SIDEBARS & ASIDES
 
 				&:last-child {}
 
-				a {}
+				a {
+					text-decoration: none;
+				}
 
 				/* deep nesting */
 				ul {}

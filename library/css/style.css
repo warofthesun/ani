@@ -1718,9 +1718,9 @@ select {
   height: 100%;
   border-radius: 0px 3px 3px 0px;
   border: 0;
-  padding: 0 .8em;
+  padding: 0 1em;
   background-color: #16BBF7;
-  color: white; }
+  color: #66D7FF; }
 
 /*********************
 BASE (MOBILE) SIZE
@@ -2735,8 +2735,29 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-.widget ul li {
-  /* deep nesting */ }
+.widgettitle:before {
+  font-family: fontawesome;
+  color: #66D7FF;
+  margin-right: .5em; }
+
+.widget.widget_recent_entries .widgettitle:before {
+  content: "\f1ea"; }
+
+.widget.widget_recent_comments .widgettitle:before {
+  content: "\f0e5"; }
+
+.widget.widget_archive .widgettitle:before {
+  content: "\f187"; }
+
+.widget.widget_categories .widgettitle:before {
+  content: "\f142"; }
+
+.widget ul {
+  margin-left: 1em; }
+  .widget ul li {
+    /* deep nesting */ }
+    .widget ul li a {
+      text-decoration: none; }
 
 .no-widgets {
   background-color: #fff;
@@ -2999,11 +3020,11 @@ SIDEBARS & ASIDES
   .sidebar {
     /* margin-top: 2.2em; */ }
   .widgettitle {
-    border-bottom: 2px solid #444;
+    border-bottom: 1px solid rgba(5, 42, 56, 0.2);
     margin-bottom: 0.75em; }
   .widget {
     padding: 0 10px;
-    margin: 2.2em 0; }
+    margin: 3.4em 0; }
     .widget ul li {
       margin-bottom: 0.75em;
       /* deep nesting */ }
