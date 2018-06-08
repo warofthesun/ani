@@ -1780,6 +1780,10 @@ style a page via class
 /* for sites that are read right to left (i.e. hebrew) */
 /* home page */
 /* blog template page */
+.archive .entry-content img {
+  width: 100%;
+  height: auto; }
+
 /* archive page */
 /* date archive page */
 /* replace the number to the corresponding page number */

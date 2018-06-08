@@ -9,14 +9,36 @@
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<?php
-								/*
-								 *
-								 * If you want to remove post formats, just delete the post-formats folder and
-								 * replace the function below with the contents of the "format.php" file.
-								*/
-								get_template_part( 'post-formats/format', get_post_format() );
-							?>
+							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+
+								<header class="post post__header">
+									<div class="row">
+										<h1 class="h2 entry-title col-xs-12 col-md-8"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+										<div class="col-xs-12 col-md-4 article-info">
+											<?php printf( '<p class="byline entry-meta vcard">' . __( '', 'startertheme' ).' %1$s', '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time></p>'); ?>
+											<?php printf( '<p class="category">' . __('', 'startertheme' ) . '%1$s</p>' , get_the_category_list(', ') ); ?>
+										</div>
+									</div>
+									<?php the_post_thumbnail('featured-image'); ?>
+								</header>
+
+                <section class="entry-content cf" itemprop="articleBody">
+                  <?php the_content();   ?>
+                </section> <?php // end article section ?>
+
+
+
+                <footer class="article-footer">
+
+                  <?php //printf( __( 'filed under', 'startertheme' ).': %1$s', get_the_category_list(', ') ); ?>
+
+                  <?php //the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'startertheme' ) . '</span> ', ', ', '</p>' ); ?>
+
+                </footer> <?php // end article footer ?>
+
+                <?php //comments_template(); ?>
+
+              </article> <?php // end article ?>
 
 						<?php endwhile; ?>
 
@@ -24,13 +46,13 @@
 
 							<article id="post-not-found" class="hentry cf">
 									<header class="article-header">
-										<h1><?php _e( 'Oops, Post Not Found!', 'startertheme' ); ?></h1>
+										<h1><?php _e( 'Post Not Found.', 'startertheme' ); ?></h1>
 									</header>
 									<section class="entry-content">
 										<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'startertheme' ); ?></p>
 									</section>
 									<footer class="article-footer">
-											<p><?php _e( 'This is the error message in the single.php template.', 'startertheme' ); ?></p>
+											<p><?php _e( '', 'startertheme' ); ?></p>
 									</footer>
 							</article>
 
