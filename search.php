@@ -54,11 +54,12 @@
 										<header class="article-header">
 											<h1><?php _e( 'Sorry, No Results.', 'startertheme' ); ?></h1>
 										</header>
+										<?php get_search_form(); ?>
 										<section class="entry-content">
 											<p><?php _e( 'Try your search again.', 'startertheme' ); ?></p>
 										</section>
 										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the search.php template.', 'startertheme' ); ?></p>
+												<p><?php //_e( 'This is the error message in the search.php template.', 'startertheme' ); ?></p>
 										</footer>
 									</article>
 
