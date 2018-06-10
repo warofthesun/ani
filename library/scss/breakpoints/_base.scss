@@ -246,6 +246,16 @@ HEADER STYLES
 
 
 	&__navigation {
+		ul.sub-menu {
+
+				li {
+					&::after {
+						content: "";
+						display: none;
+					}
+				
+			}
+		}
 		ul {
 			li {
 				a {
@@ -1444,6 +1454,8 @@ FOOTER STYLES
 				border-right: 0px;
 				font-weight: normal;
 				border-left: 1px solid $primary-lt;
+
+
 
 				a {
 					border-bottom: 0px;

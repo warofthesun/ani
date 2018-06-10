@@ -1952,6 +1952,9 @@ HEADER STYLES
 *********************/
 .header {
   background-color: #fff; }
+  .header__navigation ul.sub-menu li::after {
+    content: "";
+    display: none; }
   .header__navigation ul li a {
     text-transform: uppercase;
     font-weight: normal; }
@@ -2817,6 +2820,22 @@ them in here, they won't work.
   /*********************
 NAVIGATION STYLES
 *********************/
+  .nav ul.sub-menu,
+  .nav ul.children {
+    margin-top: 0;
+    border: 0px solid #ccc;
+    border-top: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 8999;
+    border-radius: 0 0 5px 5px; }
+    .nav ul.sub-menu li:hover,
+    .nav ul.children li:hover {
+      background: rgba(22, 187, 247, 0.7); }
+      .nav ul.sub-menu li:hover a,
+      .nav ul.children li:hover a {
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(6, 120, 161, 0.3); }
   #mobile-nav {
     display: none; }
   #inner__header {
@@ -2840,7 +2859,11 @@ NAVIGATION STYLES
       display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      position: relative; }
+      .header__navigation ul li.menu-item-has-children > a::after {
+        content: " \f107";
+        font-family: fontawesome; }
       .header__navigation ul li:after {
         content: " |"; }
       .header__navigation ul li:last-child::after {
@@ -2857,8 +2880,16 @@ NAVIGATION STYLES
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
+    .nav ul {
+      background: rgba(255, 255, 255, 0.6); }
+      .nav ul .sub-menu li:hover {
+        background-color: rgba(22, 187, 247, 0.3); }
     .nav li {
-      border-bottom: 0; }
+      border-bottom: 0;
+      /* showing sub-menus */ }
+      .nav li:hover > ul {
+        top: 48px;
+        visibility: visible !important; }
       .nav li:hover, .nav li:focus {
         color: #384472; }
   /* .menu is clearfixed inside mixins.scss */
@@ -2964,13 +2995,16 @@ NAVIGATION STYLES
     /* highlight current page */
     /* end current highlighters */ }
     .nav ul {
-      background: #052A38;
       margin-top: 0; }
     .nav li {
       /*
 		plan your menus and drop-downs wisely.
 		*/
-      /* showing sub-menus */ }
+      /* showing sub-menus
+		&:hover > ul {
+			top: 48px;
+			visibility:visible;
+		} */ }
       .nav li a {
         border-bottom: 0;
         /*
@@ -2982,12 +3016,6 @@ NAVIGATION STYLES
           text-decoration: underline; }
       .nav li ul.sub-menu,
       .nav li ul.children {
-        margin-top: 0;
-        border: 1px solid #ccc;
-        border-top: 0;
-        position: absolute;
-        visibility: hidden;
-        z-index: 8999;
         /* highlight sub-menu current page */ }
         .nav li ul.sub-menu li,
         .nav li ul.children li {
@@ -3002,7 +3030,7 @@ NAVIGATION STYLES
             border-right: 0;
             display: block;
             width: 180px;
-            border-bottom: 1px solid #ccc; }
+            border-bottom: 0px solid #ccc; }
           .nav li ul.sub-menu li:last-child a,
           .nav li ul.children li:last-child a {
             border-bottom: 0; }
@@ -3010,9 +3038,6 @@ NAVIGATION STYLES
           .nav li ul.children li ul {
             top: 0;
             left: 100%; }
-      .nav li:hover > ul {
-        top: auto;
-        visibility: visible; }
   /* end .nav */
   /*********************
 SIDEBARS & ASIDES
