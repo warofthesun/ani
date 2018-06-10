@@ -18,7 +18,7 @@
 						?>
 
 				</header>
-				<div id="inner-content" class="wrap cf row">
+				<div id="inner__content" class="wrap cf">
 
 						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							<?php $the_query = new WP_Query( 'showposts=1' ); ?>

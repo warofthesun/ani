@@ -265,6 +265,51 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 
+#inner {
+	&__footer {
+		ul {
+			margin: 0;
+			li {
+				text-align: left;
+				min-width: 180px;
+				font-weight: bold;
+				font-family: $display;
+				color: white;
+
+
+				a {
+					color: white;
+					text-transform: capitalize;
+
+				}
+
+				&:last-child {
+					border-right: 0px;
+				}
+			}
+		}
+		ul.sub-menu {
+			visibility: visible;
+			position: relative;
+			background: transparent;
+			border:0px;
+			margin-left: 1em;
+
+			li {
+				text-align: left;
+				border-right: 0px;
+				font-weight: normal;
+				border-left: 1px solid $primary-lt;
+
+				a {
+					border-bottom: 0px;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
+
 /*
 you'll probably need to do quite a bit
 of overriding here if you styled them for

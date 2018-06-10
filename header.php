@@ -49,7 +49,7 @@
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-				<div id="inner-header" class="wrap cf row">
+				<div id="inner__header" class="wrap cf">
 					<div class="col-xs-12 col-sm-4 header__logo">
 						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/ani-logo-horiz.png"</img></a></p>
 
