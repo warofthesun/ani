@@ -1959,9 +1959,10 @@ HEADER STYLES
     text-transform: uppercase;
     font-weight: normal; }
   .header #logo {
-    margin: 0; }
+    margin: 0;
+    text-align: center; }
     .header #logo img {
-      max-width: 200px;
+      max-width: 300px;
       height: auto; }
     .header #logo a {
       color: #fff; }
@@ -1969,6 +1970,26 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
+@media only screen and (max-width: 48em) {
+  .top-nav {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .top-nav .sub-menu {
+      margin-top: 0; }
+      .top-nav .sub-menu > li {
+        text-align: left; }
+        .top-nav .sub-menu > li a {
+          padding-left: 0.75em !important;
+          margin-left: 0.75em;
+          border-left: 1px solid #66D7FF; }
+    .top-nav > li {
+      width: 49%;
+      text-align: left !important; } }
+
 /*
 all navs have a .nav class applied via
 the wp_menu function; this is so we can
@@ -1980,7 +2001,7 @@ and more scalable.
 #mobile-nav {
   text-align: center;
   margin-bottom: 1em;
-  margin-top: -2em;
+  margin-top: -1em;
   -webkit-transition: all .5s;
   transition: all .5s; }
   #mobile-nav.show {
@@ -2843,6 +2864,11 @@ NAVIGATION STYLES
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row; }
+  .header__logo #logo {
+    text-align: left; }
+    .header__logo #logo img {
+      max-width: 200px;
+      height: auto; }
   .header__navigation {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2870,7 +2896,7 @@ NAVIGATION STYLES
         display: none; }
       .header__navigation ul li a:hover {
         text-decoration: none; }
-  .nav {
+  .header__navigation .nav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2880,17 +2906,17 @@ NAVIGATION STYLES
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
-    .nav ul {
+    .header__navigation .nav ul {
       background: rgba(255, 255, 255, 0.6); }
-      .nav ul .sub-menu li:hover {
+      .header__navigation .nav ul .sub-menu li:hover {
         background-color: rgba(22, 187, 247, 0.3); }
-    .nav li {
+    .header__navigation .nav li {
       border-bottom: 0;
       /* showing sub-menus */ }
-      .nav li:hover > ul {
+      .header__navigation .nav li:hover > ul {
         top: 48px;
         visibility: visible !important; }
-      .nav li:hover, .nav li:focus {
+      .header__navigation .nav li:hover, .header__navigation .nav li:focus {
         color: #384472; }
   /* .menu is clearfixed inside mixins.scss */
   .menu {

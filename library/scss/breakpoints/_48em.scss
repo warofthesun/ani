@@ -57,7 +57,13 @@ NAVIGATION STYLES
 
 .header {
 	&__logo {
-
+		#logo {
+			text-align: left;
+			img {
+				max-width: 200px;
+				height: auto;
+			}
+		}
 	}
 
 	&__navigation {
@@ -99,39 +105,39 @@ NAVIGATION STYLES
 		}
 	}
 }
+.header__navigation {
+	.nav {
+		flex-direction: row;
+		height: auto;
+		opacity: 1;
+		justify-content: flex-end;
 
-.nav {
-	flex-direction: row;
-	height: auto;
-	opacity: 1;
-	justify-content: flex-end;
+		ul {
+			background:rgba($white, 0.6);
 
-	ul {
-		background:rgba($white, 0.6);
+			.sub-menu {
+				li:hover {
+					background-color: rgba($primary, 0.3);
+				}
+			}
+		}
 
-		.sub-menu {
-			li:hover {
-				background-color: rgba($primary, 0.3);
+		li {
+			border-bottom: 0;
+
+			/* showing sub-menus */
+			&:hover > ul {
+				top: 48px;
+				visibility:visible !important;
+			}
+
+			&:hover, &:focus {
+				color: $link-hover;
+
 			}
 		}
 	}
-
-	li {
-		border-bottom: 0;
-
-		/* showing sub-menus */
-		&:hover > ul {
-			top: 48px;
-			visibility:visible !important;
-		}
-
-		&:hover, &:focus {
-			color: $link-hover;
-
-		}
-	}
 }
-
 
 	/* .menu is clearfixed inside mixins.scss */
 	.menu {

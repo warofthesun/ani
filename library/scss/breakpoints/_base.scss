@@ -253,7 +253,7 @@ HEADER STYLES
 						content: "";
 						display: none;
 					}
-				
+
 			}
 		}
 		ul {
@@ -268,9 +268,11 @@ HEADER STYLES
 
 	#logo {
 		margin: 0;
+		text-align: center;
 
 		img {
-			max-width: 200px;
+			
+			max-width: 300px;
 			height: auto;
 		}
 
@@ -283,8 +285,31 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 
+@media only screen and (max-width: 48em) {
 
+	.top-nav {
+		flex-direction: row !important;
+		flex-wrap: wrap;
 
+		.sub-menu {
+			margin-top: 0;
+
+			> li {
+				text-align: left;
+				a {
+				padding-left: 0.75em !important;
+				margin-left: 0.75em;
+				border-left: 1px solid $primary-lt;
+				}
+			}
+		}
+		> li {
+			width: 49%;
+			text-align: left !important;
+		}
+	}
+
+}
 /*
 all navs have a .nav class applied via
 the wp_menu function; this is so we can
@@ -296,7 +321,7 @@ and more scalable.
 #mobile-nav {
 	text-align: center;
 	margin-bottom: 1em;
-	margin-top:-2em;
+	margin-top:-1em;
 	transition: all .5s;
 
 	&.show {

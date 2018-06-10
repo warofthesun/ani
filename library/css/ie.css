@@ -189,6 +189,12 @@ NAVIGATION STYLES
       -ms-flex-direction: row;
           flex-direction: row; }
 
+.header__logo #logo {
+  text-align: left; }
+  .header__logo #logo img {
+    max-width: 200px;
+    height: auto; }
+
 .header__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -217,7 +223,7 @@ NAVIGATION STYLES
     .header__navigation ul li a:hover {
       text-decoration: none; }
 
-.nav {
+.header__navigation .nav {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -227,17 +233,17 @@ NAVIGATION STYLES
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
-  .nav ul {
+  .header__navigation .nav ul {
     background: rgba(255, 255, 255, 0.6); }
-    .nav ul .sub-menu li:hover {
+    .header__navigation .nav ul .sub-menu li:hover {
       background-color: rgba(22, 187, 247, 0.3); }
-  .nav li {
+  .header__navigation .nav li {
     border-bottom: 0;
     /* showing sub-menus */ }
-    .nav li:hover > ul {
+    .header__navigation .nav li:hover > ul {
       top: 48px;
       visibility: visible !important; }
-    .nav li:hover, .nav li:focus {
+    .header__navigation .nav li:hover, .header__navigation .nav li:focus {
       color: #384472; }
 
 /* .menu is clearfixed inside mixins.scss */
