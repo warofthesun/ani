@@ -1,38 +1,53 @@
 <!--front page-->
 <?php get_header(); ?>
 			<section class="hero">
-				<div class="hero__image hero__image--full">
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<?php
+							$attachment_id = get_field('hero_image');
+							$size = "full"; // (thumbnail, medium, large, full or custom size)
+							$image = wp_get_attachment_image_src( $attachment_id, $size );
+							// url = $image[0];
+							// width = $image[1];
+							// height = $image[2];
+						?>
+				<div class="hero__image hero__image--full" style="background-image:url('<?php echo $image[0]; ?>')">
 					<div class="hero__content hero__content--left wrap">
-						<p>
-							Your Brain &amp;<br />Nerve Neurology<br />Experts
-						</p>
+					<p><?php the_field('hero_title'); ?></p>
 					</div>
 				</div>
 				<div class="hero__content">
-					<div class="content-boxes row wrap">
+					<div class="content-boxes wrap">
 						<div class="col-xs-12 col-sm-3">
 							<a href="#" class="content-boxes__header">
-								<p>Making an<br />Appointment</p>
+								<p>
+									<?php the_field('box_one_title'); ?>
+								</p>
 							</a>
-							<div class="content-boxes__content">this is the content</div>
+							<div class="content-boxes__content"><?php the_field('box_one_content'); ?></div>
 						</div>
 						<div class="col-xs-12 col-sm-3">
-							<div class="content-boxes__header">
-								<p>Contact</p>
-							</div>
-							<div class="content-boxes__content">this is the content</div>
+							<a href="#" class="content-boxes__header">
+								<p>
+									<?php the_field('box_two_title'); ?>
+								</p>
+							</a>
+							<div class="content-boxes__content"><?php the_field('box_two_content'); ?></div>
 						</div>
 						<div class="col-xs-12 col-sm-3">
-							<div class="content-boxes__header">
-								<p>Directions</p>
-							</div>
-							<div class="content-boxes__content">this is the content</div>
+							<a href="#" class="content-boxes__header">
+								<p>
+									<?php the_field('box_three_title'); ?>
+								</p>
+							</a>
+							<div class="content-boxes__content"><?php the_field('box_three_content'); ?></div>
 						</div>
 						<div class="col-xs-12 col-sm-3">
-							<div class="content-boxes__header">
-								<p>In-House<br />Procedures</p>
-							</div>
-							<div class="content-boxes__content">this is the content</div>
+							<a href="#" class="content-boxes__header">
+								<p>
+									<?php the_field('box_four_title'); ?>
+								</p>
+							</a>
+							<div class="content-boxes__content"><?php the_field('box_four_content'); ?></div>
 						</div>
 					</div>
 				</div>
@@ -41,33 +56,31 @@
 				<div class="content-boxes wrap row">
 					<div class="col-xs-12 col-sm-4">
 						<div class="content-boxes__header">
-							<p>Research</p>
+							<p><?php the_field('secondary_box_one_title'); ?></p>
 							<a href="#">See All</a>
 						</div>
-						<div class="content-boxes__content">this is the content</div>
+						<div class="content-boxes__content"><?php the_field('secondary_box_one_content'); ?></div>
 					</div>
 					<div class="col-xs-12 col-sm-4">
 						<div class="content-boxes__header">
-							<p>Distinctions</p>
+							<p><?php the_field('secondary_box_two_title'); ?></p>
 							<a href="#">See All</a>
 						</div>
-						<div class="content-boxes__content">this is the content</div>
+						<div class="content-boxes__content"><?php the_field('secondary_box_two_content'); ?></div>
 					</div>
 					<div class="col-xs-12 col-sm-4">
 						<div class="content-boxes__header">
-							<p>NeuroNexus</p>
+							<p><?php the_field('secondary_box_three_title'); ?></p>
 							<a href="#">See All</a>
 						</div>
-						<div class="content-boxes__content">this is the content</div>
+						<div class="content-boxes__content"><?php the_field('secondary_box_three_content'); ?></div>
 					</div>
 				</div>
 			</section>
 			<section class="content__full-width content__full-width--lt-blue content__full-width--centered">
 				<div class="wrap">
-					<h1>About Us</h2>
-					<p>
-						Bitly blyve oovoo zynga whrrl, hojoki plugg grockit wikia, zoosk skype greplin. Sococo kiko trulia imvu, stypi. Zanga heroku boxbe jiglu kno, babblely imeem ning. Elgg loopt oooj jajah vuvox twones lala hojoki, boxbe chartly heekya nuvvo kaboodle jiglu. Revver insala squidoo sifteo rovio, sclipo meevee ifttt. Tivo lala blippy oovoo, xobni. fleck doostang. zillow quora spock. Grockit wikia omgpop empressr chartly, plaxo lijit. Imvu hipmunk plaxo blippy whrrl, blyve bubbli zillow. Meevee flickr zooomr nuvvo kno, zapier waze. Zapier jaiku reddit shopify zillow lala nuvvo, sclipo joyent xobni sclipo.
-					</p>
+					<h1><?php the_field('about_title'); ?></h2>
+					<?php the_field('about_content'); ?>
 				</div>
 			</section>
 			<section class="content staff wrap row">
@@ -128,7 +141,7 @@
 							</p>
 
 						<div class="col-xs-12 col-md-7" style="margin-top:-1em;">
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
 								<?php the_content(); ?>
 							<?php endwhile; endif; ?>
 						</div>

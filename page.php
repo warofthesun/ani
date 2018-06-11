@@ -71,8 +71,6 @@
 									</p>
 								</a>
 							</li>
-
-
 						</ul>
 					</div>
 				</section>
