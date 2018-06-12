@@ -83,18 +83,44 @@
 					<?php the_field('about_content'); ?>
 				</div>
 			</section>
+
 			<section class="content staff wrap row">
 				<h1 class="col-xs-12">Our Staff</h1>
-				<div class="col-xs-12 col-sm-4">
-					<div>
-						<div class="staff__name">Mary<br />White</div>
-						<div class="staff__role">Their Role</div>
-						<div class="staff__qualifications">Their Qualifications</div>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-4">col</div>
-				<div class="col-xs-12 col-sm-4">col</div>
-				<a href="#" class="col-xs-12" style="text-align:right;">See All</a>
+				<?php $custom_query = new WP_Query('pagename=our-staff');
+				while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+
+				<?php
+				// check if the repeater field has rows of data
+				if( have_rows('staff') ):
+					$i=0;
+					// loop through the rows of data
+						while ( have_rows('staff') ) : the_row(); ?>
+
+						<?php
+							 $attachment_id = get_sub_field('photo');
+							 $size = "staff-image"; // (thumbnail, medium, large, full or custom size)
+							 $image = wp_get_attachment_image_src( $attachment_id, $size );
+							 // url = $image[0];
+							 // width = $image[1];
+							 // height = $image[2];
+						 ?>
+						 <?php //UNCOMMENT TO LIMIT NUMBER SHOWN ON HOMEPAGE if ( $i > 2 ) { break; } ?>
+								<div class="col-xs-12 col-sm-4" style="background-image:url('<?php echo $image[0]; ?>')">
+									<div>
+										<div class="staff__name"><span class="highlight highlight--wrapping"><?php the_sub_field('first_name'); ?></br><?php the_sub_field('last_name'); ?></span></div>
+										<div class="staff__role"><span class="highlight highlight--wrapping"><?php the_sub_field('role'); ?></span></div>
+										<div class="staff__qualifications"><span class="highlight highlight--wrapping"><?php the_sub_field('qualifications'); ?></span></div>
+									</div>
+								</div>
+							<?php $i++; ?>
+						<?php endwhile;
+				else :
+						// no rows found
+				endif;endwhile;
+				?>
+
+			<?php wp_reset_postdata(); // reset the query ?>
+				<!--a href="/our-staff" class="col-xs-12" style="text-align:right;">See All</a-->
 			</section>
 			<section class="content content__full-width content__full-width--centered">
 				<div class="wrap recent-news">

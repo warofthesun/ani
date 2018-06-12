@@ -195,12 +195,13 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 .hero {
-	height: 80vh;
+	min-height: 80vh;
+	
 
 	&__content {
 
 		.content-boxes {
-			height: 30vh;
+			min-height: 30vh;
 			display: flex;
 			flex-direction: row;
 			border-radius: 10px 10px 0 0;

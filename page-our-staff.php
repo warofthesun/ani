@@ -19,7 +19,7 @@
 						    while ( have_rows('staff') ) : the_row(); ?>
 								<?php
 									 $attachment_id = get_sub_field('photo');
-									 $size = "full"; // (thumbnail, medium, large, full or custom size)
+									 $size = "staff-image"; // (thumbnail, medium, large, full or custom size)
 									 $image = wp_get_attachment_image_src( $attachment_id, $size );
 									 // url = $image[0];
 									 // width = $image[1];
@@ -27,9 +27,9 @@
 								 ?>
 										<div class="col-xs-12 col-sm-4" style="background-image:url('<?php echo $image[0]; ?>')">
 											<div>
-												<div class="staff__name"><?php the_sub_field('name'); ?></div>
-												<div class="staff__role"><?php the_sub_field('role'); ?></div>
-												<div class="staff__qualifications"><?php the_sub_field('qualifications'); ?></div>
+												<div class="staff__name"><span class="highlight highlight--wrapping"><?php the_sub_field('first_name'); ?></br><?php the_sub_field('last_name'); ?></span></div>
+												<div class="staff__role"><span class="highlight highlight--wrapping"><?php the_sub_field('role'); ?></span></div>
+												<div class="staff__qualifications"><span class="highlight highlight--wrapping"><?php the_sub_field('qualifications'); ?></span></div>
 											</div>
 										</div>
 
