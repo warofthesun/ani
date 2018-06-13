@@ -872,16 +872,35 @@ POSTS & CONTENT STYLES
 	                $title-pad*-1 0 0 $color-red;
 	  }
 
-		>div {
+
+		.content-block {
 			//background-color: $primary-lt;
 			height: 400px;
 			display: flex;
 			justify-content: flex-end;
 			flex-direction: column;
-			margin-bottom: 1em;
+			margin-bottom: 1.5em;
 			background-repeat: no-repeat;
 			background-size: cover;
 			padding: 1em;
+
+			.staff__category {
+				color: $primary;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 0.8em;
+				text-align: left;
+				padding-left: 0;
+				display: flex;
+				align-content: flex-start;
+				justify-content: flex-start;
+				margin-top: -2.6em;
+				margin-left: -1em;
+			}
+
+			&.extra-info {
+				height: 636px;
+			}
 
 			>div {
 				//background-color: white;

@@ -2390,7 +2390,7 @@ POSTS & CONTENT STYLES
     padding-left: 0;
     -webkit-box-shadow: 0.25em 0 0 rgba(255, 255, 255, 0.9), -0.25em 0 0 rgba(255, 255, 255, 0.9);
             box-shadow: 0.25em 0 0 rgba(255, 255, 255, 0.9), -0.25em 0 0 rgba(255, 255, 255, 0.9); }
-  .content.staff > div {
+  .content.staff .content-block {
     height: 400px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2402,11 +2402,30 @@ POSTS & CONTENT STYLES
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 1em; }
-    .content.staff > div > div {
+    .content.staff .content-block .staff__category {
+      color: #16BBF7;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.8em;
+      text-align: left;
+      padding-left: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      margin-top: -2.6em;
+      margin-left: -1em; }
+    .content.staff .content-block.extra-info {
+      height: 636px; }
+    .content.staff .content-block > div {
       height: 100%;
       -webkit-box-pack: end;
           -ms-flex-pack: end;

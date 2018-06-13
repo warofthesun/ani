@@ -86,8 +86,8 @@
 
 			<section class="content staff wrap row">
 				<h1 class="col-xs-12">Our Staff</h1>
-				<?php $custom_query = new WP_Query('pagename=our-staff');
-				while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+				<?php //$custom_query = new WP_Query('pagename=our-staff');
+				//while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 
 				<?php
 				// check if the repeater field has rows of data
@@ -105,18 +105,41 @@
 							 // height = $image[2];
 						 ?>
 						 <?php //UNCOMMENT TO LIMIT NUMBER SHOWN ON HOMEPAGE if ( $i > 2 ) { break; } ?>
-								<div class="col-xs-12 col-sm-4" style="background-image:url('<?php echo $image[0]; ?>')">
+						 <?php if ( get_sub_field( 'extra_info_tf' ) ): ?>
+
+							 <div class="col-xs-12 col-sm-6 content-block extra-info" style="background-image:url('<?php echo $image[0]; ?>')">
+								 <?php if ( get_sub_field( 'category' ) ): ?>
+									<div class="staff__category col-xs-12"><?php the_sub_field('category'); ?></div>
+								<?php endif; ?>
+ 								<div>
+
+ 									<div class="staff__name"><span class="highlight highlight--wrapping"><?php the_sub_field('first_name'); ?></br><?php the_sub_field('last_name'); ?></span></div>
+ 									<div class="staff__role"><span class="highlight highlight--wrapping"><?php the_sub_field('role'); ?></span></div>
+ 									<div class="staff__qualifications"><span class="highlight highlight--wrapping"><?php the_sub_field('qualifications'); ?></span></div>
+ 								</div>
+ 							</div>
+							<div class="col-xs-12 col-sm-6 content-block extra-info"><?php the_sub_field('extra_info'); ?></div>
+
+							<?php else: // field_name returned false ?>
+
+								<div class="col-xs-12 col-sm-3 content-block" style="background-image:url('<?php echo $image[0]; ?>')">
+									<?php if ( get_sub_field( 'category' ) ): ?>
+	 								 <div class="staff__category col-xs-12" style="text-align: left;padding-left: 0;display: flex;align-content: flex-start;justify-content: flex-start;margin-top: -2.6em;margin-left: -1em;"><?php the_sub_field('category'); ?></div>
+	 							 <?php endif; ?>
 									<div>
 										<div class="staff__name"><span class="highlight highlight--wrapping"><?php the_sub_field('first_name'); ?></br><?php the_sub_field('last_name'); ?></span></div>
 										<div class="staff__role"><span class="highlight highlight--wrapping"><?php the_sub_field('role'); ?></span></div>
 										<div class="staff__qualifications"><span class="highlight highlight--wrapping"><?php the_sub_field('qualifications'); ?></span></div>
 									</div>
 								</div>
+
+							<?php endif; // end of if field_name logic ?>
+
 							<?php $i++; ?>
 						<?php endwhile;
 				else :
 						// no rows found
-				endif;endwhile;
+				endif;//endwhile;
 				?>
 
 			<?php wp_reset_postdata(); // reset the query ?>
@@ -162,13 +185,13 @@
 					<h1 class="col-xs-12 ">Contact Us</h1>
 					<div class="flex-direction flex-direction--row">
 
-							<p class="col-xs-12 col-md-5 collapse--top">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis ipsum suscipit, dignissim libero id, varius ligula. Integer sem nunc, tristique eu cursus at, posuere at enim. Pellentesque tristique molestie condimentum. Nam venenatis tincidunt enim eget semper. Nulla non ante vitae felis molestie sodales. Mauris quis risus sed neque scelerisque aliquam et ac metus. Duis egestas ligula eu odio interdum tempus. Maecenas varius mauris libero, sed lacinia magna maximus nec.
-							</p>
+							<div class="col-xs-12 col-md-5 collapse--top">
+								<?php the_field('contact_text'); ?>
+							</div>
 
 						<div class="col-xs-12 col-md-7" style="margin-top:-1em;">
 
-								<?php the_content(); ?>
+								<?php the_field('contact_form'); ?>
 							<?php endwhile; endif; ?>
 						</div>
 					</div>
