@@ -70,6 +70,7 @@ add_image_size( 'featured-half', 700, 450, true );
 add_image_size( 'ani-thumb-600', 600, 150, true );
 add_image_size( 'ani-thumb-300', 300, 100, true );
 add_image_size( 'gallery-image', 680, 450, true );
+add_image_size( 'square', 400, 400, true );
 add_image_size( 'staff-image', 350, 450, true );
 
 /*
@@ -112,6 +113,28 @@ new image size.
 
 // TGM Plugin Activation Class
 require_once locate_template('library/tgm-plugin-activation/class-tgm-plugin-activation.php');
+
+// Exclude Featured category from list
+function exclude_post_categories($excl='', $spacer=' ') {
+  $categories = get_the_category($post->ID);
+  if (!empty($categories)) {
+    $exclude = $excl;
+    $exclude = explode(",", $exclude);
+    $thecount = count(get_the_category()) - count($exclude);
+    foreach ($categories as $cat) {
+      $html = '';
+      if (!in_array($cat->cat_ID, $exclude)) {
+        $html .= '<a href="' . get_category_link($cat->cat_ID) . '" ';
+        $html .= 'title="' . $cat->cat_name . '">' . $cat->cat_name . '</a>';
+        if ($thecount > 0) {
+          $html .= $spacer;
+        }
+        $thecount--;
+        echo $html;
+      }
+    }
+  }
+}
 
 /************* THEME CUSTOMIZE *********************/
 

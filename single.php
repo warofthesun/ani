@@ -3,7 +3,7 @@
 
 			<div id="content">
 
-				<div id="inner__content" class="wrap cf row">
+				<div id="inner__content" class="wrap cf">
 
 					<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 

@@ -148,34 +148,24 @@
 				<div class="wrap recent-news">
 					<h1>Recent News</h2>
 					<div class="flex-direction flex-direction--row">
-					<div class="col-xs-12 col-sm-2 col-md-3">
-						<div class="recent-news__category">Category</div>
-						<img src="https://picsum.photos/300" />
-						<div class="recent-news__title">Post Title</div>
-						<div class="recent-news__date">Oct. 15</div>
-						<p>Bitly blyve oovoo zynga whrrl, hojoki plugg grockit wikia…</p>
-					</div>
-					<div class="col-xs-12 col-sm-2 col-md-3">
-						<div class="recent-news__category">Category</div>
-						<img src="https://picsum.photos/400" />
-						<div class="recent-news__title">Post Title</div>
-						<div class="recent-news__date">Oct. 15</div>
-						<p>Bitly blyve oovoo zynga whrrl, hojoki plugg grockit wikia…</p>
-					</div>
-					<div class="col-xs-12 col-sm-2 col-md-3">
-						<div class="recent-news__category">Category</div>
-						<img src="https://picsum.photos/350" />
-						<div class="recent-news__title">Post Title</div>
-						<div class="recent-news__date">Oct. 15</div>
-						<p>Bitly blyve oovoo zynga whrrl, hojoki plugg grockit wikia…</p>
-					</div>
-					<div class="col-xs-12 col-sm-2 col-md-3">
-						<div class="recent-news__category">Category</div>
-						<img src="https://picsum.photos/450" />
-						<div class="recent-news__title">Post Title</div>
-						<div class="recent-news__date">Oct. 15</div>
-						<p>Bitly blyve oovoo zynga whrrl, hojoki plugg grockit wikia…</p>
-					</div>
+						<?php global $post; // required
+						$args = array('numberposts'=>4, 'category_name'=>'Featured');
+						$custom_posts = get_posts($args);
+						foreach($custom_posts as $post) : setup_postdata($post); ?>
+						<div class="col-xs-12 col-sm-2 col-md-3">
+							<div class="recent-news__category"><?php exclude_post_categories("8"); ?></div>
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('square'); ?></a>
+							<div class="recent-news__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
+							<div class="recent-news__date"><?php the_date(); ?></div>
+							<p>
+								<?php
+								$content = get_the_excerpt();
+								echo wp_trim_words( $content , '10' );
+								?>
+							</p>
+						</div>
+					<?php	endforeach;?>
+					<?php wp_reset_postdata(); // reset the query ?>
 					</div>
 				</div>
 			</section>
