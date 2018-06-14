@@ -143,7 +143,6 @@
 				?>
 
 			<?php wp_reset_postdata(); // reset the query ?>
-				<!--a href="/our-staff" class="col-xs-12" style="text-align:right;">See All</a-->
 			</section>
 			<section class="content content__full-width content__full-width--centered">
 				<div class="wrap recent-news">
