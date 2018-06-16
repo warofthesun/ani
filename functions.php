@@ -282,36 +282,12 @@ function my_theme_register_required_plugins() {
 	 */
 	$plugins = array(
 
-		// All-in-One Migration
-		 array(
-		 	'name'     				=> 'All-in-One WP Migration', // The plugin name
-		 	'slug'     				=> 'advanced-custom-fields', // The plugin slug (typically the folder name)
-		 	'source'   				=> 'https://downloads.wordpress.org/plugin/all-in-one-wp-migration.zip', // The plugin source
-		 	'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-		 	'version' 				=> '6.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-		 	'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-		 	'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-		 	'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		 ),
-
 
 		// Require ACF Pro
 		array(
 			'name'     				=> 'Advanced Custom Fields Pro', // The plugin name
 			'slug'     				=> 'advanced-custom-fields-pro', // The plugin slug (typically the folder name)
 			'source'   				=> get_stylesheet_directory_uri().'/library/tgm-plugin-activation/plugins/advanced-custom-fields-pro.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		),
-
-    // GitHub Updater
-		array(
-			'name'     				=> 'GitHub Updater', // The plugin name
-			'slug'     				=> 'github-updater-develop', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://github.com/afragen/github-updater/archive/develop.zip', // The plugin source
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
 			'version' 				=> '1.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
@@ -350,18 +326,6 @@ function my_theme_register_required_plugins() {
 			'source'   				=> 'https://downloads.wordpress.org/plugin/wordfence.zip', // The plugin source
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
 			'version' 				=> '6.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		),
-
-    // Google Analytics
-		array(
-			'name'     				=> 'Google Analytics Dashboard for WP', // The plugin name
-			'slug'     				=> 'google-analytics-dashboard-for-wp', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '5.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -410,6 +374,42 @@ function my_theme_register_required_plugins() {
 			'source'   				=> 'https://downloads.wordpress.org/plugin/bj-lazy-load.zip', // The plugin source
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
 			'version' 				=> '1.0.9', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+		),
+
+    // Flamingo
+		array(
+			'name'     				=> 'Flamingo', // The plugin name
+			'slug'     				=> 'flamingo', // The plugin slug (typically the folder name)
+			'source'   				=> 'https://downloads.wordpress.org/plugin/flamingo.1.8.zip', // The plugin source
+			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
+			'version' 				=> '1.8', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+		),
+
+    // Contact Form 7
+		array(
+			'name'     				=> 'Contact Form 7', // The plugin name
+			'slug'     				=> 'contact-form-7', // The plugin slug (typically the folder name)
+			'source'   				=> 'https://downloads.wordpress.org/plugin/contact-form-7.5.0.2.zip', // The plugin source
+			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
+			'version' 				=> '7.5.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+		),
+
+    // Contact Form 7 Conditional
+		array(
+			'name'     				=> 'CF7 Conditional', // The plugin name
+			'slug'     				=> 'cf7-conditional-fields', // The plugin slug (typically the folder name)
+			'source'   				=> 'https://downloads.wordpress.org/plugin/cf7-conditional-fields.1.3.4.zip', // The plugin source
+			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
+			'version' 				=> '1.3.4', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
