@@ -2329,13 +2329,13 @@ POSTS & CONTENT STYLES
         max-width: 660px;
         -ms-flex-item-align: center;
             align-self: center; }
-    .content__full-width--centered.sample-page ul {
+    .content__full-width--centered.making-an-appointment ul {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-      .content__full-width--centered.sample-page ul li {
+      .content__full-width--centered.making-an-appointment ul li {
         margin-bottom: 2em;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2344,25 +2344,26 @@ POSTS & CONTENT STYLES
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
                 flex-direction: row; }
-        .content__full-width--centered.sample-page ul li:hover:before {
+        .content__full-width--centered.making-an-appointment ul li:hover:before {
           content: "\f019";
           -webkit-transition: all .5s;
           transition: all .5s;
-          font-size: 1.5em; }
-        .content__full-width--centered.sample-page ul li:before {
+          font-size: 1.5em;
+          width: 1.2em; }
+        .content__full-width--centered.making-an-appointment ul li:before {
           content: "\f0f6";
           font-family: fontawesome;
           color: #16BBF7;
           font-size: 1.5em;
           -webkit-transition: all .5s;
           transition: all .5s;
-          width: 1.1em; }
-        .content__full-width--centered.sample-page ul li > div, .content__full-width--centered.sample-page ul li > a {
+          width: 1.2em; }
+        .content__full-width--centered.making-an-appointment ul li > div, .content__full-width--centered.making-an-appointment ul li > a {
           margin: 0 1em;
           text-decoration: none; }
-          .content__full-width--centered.sample-page ul li > div p, .content__full-width--centered.sample-page ul li > a p {
+          .content__full-width--centered.making-an-appointment ul li > div p, .content__full-width--centered.making-an-appointment ul li > a p {
             color: #5c6b80; }
-    .content__full-width--centered.sample-page h4, .content__full-width--centered.sample-page .h4, .content__full-width--centered.sample-page p {
+    .content__full-width--centered.making-an-appointment h4, .content__full-width--centered.making-an-appointment .h4, .content__full-width--centered.making-an-appointment p {
       margin: 0; }
   .content.staff > a {
     color: #475691;

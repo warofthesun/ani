@@ -777,7 +777,7 @@ POSTS & CONTENT STYLES
 				}
 			}
 
-			&.sample-page {
+			&.making-an-appointment {
 				ul {
 					display: flex;
 					flex-wrap: wrap;
@@ -792,6 +792,7 @@ POSTS & CONTENT STYLES
 								content: "\f019";
 								transition: all .5s;
 								font-size: 1.5em;
+								width: 1.2em;
 							}
 						}
 
@@ -801,7 +802,7 @@ POSTS & CONTENT STYLES
 							color: $primary;
 							font-size: 1.5em;
 							transition: all .5s;
-							width: 1.1em;
+							width: 1.2em;
 						}
 
 						>div, >a {
