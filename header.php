@@ -50,11 +50,11 @@
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 				<div id="inner__header" class="wrap cf">
-					<div class="col-xs-12 col-sm-4 header__logo">
+					<div class="col-xs-12 header__logo">
 						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/ani-logo-horiz.png"</img></a></p>
 
 					</div>
-					<div class="col-xs-12 col-sm-8 header__navigation">
+					<div class="col-xs-12 header__navigation">
 						<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 							<?php wp_nav_menu(array(
 	    					         'container' => false,                           // remove nav container
