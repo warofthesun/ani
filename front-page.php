@@ -18,7 +18,7 @@
 				<div class="hero__content">
 					<div class="content-boxes wrap">
 						<div class="col-xs-12 col-sm-3">
-							<a href="#" class="content-boxes__header">
+							<a href="<?php the_field('box_one_link'); ?>" class="content-boxes__header">
 								<p>
 									<?php the_field('box_one_title'); ?>
 								</p>
@@ -26,7 +26,7 @@
 							<div class="content-boxes__content"><?php the_field('box_one_content'); ?></div>
 						</div>
 						<div class="col-xs-12 col-sm-3">
-							<a href="#" class="content-boxes__header">
+							<a href="<?php the_field('box_two_link'); ?>" class="content-boxes__header">
 								<p>
 									<?php the_field('box_two_title'); ?>
 								</p>
@@ -34,7 +34,7 @@
 							<div class="content-boxes__content"><?php the_field('box_two_content'); ?></div>
 						</div>
 						<div class="col-xs-12 col-sm-3">
-							<a href="#" class="content-boxes__header">
+							<a href="<?php the_field('box_three_link'); ?>" class="content-boxes__header">
 								<p>
 									<?php the_field('box_three_title'); ?>
 								</p>
@@ -42,7 +42,7 @@
 							<div class="content-boxes__content"><?php the_field('box_three_content'); ?></div>
 						</div>
 						<div class="col-xs-12 col-sm-3">
-							<a href="#" class="content-boxes__header">
+							<a href="<?php the_field('box_four_link'); ?>" class="content-boxes__header">
 								<p>
 									<?php the_field('box_four_title'); ?>
 								</p>
@@ -57,21 +57,21 @@
 					<div class="col-xs-12 col-sm-4">
 						<div class="content-boxes__header">
 							<p><?php the_field('secondary_box_one_title'); ?></p>
-							<a href="#">See All</a>
+							<a href="<?php the_field('secondary_box_one_link'); ?>"><?php the_field('secondary_box_one_link_text'); ?></a>
 						</div>
 						<div class="content-boxes__content"><?php the_field('secondary_box_one_content'); ?></div>
 					</div>
 					<div class="col-xs-12 col-sm-4">
 						<div class="content-boxes__header">
 							<p><?php the_field('secondary_box_two_title'); ?></p>
-							<a href="#">See All</a>
+							<a href="<?php the_field('secondary_box_two_link'); ?>"><?php the_field('secondary_box_two_link_text'); ?></a>
 						</div>
 						<div class="content-boxes__content"><?php the_field('secondary_box_two_content'); ?></div>
 					</div>
 					<div class="col-xs-12 col-sm-4">
 						<div class="content-boxes__header">
 							<p><?php the_field('secondary_box_three_title'); ?></p>
-							<a href="#">See All</a>
+							<a href="<?php the_field('secondary_box_three_link'); ?>"><?php the_field('secondary_box_three_link_text'); ?></a>
 						</div>
 						<div class="content-boxes__content"><?php the_field('secondary_box_three_content'); ?></div>
 					</div>
@@ -86,8 +86,8 @@
 
 			<section class="content staff wrap row">
 				<h1 class="col-xs-12">Our Staff</h1>
-				<?php //$custom_query = new WP_Query('pagename=our-staff');
-				//while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+				<?php $custom_query = new WP_Query('pagename=clinic-staff');
+				while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 
 				<?php
 				// check if the repeater field has rows of data
@@ -104,7 +104,7 @@
 							 // width = $image[1];
 							 // height = $image[2];
 						 ?>
-						 <?php //UNCOMMENT TO LIMIT NUMBER SHOWN ON HOMEPAGE if ( $i > 2 ) { break; } ?>
+						 <?php if ( $i > 4 ) { break; } ?>
 						 <?php if ( get_sub_field( 'extra_info_tf' ) ): ?>
 
 							 <div class="col-xs-12 col-sm-6 content-block extra-info" style="background-image:url('<?php echo $image[0]; ?>')">
@@ -141,6 +141,7 @@
 						// no rows found
 				endif;//endwhile;
 				?>
+			<?php endwhile; ?>
 				<a href="/clinic-staff" class="col-xs-12">See All</a>
 
 			<?php wp_reset_postdata(); // reset the query ?>
