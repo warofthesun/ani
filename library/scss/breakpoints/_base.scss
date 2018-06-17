@@ -1139,8 +1139,10 @@ POSTS & CONTENT STYLES
 			}
 
 			ul {
-
-				li {}
+					list-style-type: disc;
+				li {
+					margin:.5em 0 .5em 2em;
+				}
 
 			}
 

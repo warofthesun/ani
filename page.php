@@ -11,12 +11,11 @@
 					</header>
 				<div id="inner__content" class="wrap cf row">
 
-						<main id="main" class="col-xs-12 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="col-xs-12 col-sm-10 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" style="margin:0 auto;">
 
 
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-
 
 
 								<section class="entry__content cf" itemprop="articleBody">
@@ -25,12 +24,7 @@
 
 								</section> <?php // end article section ?>
 
-
-
-								<?php comments_template(); ?>
-
 							</article>
-
 
 						</main>
 

@@ -2576,6 +2576,10 @@ p.category {
 			*/ }
   .entry__content p {
     margin: 0 0 1.5em; }
+  .entry__content ul {
+    list-style-type: disc; }
+    .entry__content ul li {
+      margin: .5em 0 .5em 2em; }
   .entry__content table {
     width: 100%;
     border: 1px solid #eaedf2;
