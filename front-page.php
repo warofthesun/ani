@@ -141,6 +141,7 @@
 						// no rows found
 				endif;//endwhile;
 				?>
+				<a href="/clinic-staff" class="col-xs-12">See All</a>
 
 			<?php wp_reset_postdata(); // reset the query ?>
 			</section>
