@@ -234,7 +234,9 @@ NAVIGATION STYLES
       -ms-flex-pack: end;
           justify-content: flex-end; }
   .header__navigation .nav ul {
-    background: rgba(255, 255, 255, 0.6); }
+    background: rgba(255, 255, 255, 0.9);
+    -webkit-box-shadow: 1px 2px 3px rgba(5, 42, 56, 0.3);
+            box-shadow: 1px 2px 3px rgba(5, 42, 56, 0.3); }
     .header__navigation .nav ul .sub-menu li:hover {
       background-color: rgba(22, 187, 247, 0.3); }
   .header__navigation .nav li {

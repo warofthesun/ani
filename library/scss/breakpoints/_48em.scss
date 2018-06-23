@@ -113,7 +113,8 @@ NAVIGATION STYLES
 		justify-content: flex-end;
 
 		ul {
-			background:rgba($white, 0.6);
+			background:rgba($white, 0.9);
+			box-shadow: 1px 2px 3px rgba($black, 0.3);
 
 			.sub-menu {
 				li:hover {

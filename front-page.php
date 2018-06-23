@@ -12,7 +12,7 @@
 						?>
 				<div class="hero__image hero__image--full" style="background-image:url('<?php echo $image[0]; ?>')">
 					<div class="hero__content hero__content--left wrap">
-					<p><?php the_field('hero_title'); ?></p>
+					<p class="highlight highlight--wrapping"><?php the_field('hero_title'); ?></p>
 					</div>
 				</div>
 				<div class="hero__content">
@@ -120,7 +120,7 @@
 	 							</div>
 								<div class="col-xs-12 col-sm-6 content-block extra-info"><?php the_sub_field('extra_info'); ?></div>
 							</div>
-							
+
 							<?php else: // field_name returned false ?>
 
 								<div class="col-xs-12 col-sm-3 content-block" style="background-image:url('<?php echo $image[0]; ?>')">
@@ -170,6 +170,7 @@
 						</div>
 					<?php	endforeach;?>
 					<?php wp_reset_postdata(); // reset the query ?>
+					<a name="contact"></a>
 					</div>
 				</div>
 			</section>

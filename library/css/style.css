@@ -2070,6 +2070,17 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.highlight {
+  display: inline;
+  background: rgba(255, 255, 255, 0.9); }
+
+.highlight--wrapping {
+  position: relative;
+  left: 0.25em;
+  padding-left: 0;
+  -webkit-box-shadow: 0.25em 0 0 rgba(255, 255, 255, 0.9), -0.25em 0 0 rgba(255, 255, 255, 0.9);
+          box-shadow: 0.25em 0 0 rgba(255, 255, 255, 0.9), -0.25em 0 0 rgba(255, 255, 255, 0.9); }
+
 .hero {
   margin-bottom: 2em; }
   .hero__image--full {
@@ -2083,11 +2094,10 @@ POSTS & CONTENT STYLES
     margin: 0 auto; }
   .hero__content p {
     font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 4em;
-    line-height: 1;
-    color: white;
-    text-shadow: 1px 1px 0 rgba(6, 120, 161, 0.8); }
+    line-height: 1.2;
+    color: #16BBF7; }
   .hero__content--left {
     -ms-flex-item-align: center;
         align-self: center;
@@ -2155,6 +2165,9 @@ POSTS & CONTENT STYLES
       border-top: 1px solid #fff;
       -webkit-box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6);
               box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6); }
+      .hero__content .content-boxes__content a {
+        color: #fff;
+        font-weight: bold; }
       .hero__content .content-boxes__content p {
         font-size: 1.1em;
         line-height: 1.2em;
@@ -2288,6 +2301,9 @@ POSTS & CONTENT STYLES
       border-top: 1px solid #fff;
       -webkit-box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6);
               box-shadow: 0px -3px 5px -3px rgba(6, 120, 161, 0.6); }
+      .content--secondary .content-boxes__content a {
+        color: #fff;
+        font-weight: bold; }
       .content--secondary .content-boxes__content p {
         margin: 0;
         color: #fff;
@@ -2382,15 +2398,6 @@ POSTS & CONTENT STYLES
       content: "\f061";
       font-family: fontawesome;
       margin-left: .2em; }
-  .content.staff .highlight {
-    display: inline;
-    background: rgba(255, 255, 255, 0.9); }
-  .content.staff .highlight--wrapping {
-    position: relative;
-    left: 0.25em;
-    padding-left: 0;
-    -webkit-box-shadow: 0.25em 0 0 rgba(255, 255, 255, 0.9), -0.25em 0 0 rgba(255, 255, 255, 0.9);
-            box-shadow: 0.25em 0 0 rgba(255, 255, 255, 0.9), -0.25em 0 0 rgba(255, 255, 255, 0.9); }
   .content.staff .content-block {
     height: 400px;
     display: -webkit-box;
@@ -2952,7 +2959,9 @@ NAVIGATION STYLES
         -ms-flex-pack: end;
             justify-content: flex-end; }
     .header__navigation .nav ul {
-      background: rgba(255, 255, 255, 0.6); }
+      background: rgba(255, 255, 255, 0.9);
+      -webkit-box-shadow: 1px 2px 3px rgba(5, 42, 56, 0.3);
+              box-shadow: 1px 2px 3px rgba(5, 42, 56, 0.3); }
       .header__navigation .nav ul .sub-menu li:hover {
         background-color: rgba(22, 187, 247, 0.3); }
     .header__navigation .nav li {
