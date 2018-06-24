@@ -37,10 +37,8 @@
 						</main>
 
 				</div>
-				<?php if ( get_field( 'include_bottom_section_tf' ) ): ?>
-				<?php include 'partials/bottom-section.php'; ?>
-			<?php else: ?>
-			<?php endif; ?>
+				<?php if ( get_field( 'include_bottom_section_tf' ) ): include 'partials/bottom-section.php'; ?>
+				<?php else: endif; ?>
 
 				<?php endwhile; endif; ?>
 

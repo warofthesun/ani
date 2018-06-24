@@ -1,36 +1,54 @@
 <?php
+ if ( get_field( 'include_info_nav' ) ): include 'info-nav.php'; else: endif; 
 
   // check if the flexible content field has rows of data
-  if( have_rows('info_page_content') ):
+  if( have_rows('info_page_content') ): ?>
+    <ul class="content__flexible">
 
+    <?php
        // loop through the rows of data
       while ( have_rows('info_page_content') ) : the_row();
-
           if( get_row_layout() == 'content_block' ): ?>
 
+          <li class="block">
+            <a name="<?php $page_link = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $page_link ); ?>"></a>
             <h2><?php the_sub_field('header'); ?></h2>
             <h3><?php the_sub_field('sub-header'); ?></h3>
-            <?php the_sub_field('content');
+            <?php the_sub_field('content'); ?>
+          </li>
+        <?php elseif( get_row_layout() == 'distinctions' ): ?>
 
-          elseif( get_row_layout() == 'distinctions' ): ?>
-          <h2><?php the_sub_field('header'); ?></h2>
-          <h3><?php the_sub_field('sub-header'); ?></h3>
-            <?php if( have_rows('distinctions-repeater') ): ?>
-              <ul>
-                <?php while ( have_rows('distinctions-repeater') ) : the_row(); ?>
-                <li>
-                  <?php the_sub_field('year');
-                  the_sub_field('distinction'); ?>
-                </li>
-                <?php endwhile; ?>
-              </ul>
+          <li class="distinctions">
+            <a name="<?php $page_link = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $page_link ); ?>"></a>
+            <h2><?php the_sub_field('header'); ?></h2>
+            <h3><?php the_sub_field('sub-header'); ?></h3>
+              <?php if( have_rows('distinctions-repeater') ): ?>
+                <ul>
+                  <?php while ( have_rows('distinctions-repeater') ) : the_row(); ?>
+                  <li>
+                    <div>
+                      <?php if (get_sub_field('year') ): ?>
+                      <span><?php the_sub_field('year'); ?></span> -
+                    <?php endif; ?>
+                    </div>
+                    <div>
+                      <?php the_sub_field('distinction'); ?>
+                    </div>
 
-          <?php the_sub_field('content'); ?>
+                  </li>
+                  <?php endwhile; ?>
+                </ul>
+
+            <?php the_sub_field('content'); ?>
+          </li>
         <?php endif; ?>
+
           <?php elseif( get_row_layout() == 'in-house_procedures' ): ?>
 
-            <h2><?php the_sub_field('header'); ?></h2>
-            <h3><?php the_sub_field('sub-header'); ?></h3>
+            <li class="in-house_procedures">
+              <a name="<?php $page_link = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $page_link ); ?>"></a>
+              <h2><?php the_sub_field('header'); ?></h2>
+              <h3><?php the_sub_field('sub-header'); ?></h3>
 
             <?php
 
@@ -47,17 +65,16 @@
                 </li>
 
                 <?php	endwhile; 	echo '</ul>'; 	endif; ?>
-                <?php the_sub_field('content');
-
-              endif;
+                <?php the_sub_field('content'); ?>
+              </li>
+            <?php endif;
 
 
       endwhile;
 
   else :
 
-      // no layouts found
+      // no layouts found ?>
+</ul>
 
-  endif;
-
-?>
+<?php  endif; ?>

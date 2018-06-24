@@ -190,6 +190,17 @@ NAVIGATION STYLES
           flex-direction: column;
   margin-bottom: 2em; }
 
+#inner__content ul.info-nav {
+  margin: -2em 0 2em 0; }
+  #inner__content ul.info-nav li {
+    display: inline-block;
+    padding: 0;
+    margin: 0; }
+    #inner__content ul.info-nav li:nth-child(1n+2) {
+      margin-right: 2em; }
+    #inner__content ul.info-nav li:first-child:after {
+      content: " | "; }
+
 .header__logo #logo {
   text-align: center; }
   .header__logo #logo img {

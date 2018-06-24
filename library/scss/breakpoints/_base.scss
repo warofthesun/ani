@@ -39,6 +39,111 @@ img {
 
 	&__content {
 		display: flex;
+
+		ul.info-nav {
+			list-style: none;
+			margin:0;
+			padding: 0;
+			margin:-2em 0 2em 0;
+			font-family: $display;
+
+			li {
+				padding: 0;
+				margin: 1em 0;
+
+				&:nth-child(1n+2) {
+					margin-right: 2em;
+				}
+
+				&:first-child {
+					text-transform: uppercase;
+
+
+				}
+
+				a {
+					text-decoration: none;
+					color: $primary;
+
+					&::after {
+						content: "\f103";
+						font-family: fontawesome;
+						position: relative;
+						bottom: -2px;
+						right: -.5em;
+
+					}
+				}
+
+			}
+		}
+
+		ul.content {
+			&__flexible {
+					list-style: none;
+					margin:0;
+					padding: 0;
+
+
+
+					>li {
+						margin:0;
+						padding: 0;
+
+						&:not(:first-child) {
+							border-top: 1px solid rgba($black, 0.1);
+						}
+					}
+				.in-house_procedures {
+					ul {
+						list-style: none;
+
+						li {
+							padding: 0;
+							margin:0;
+							padding: .5em;
+							font-weight: bold;
+
+							&:nth-child(even) {
+								background-color: rgba($primary, 0.1);
+							}
+						}
+					}
+				}
+				.distinctions {
+					ul {
+						list-style: none;
+						li {
+							padding: 0;
+							margin:0;
+							padding: .5em;
+
+							&:nth-child(even) {
+								background-color: rgba($primary, 0.1);
+							}
+
+
+							div {
+								display: inline-block;
+								&:first-child {
+									width: 4em;
+									font-family: $display;
+
+
+									span {
+										width:3em;
+										display: inline-block;
+										color: $primary;
+										font-weight: bold;
+										font-style: italic;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 	&__footer {
@@ -222,6 +327,8 @@ h2, .h2 {
 
 h3, .h3 {
 	font-size: 1.125em;
+	color: $black;
+	margin-top: 0;
 }
 
 h4, .h4 {
@@ -672,8 +779,6 @@ $title-lineheight: $title-pad + 1;
 	margin-top:2em;
 	margin-bottom: 2em;
 
-
-
 	&--secondary {
 		display: flex;
 		margin-bottom: 2em;
@@ -882,7 +987,6 @@ $title-lineheight: $title-pad + 1;
 			}
 		}
 
-
 		.content-block {
 			//background-color: $primary-lt;
 			height: 400px;
@@ -990,7 +1094,6 @@ $title-lineheight: $title-pad + 1;
 
 	}
 }
-
 
 
 #content {

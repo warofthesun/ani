@@ -1771,6 +1771,65 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+    #inner__content ul.info-nav {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      margin: -2em 0 2em 0;
+      font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      #inner__content ul.info-nav li {
+        padding: 0;
+        margin: 1em 0; }
+        #inner__content ul.info-nav li:nth-child(1n+2) {
+          margin-right: 2em; }
+        #inner__content ul.info-nav li:first-child {
+          text-transform: uppercase; }
+        #inner__content ul.info-nav li a {
+          text-decoration: none;
+          color: #16BBF7; }
+          #inner__content ul.info-nav li a::after {
+            content: "\f103";
+            font-family: fontawesome;
+            position: relative;
+            bottom: -2px;
+            right: -.5em; }
+    #inner__content ul.content__flexible {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      #inner__content ul.content__flexible > li {
+        margin: 0;
+        padding: 0; }
+        #inner__content ul.content__flexible > li:not(:first-child) {
+          border-top: 1px solid rgba(5, 42, 56, 0.1); }
+      #inner__content ul.content__flexible .in-house_procedures ul {
+        list-style: none; }
+        #inner__content ul.content__flexible .in-house_procedures ul li {
+          padding: 0;
+          margin: 0;
+          padding: .5em;
+          font-weight: bold; }
+          #inner__content ul.content__flexible .in-house_procedures ul li:nth-child(even) {
+            background-color: rgba(22, 187, 247, 0.1); }
+      #inner__content ul.content__flexible .distinctions ul {
+        list-style: none; }
+        #inner__content ul.content__flexible .distinctions ul li {
+          padding: 0;
+          margin: 0;
+          padding: .5em; }
+          #inner__content ul.content__flexible .distinctions ul li:nth-child(even) {
+            background-color: rgba(22, 187, 247, 0.1); }
+          #inner__content ul.content__flexible .distinctions ul li div {
+            display: inline-block; }
+            #inner__content ul.content__flexible .distinctions ul li div:first-child {
+              width: 4em;
+              font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+              #inner__content ul.content__flexible .distinctions ul li div:first-child span {
+                width: 3em;
+                display: inline-block;
+                color: #16BBF7;
+                font-weight: bold;
+                font-style: italic; }
   #inner__footer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1934,7 +1993,9 @@ h2, .h2 {
   margin-bottom: 0.375em; }
 
 h3, .h3 {
-  font-size: 1.125em; }
+  font-size: 1.125em;
+  color: #052A38;
+  margin-top: 0; }
 
 h4, .h4 {
   font-size: 1.1em;
@@ -2917,6 +2978,16 @@ NAVIGATION STYLES
         -ms-flex-direction: column;
             flex-direction: column;
     margin-bottom: 2em; }
+  #inner__content ul.info-nav {
+    margin: -2em 0 2em 0; }
+    #inner__content ul.info-nav li {
+      display: inline-block;
+      padding: 0;
+      margin: 0; }
+      #inner__content ul.info-nav li:nth-child(1n+2) {
+        margin-right: 2em; }
+      #inner__content ul.info-nav li:first-child:after {
+        content: " | "; }
   .header__logo #logo {
     text-align: center; }
     .header__logo #logo img {
