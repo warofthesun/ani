@@ -49,7 +49,7 @@
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-				<div id="inner__header" class="wrap cf">
+				<div id="inner__header" class="wrap ">
 					<div class="col-xs-12 header__logo">
 						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/ani-logo-horiz.png"</img></a></p>
 
@@ -58,9 +58,9 @@
 						<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 							<?php wp_nav_menu(array(
 	    					         'container' => false,                           // remove nav container
-	    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+	    					         'container_class' => 'menu ',                 // class of container (should you choose to use it)
 	    					         'menu' => __( 'The Main Menu', 'startertheme' ),  // nav name
-	    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
+	    					         'menu_class' => 'nav top-nav ',               // adding custom nav class
 	    					         'theme_location' => 'main-nav',                 // where it's located in the theme
 	    					         'before' => '',                                 // before the menu
 	        			               'after' => '',                                  // after the menu

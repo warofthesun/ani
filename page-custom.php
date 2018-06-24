@@ -8,13 +8,13 @@
 
 			<div id="content">
 
-				<div id="inner__content" class="wrap cf row">
+				<div id="inner__content" class="wrap  row">
 
-						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<header class="article__header">
 
@@ -27,7 +27,7 @@
 
 								</header>
 
-								<section class="entry__content cf" itemprop="articleBody">
+								<section class="entry__content " itemprop="articleBody">
 
 									<?php	the_content(); ?>
 
@@ -46,7 +46,7 @@
 
 							<?php endwhile; else : ?>
 
-									<article id="post-not-found" class="hentry cf">
+									<article id="post-not-found" class="hentry ">
 											<header class="article-header">
 												<h1><?php _e( 'Oops, Post Not Found!', 'startertheme' ); ?></h1>
 										</header>

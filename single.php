@@ -3,13 +3,13 @@
 
 			<div id="content">
 
-				<div id="inner__content" class="wrap cf">
+				<div id="inner__content" class="wrap row">
 
-					<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" class="col-xs-12 col-sm-8 col-lg-9 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 
 								<header class="post post__header">
 									<div class="row">
@@ -22,7 +22,7 @@
 									<?php the_post_thumbnail('featured-image'); ?>
 								</header>
 
-                <section class="entry-content cf" itemprop="articleBody">
+                <section class="entry-content " itemprop="articleBody">
                   <?php the_content();   ?>
                 </section> <?php // end article section ?>
 
@@ -44,7 +44,7 @@
 
 						<?php else : ?>
 
-							<article id="post-not-found" class="hentry cf">
+							<article id="post-not-found" class="hentry ">
 									<header class="article-header">
 										<h1><?php _e( 'Post Not Found.', 'startertheme' ); ?></h1>
 									</header>

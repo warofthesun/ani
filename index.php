@@ -18,12 +18,12 @@
 						?>
 
 				</header>
-				<div id="inner__content" class="wrap cf">
+				<div id="inner__content" class="wrap row">
 
-						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							<?php $the_query = new WP_Query( 'showposts=1' ); ?>
 						<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf single-post' ); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( ' single-post' ); ?> role="article">
 
 								<header class="post post__header">
 									<div class="row">
@@ -38,7 +38,7 @@
 									<?php the_post_thumbnail('featured-image'); ?>
 								</header>
 
-								<section class="post post__content cf">
+								<section class="post post__content ">
 									<?php
 									$content = get_the_excerpt();
 									echo wp_trim_words( $content , '55' );
@@ -52,7 +52,7 @@
 						<ul class="row articles__secondary">
 							<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 								<li class="col-xs-12 col-md-6">
-									<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf single-post' ); ?> role="article">
+									<article id="post-<?php the_ID(); ?>" <?php post_class( ' single-post' ); ?> role="article">
 
 										<header class="post post__header">
 
@@ -69,7 +69,7 @@
 
 										</header>
 
-										<section class="entry-content cf">
+										<section class="entry-content ">
 											<?php
 											$content = get_the_excerpt();
 											echo wp_trim_words( $content , '10' );

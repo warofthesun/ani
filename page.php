@@ -8,18 +8,18 @@
 						<h1 class="page-title <?php echo sanitize_title_with_dashes(get_the_title()); ?>" itemprop="headline"><?php the_title(); ?></h1>
 
 					</header>
-				<div id="inner__content" class="wrap cf row">
+				<div id="inner__content" class="wrap  row">
 					<?php if ( is_page('clinic-staff') ) { ?>
-					  <main id="main" class="col-xs-12 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" style="margin:0 auto;">
+					  <main id="main" class="col-xs-12 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" style="margin:0 auto;">
 					<? } else { ?>
-					  <main id="main" class="col-xs-12 col-sm-10 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" style="margin:0 auto;">
+					  <main id="main" class="col-xs-12 col-sm-10 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" style="margin:0 auto;">
 					<?php } ?>
 
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 
-								<section class="entry__content cf" itemprop="articleBody">
+								<section class="entry__content " itemprop="articleBody">
 
 									<?php if ( is_page('clinic-staff') ) { ?>
 										<?php include 'partials/clinic-staff.php'; }

@@ -3,11 +3,11 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf row">
+				<div id="inner-content" class="wrap  row">
 
-					<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" class="col-xs-12 col-sm-8 col-lg-9 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-						<article id="post-not-found" class="hentry cf">
+						<article id="post-not-found" class="hentry ">
 
 							<header class="article-header">
 
