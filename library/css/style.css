@@ -2915,7 +2915,8 @@ NAVIGATION STYLES
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    margin-bottom: 2em; }
   .header__logo #logo {
     text-align: center; }
     .header__logo #logo img {

@@ -150,7 +150,7 @@
 			</section>
 			<section class="content content__full-width content__full-width--centered">
 				<div class="wrap recent-news">
-					<h1>Recent News</h2>
+					<h1>Latest News</h2>
 					<div class="flex-direction flex-direction--row">
 						<?php global $post; // required
 						$args = array('numberposts'=>4, 'category_name'=>'Featured');
