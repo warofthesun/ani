@@ -1816,16 +1816,20 @@ img {
         #inner__content ul.content__flexible .distinctions ul li {
           padding: 0;
           margin: 0;
-          padding: .5em; }
+          padding: .5em;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column; }
           #inner__content ul.content__flexible .distinctions ul li:nth-child(even) {
             background-color: rgba(22, 187, 247, 0.1); }
           #inner__content ul.content__flexible .distinctions ul li div {
-            display: inline-block; }
+            width: 92%; }
             #inner__content ul.content__flexible .distinctions ul li div:first-child {
-              width: 4em;
+              width: 8%;
               font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
               #inner__content ul.content__flexible .distinctions ul li div:first-child span {
-                width: 3em;
+                width: 65%;
                 display: inline-block;
                 color: #16BBF7;
                 font-weight: bold;
@@ -3004,6 +3008,11 @@ NAVIGATION STYLES
         margin-right: 2em; }
       #inner__content ul.info-nav li:first-child:after {
         content: " | "; }
+  #inner__content ul.content__flexible .distinctions ul li {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
   .page-title {
     margin-left: auto;
     margin-right: 0;

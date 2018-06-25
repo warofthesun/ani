@@ -89,10 +89,27 @@ NAVIGATION STYLES
 			&__flexible {
 				>li {}
 				.in-house_procedures {}
-				.distinctions {}
+				.distinctions {
+					ul {
+						li {
+							flex-direction: row;
+
+							&:nth-child(even) {}
+							div {
+
+								&:first-child {
+									
+									span {
+
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
+	}
 }
 
 .page-title {

@@ -1,5 +1,5 @@
 <?php
- if ( get_field( 'include_info_nav' ) ): include 'info-nav.php'; else: endif; 
+ if ( get_field( 'include_info_nav' ) ): include 'info-nav.php'; else: endif;
 
   // check if the flexible content field has rows of data
   if( have_rows('info_page_content') ): ?>
@@ -25,7 +25,7 @@
               <?php if( have_rows('distinctions-repeater') ): ?>
                 <ul>
                   <?php while ( have_rows('distinctions-repeater') ) : the_row(); ?>
-                  <li>
+                  <li class="row">
                     <div>
                       <?php if (get_sub_field('year') ): ?>
                       <span><?php the_sub_field('year'); ?></span> -

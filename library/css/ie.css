@@ -201,6 +201,12 @@ NAVIGATION STYLES
     #inner__content ul.info-nav li:first-child:after {
       content: " | "; }
 
+#inner__content ul.content__flexible .distinctions ul li {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
 .page-title {
   margin-left: auto;
   margin-right: 0;
