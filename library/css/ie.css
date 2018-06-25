@@ -206,6 +206,10 @@ NAVIGATION STYLES
   margin-right: 0;
   margin: auto 0 auto auto; }
 
+.home .header__navigation {
+  border-bottom: 0px;
+  padding-bottom: 0; }
+
 .header__logo--inner #logo {
   text-align: left; }
   .header__logo--inner #logo img {
@@ -227,7 +231,9 @@ NAVIGATION STYLES
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgba(5, 42, 56, 0.1); }
   .header__navigation ul li {
     display: -webkit-box;
     display: -ms-flexbox;

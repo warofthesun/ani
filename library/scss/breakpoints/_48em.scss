@@ -101,6 +101,13 @@ NAVIGATION STYLES
 	margin:auto 0 auto auto;
 }
 
+.home {
+	.header__navigation {
+		border-bottom: 0px;
+		padding-bottom: 0;
+	}
+}
+
 
 .header {
 	&__logo {
@@ -128,6 +135,8 @@ NAVIGATION STYLES
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding-bottom: 1em;
+		border-bottom: 1px solid rgba($black, 0.1);
 
 		ul {
 			li {

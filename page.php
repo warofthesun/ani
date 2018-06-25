@@ -3,16 +3,12 @@
 
 			<div id="content">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					<header class="article article__header wrap">
 
-						<!--h1 class="page-title <?php //echo sanitize_title_with_dashes(get_the_title()); ?>" itemprop="headline"><?php //the_title(); ?></h1-->
-
-					</header>
 				<div id="inner__content" class="wrap  row">
 					<?php if ( is_page('clinic-staff') ) { ?>
-					  <main id="main" class="col-xs-12 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" style="margin:0 auto;">
+					  <main id="main" class="col-xs-12 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 					<? } else { ?>
-					  <main id="main" class="col-xs-12 col-sm-10 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" style="margin:0 auto;">
+					  <main id="main" class="col-xs-12 col-sm-10 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 					<?php } ?>
 
 

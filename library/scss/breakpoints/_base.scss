@@ -547,6 +547,11 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 
+#main {
+
+	margin: 1em auto;
+}
+
 $background-color: rgba($white, 0.9);
 $color-white: #fff;
 $title-pad: 0.25em;
@@ -568,6 +573,8 @@ $title-lineheight: $title-pad + 1;
 
 .hero {
 	margin-bottom: 2em;
+	margin-top: 2em;
+
 		&__image {
 
 			&--full {
