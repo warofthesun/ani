@@ -188,7 +188,7 @@ NAVIGATION STYLES
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 2em; }
+  margin-bottom: 0em; }
 
 #inner__content ul.info-nav {
   margin: -2em 0 2em 0; }
@@ -200,6 +200,17 @@ NAVIGATION STYLES
       margin-right: 2em; }
     #inner__content ul.info-nav li:first-child:after {
       content: " | "; }
+
+.page-title {
+  margin-left: auto;
+  margin-right: 0;
+  margin: auto 0 auto auto; }
+
+.header__logo--inner #logo {
+  text-align: left; }
+  .header__logo--inner #logo img {
+    max-width: 80%;
+    height: auto; }
 
 .header__logo #logo {
   text-align: center; }

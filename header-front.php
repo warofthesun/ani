@@ -49,29 +49,11 @@
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-				<div id="inner__header" class="wrap">
-					<div class="row">
-					<div class="col-xs-12 col-sm-4 header__logo--inner">
-						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization">
-							<a href="<?php echo home_url(); ?>" rel="nofollow">
-								<img src="<?php echo get_template_directory_uri(); ?>/library/images/ani-logo-horiz.png"</img>
-							</a>
-						</p>
+				<div id="inner__header" class="wrap ">
+					<div class="col-xs-12 header__logo">
+						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/ani-logo-horiz.png"</img></a></p>
+
 					</div>
-						<div class="col-xs-12 col-sm-8 row">
-							<?php if ( is_front_page() && is_home() ) {
-								  // Default homepage
-								} elseif ( is_front_page() ) {
-								  // static homepage
-								} elseif ( is_home() ) { ?>
-								<?php	$page_title = get_the_title( get_option('page_for_posts', true) ); ?>
-								<h1 class="page-title blog-page" itemprop="headline"><?php single_post_title('', true,''); ?></h1>
-							<?php	} else { ?>
-								  <h1 class="page-title <?php echo sanitize_title_with_dashes(get_the_title()); ?>" itemprop="headline"><?php single_post_title('', true,''); ?></h1>
-									<?php
-								}
-							?>
-						</div>
 					<div class="col-xs-12 header__navigation">
 						<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 							<?php wp_nav_menu(array(

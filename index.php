@@ -2,22 +2,6 @@
 <?php get_header(); ?>
 
 			<div id="content">
-				<header class="article article__header wrap">
-
-						<?php if ( is_front_page() && is_home() ) {
-							  // Default homepage
-							} elseif ( is_front_page() ) {
-							  // static homepage
-							} elseif ( is_home() ) { ?>
-							<?php	$page_title = get_the_title( get_option('page_for_posts', true) ); ?>
-							<h1 class="page-title blog-page" itemprop="headline"><?php echo $page_title; ?></h1>
-						<?php	} else { ?>
-							  <h1 class="page-title <?php echo sanitize_title_with_dashes(get_the_title()); ?>" itemprop="headline"><?php echo $page_title; ?></h1>
-								<?php
-							}
-						?>
-
-				</header>
 				<div id="inner__content" class="wrap row">
 
 						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">

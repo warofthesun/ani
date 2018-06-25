@@ -1095,6 +1095,12 @@ $title-lineheight: $title-pad + 1;
 	}
 }
 
+.blog-page {
+	&:before {
+		content: "\f1ea";
+	}
+}
+
 
 #content {
 	margin-top: 0em;
@@ -1187,7 +1193,12 @@ $title-lineheight: $title-pad + 1;
 
 		.single-title {}
 
-		.page-title {}
+		.page-title {
+			font-size: 2em;
+			justify-content: flex-end;
+			align-self: center;
+			margin:0em auto 1em auto;
+		}
 
 		.entry-title {
 			font-weight: bold;

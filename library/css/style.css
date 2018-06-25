@@ -2551,6 +2551,9 @@ POSTS & CONTENT STYLES
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1em; }
 
+.blog-page:before {
+  content: "\f1ea"; }
+
 #content {
   margin-top: 0em; }
   #content .article__header {
@@ -2601,6 +2604,15 @@ POSTS & CONTENT STYLES
 .page-title,
 .entry-title {
   margin: 0; }
+
+.page-title {
+  font-size: 2em;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 0em auto 1em auto; }
 
 .entry-title {
   font-weight: bold;
@@ -2977,7 +2989,7 @@ NAVIGATION STYLES
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 2em; }
+    margin-bottom: 0em; }
   #inner__content ul.info-nav {
     margin: -2em 0 2em 0; }
     #inner__content ul.info-nav li {
@@ -2988,6 +3000,15 @@ NAVIGATION STYLES
         margin-right: 2em; }
       #inner__content ul.info-nav li:first-child:after {
         content: " | "; }
+  .page-title {
+    margin-left: auto;
+    margin-right: 0;
+    margin: auto 0 auto auto; }
+  .header__logo--inner #logo {
+    text-align: left; }
+    .header__logo--inner #logo img {
+      max-width: 80%;
+      height: auto; }
   .header__logo #logo {
     text-align: center; }
     .header__logo #logo img {
