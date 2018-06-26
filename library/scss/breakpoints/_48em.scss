@@ -57,6 +57,25 @@ NAVIGATION STYLES
 		margin-bottom: 0em;
 	}
 
+	&__footer {
+		.nav {
+			justify-content: center;
+		}
+
+		ul {
+			li {
+
+				max-width: 250px;
+
+				a {}
+
+				&:last-child {
+
+				}
+			}
+		}
+	}
+
 	&__content {
 
 		ul.info-nav {
@@ -98,7 +117,7 @@ NAVIGATION STYLES
 							div {
 
 								&:first-child {
-									
+
 									span {
 
 									}

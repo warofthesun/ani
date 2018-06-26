@@ -157,7 +157,7 @@
 						$custom_posts = get_posts($args);
 						foreach($custom_posts as $post) : setup_postdata($post); ?>
 						<div class="col-xs-12 col-sm-2 col-md-3">
-							<div class="recent-news__category"><?php exclude_post_categories("8"); ?></div>
+							<div class="recent-news__category"><?php exclude_post_categories("3"); ?></div>
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('square'); ?></a>
 							<div class="recent-news__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
 							<div class="recent-news__date"><?php the_date(); ?></div>

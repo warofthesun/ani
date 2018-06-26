@@ -18,25 +18,44 @@
 							)); ?>
 						</nav>
 					</div>
-
+					<?php $custom_query = new WP_Query('pagename=footer');
+					while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+					<div class="col-xs-12 col-md-8" style="margin:0 auto;text-align:center;"><?php the_field('disclaimer'); ?></div>
 					<div class="contact--info col-xs-12 col-md-8">
-						<div>
-							<p>Business Name</p>
-							<p>Business Address</p>
-							<p><span>Business Phone#</span><span>Business Email</span></p>
-						</div>
+						<?php the_field('address'); ?>
 						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 					</div>
 					<div class="col-xs-12 col-md-4 social">
+						<?php
 
-							<a href="#" class="social social__icon--container"><i class="fab fa-twitter"></i></a>
-							<a href="#" class="social social__icon--container"><i class="fab fa-twitter"></i></a>
-							<a href="#" class="social social__icon--container"><i class="fab fa-twitter"></i></a>
-							<a href="#" class="social social__icon--container"><i class="fab fa-twitter"></i></a>
-						
+							// check if the repeater field has rows of data
+							if( have_rows('social_platforms') ):
+
+							 	// loop through the rows of data
+							    while ( have_rows('social_platforms') ) : the_row();
+
+							        // display a sub field value
+
+											 ?>
+											<a href="<?php the_sub_field('site_link'); ?>" class="social social__icon--container"><i class="fab fa-<?php the_sub_field('site_name'); ?>"></i></a>
+
+											<?php  endwhile;
+
+							else :
+
+							    // no rows found
+
+							endif;
+
+							?>
+
+
+
+
 					</div>
 				</div>
-
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); // reset the query ?>
 			</footer>
 
 		</div>

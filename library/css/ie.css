@@ -190,6 +190,14 @@ NAVIGATION STYLES
           flex-direction: column;
   margin-bottom: 0em; }
 
+#inner__footer .nav {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+#inner__footer ul li {
+  max-width: 250px; }
+
 #inner__content ul.info-nav {
   margin: -2em 0 2em 0; }
   #inner__content ul.info-nav li {

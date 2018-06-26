@@ -146,37 +146,6 @@ img {
 			}
 		}
 	}
-
-	&__footer {
-		flex-direction: row;
-		display: flex;
-		flex-wrap: wrap;
-
-		.col-1, .col-2 {
-			display: flex;
-		}
-
-		.col-1 {
-			justify-content: center;
-			margin-bottom: 2em;
-		}
-
-		.col-2 {
-			justify-content: center;
-		}
-		.nav {
-			opacity: 1;
-			flex-direction: row;
-			height: auto;
-			flex-wrap: wrap;
-			justify-content: center;
-			margin-bottom: 2em;
-
-			li {
-				border-bottom: 0px;
-			}
-		}
-	}
 }
 
 .social {
@@ -1647,11 +1616,40 @@ FOOTER STYLES
 	&__footer {
 		max-width: 1280px;
 		margin:0 auto;
+		flex-direction: row;
+		display: flex;
+		flex-wrap: wrap;
+
+		.col-1, .col-2 {
+			display: flex;
+		}
+
+		.col-1 {
+			justify-content: center;
+			margin-bottom: 2em;
+		}
+
+		.col-2 {
+			justify-content: center;
+		}
+		.nav {
+			opacity: 1;
+			flex-direction: row;
+			height: auto;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			margin-bottom: 2em;
+
+			li {
+				border-bottom: 0px;
+			}
+		}
+
 		ul {
 			margin: 0;
 			li {
 				text-align: left;
-				min-width: 180px;
+				width: 50%;
 				font-weight: bold;
 				font-family: $display;
 				color: white;
@@ -1680,6 +1678,7 @@ FOOTER STYLES
 				border-right: 0px;
 				font-weight: normal;
 				border-left: 1px solid $primary-lt;
+				width: 100%;
 
 
 
@@ -1704,6 +1703,17 @@ FOOTER STYLES
 
 .contact--info {
 	padding-top: 1em;
+	h2, .h2 {
+		margin-bottom: 0;
+		color: white;
+	}
+	h4, .h4 {
+		margin: 0;
+	}
+
+	a {
+		color: white;
+	}
 
 	p {
 		margin:0;
