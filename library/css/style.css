@@ -1866,9 +1866,10 @@ img {
       height: auto;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start; }
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-bottom: 2em; }
       #inner__footer .nav li {
         border-bottom: 0px; }
 
@@ -1879,7 +1880,13 @@ img {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
-          flex-direction: row; }
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 2em; }
   .social__icon--container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2871,34 +2878,36 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-#inner__footer ul {
-  margin: 0; }
-  #inner__footer ul li {
-    text-align: left;
-    min-width: 180px;
-    font-weight: bold;
-    font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: white; }
-    #inner__footer ul li a {
-      color: white;
-      text-transform: capitalize; }
-    #inner__footer ul li:last-child {
-      border-right: 0px; }
-
-#inner__footer ul.sub-menu {
-  visibility: visible;
-  position: relative;
-  background: transparent;
-  border: 0px;
-  margin-left: 1em; }
-  #inner__footer ul.sub-menu li {
-    text-align: left;
-    border-right: 0px;
-    font-weight: normal;
-    border-left: 1px solid #66D7FF; }
-    #inner__footer ul.sub-menu li a {
-      border-bottom: 0px;
-      text-transform: uppercase; }
+#inner__footer {
+  max-width: 1280px;
+  margin: 0 auto; }
+  #inner__footer ul {
+    margin: 0; }
+    #inner__footer ul li {
+      text-align: left;
+      min-width: 180px;
+      font-weight: bold;
+      font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: white; }
+      #inner__footer ul li a {
+        color: white;
+        text-transform: capitalize; }
+      #inner__footer ul li:last-child {
+        border-right: 0px; }
+  #inner__footer ul.sub-menu {
+    visibility: visible;
+    position: relative;
+    background: transparent;
+    border: 0px;
+    margin-left: 1em; }
+    #inner__footer ul.sub-menu li {
+      text-align: left;
+      border-right: 0px;
+      font-weight: normal;
+      border-left: 1px solid #66D7FF; }
+      #inner__footer ul.sub-menu li a {
+        border-bottom: 0px;
+        text-transform: uppercase; }
 
 .footer {
   clear: both;
@@ -3288,7 +3297,9 @@ FOOTER STYLES
       border-left: 1px solid #66D7FF; }
       #inner__footer ul.sub-menu li a {
         border-bottom: 0px;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        max-width: 200px;
+        padding: 0.2em 0.75em; }
   /*
 you'll probably need to do quite a bit
 of overriding here if you styled them for

@@ -1,7 +1,7 @@
 			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
-				<div id="inner__footer" class="wrap ">
-					<div class="col-xs-12 col-md-7 col-1">
+				<div id="inner__footer" class="">
+					<div class="col-xs-12">
 						<nav role="navigation">
 							<?php wp_nav_menu(array(
 	    					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
@@ -18,15 +18,8 @@
 							)); ?>
 						</nav>
 					</div>
-					<div class="col-xs-12 col-md-4 col-2">
-						<div class="social">
-							<a href="#" class="social social__icon--container"><i class="fab fa-twitter"></i></a>
-							<a href="#" class="social social__icon--container"><i class="fab fa-twitter"></i></a>
-							<a href="#" class="social social__icon--container"><i class="fab fa-twitter"></i></a>
-							<a href="#" class="social social__icon--container"><i class="fab fa-twitter"></i></a>
-						</div>
-					</div>
-					<div class="contact--info col-xs-12">
+
+					<div class="contact--info col-xs-12 col-md-8">
 						<div>
 							<p>Business Name</p>
 							<p>Business Address</p>
@@ -34,7 +27,14 @@
 						</div>
 						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 					</div>
+					<div class="col-xs-12 col-md-4 social">
 
+							<a href="#" class="social social__icon--container"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="social social__icon--container"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="social social__icon--container"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="social social__icon--container"><i class="fab fa-twitter"></i></a>
+						
+					</div>
 				</div>
 
 			</footer>

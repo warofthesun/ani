@@ -262,6 +262,7 @@ FOOTER STYLES
 
 #inner {
 	&__footer {
+		
 		ul {
 			margin: 0;
 			li {
@@ -299,11 +300,15 @@ FOOTER STYLES
 				a {
 					border-bottom: 0px;
 					text-transform: uppercase;
+					max-width: 200px;
+					padding: 0.2em 0.75em;
 				}
 			}
 		}
 	}
 }
+
+
 
 /*
 you'll probably need to do quite a bit

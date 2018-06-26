@@ -490,7 +490,9 @@ FOOTER STYLES
     border-left: 1px solid #66D7FF; }
     #inner__footer ul.sub-menu li a {
       border-bottom: 0px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      max-width: 200px;
+      padding: 0.2em 0.75em; }
 
 /*
 you'll probably need to do quite a bit
