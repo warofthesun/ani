@@ -66,7 +66,12 @@
 								} elseif ( is_home() ) { ?>
 								<?php	$page_title = get_the_title( get_option('page_for_posts', true) ); ?>
 								<h1 class="page-title blog-page" itemprop="headline"><?php single_post_title('', true,''); ?></h1>
-							<?php	} else { ?>
+								<?php } elseif ( is_archive() ) { ?>
+							    <h1 class="page-title" itemprop="headline"><?php the_archive_title(); ?></h1>
+								<?php } elseif ( is_search() ) { ?>
+									<h1 class="page-title"><span style="font-size:.5em;font-weight:normal;text-transform:capitalize;;font-style:italic;"><?php _e( 'Search Results for:', 'startertheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+
+								<?php	} else { ?>
 								  <h1 class="page-title <?php echo sanitize_title_with_dashes(get_the_title()); ?>" itemprop="headline"><?php single_post_title('', true,''); ?></h1>
 									<?php
 								}

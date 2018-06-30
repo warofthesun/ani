@@ -4,7 +4,7 @@
 			<div id="content">
 				<div id="inner__content" class="wrap row">
 
-						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="col-xs-12 col-sm-8 col-lg-9" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 							<?php $the_query = new WP_Query( 'showposts=1' ); ?>
 						<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 							<article id="post-<?php the_ID(); ?>" <?php post_class( ' single-post' ); ?> role="article">
@@ -15,6 +15,7 @@
 										<div class="col-xs-12 col-md-4 article-info">
 											<?php printf( '<p class="byline entry-meta vcard">' . __( '', 'startertheme' ).' %1$s', '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time></p>'); ?>
 											<p class="category">
+												<?php //use the id number of Featured category to remove the word"Featured" from title ?>
 												<?php exclude_post_categories("8"); ?>
 											</p>
 										</div>
@@ -22,7 +23,7 @@
 									<?php the_post_thumbnail('featured-image'); ?>
 								</header>
 
-								<section class="post post__content ">
+								<section class="post post__content">
 									<?php
 									$content = get_the_excerpt();
 									echo wp_trim_words( $content , '55' );
@@ -41,6 +42,7 @@
 										<header class="post post__header">
 
 											<p class="category">
+												<?php //use the id number of Featured category to remove the word "Featured" from title ?>
 												<?php exclude_post_categories("8"); ?>
 											</p>
 
@@ -53,7 +55,7 @@
 
 										</header>
 
-										<section class="entry-content ">
+										<section class="entry-content">
 											<?php
 											$content = get_the_excerpt();
 											echo wp_trim_words( $content , '10' );

@@ -1449,6 +1449,8 @@ $title-lineheight: $title-pad + 1;
 		margin: 0;
 	}
 
+	//Hide "Category" on Archive pages
+	.screen-reader-text {display: none;}
 
 
 /******************************************************************

@@ -13,9 +13,10 @@
 
 								<header class="post post__header">
 									<div class="row">
-										<h1 class="h2 entry-title col-xs-12 col-md-8"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-										<div class="col-xs-12 col-md-4 article-info">
-											<?php printf( '<p class="byline entry-meta vcard">' . __( '', 'startertheme' ).' %1$s', '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time></p>'); ?>
+										<div class="col-xs-6"><?php printf( '<p class="byline entry-meta vcard">' . __( '', 'startertheme' ).' %1$s', '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time></p>'); ?></div>
+										<!--h1 class="h2 entry-title col-xs-12 col-md-8"><a href="<?php //the_permalink() ?>" rel="bookmark" title="<?php //the_title_attribute(); ?>"><?php //the_title(); ?></a></h1-->
+										<div class="col-xs-6 article-info">
+
 											<?php printf( '<p class="category">' . __('', 'startertheme' ) . '%1$s</p>' , get_the_category_list(', ') ); ?>
 										</div>
 									</div>

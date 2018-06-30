@@ -6,7 +6,7 @@
 				<div id="inner-content" class="wrap  row">
 
 					<main id="main" class="col-xs-12 col-sm-8 col-lg-9 " role="main">
-						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'startertheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+						
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -16,14 +16,14 @@
 
 									<h3 class="search-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-                  						<p class="byline entry-meta vcard">
-                    							<?php printf( __( 'Posted %1$s by %2$s', 'startertheme' ),
-                   							    /* the time the post was published */
-                   							    '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-                      							    /* the author of the post */
-                       							    '<span class="by">by</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-                    							); ?>
-                  						</p>
+        						<p class="byline entry-meta vcard">
+          							<?php printf( __( 'Posted %1$s by %2$s', 'startertheme' ),
+         							    /* the time the post was published */
+         							    '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
+            							    /* the author of the post */
+             							    '<span class="by">by</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
+          							); ?>
+        						</p>
 
 								</header>
 

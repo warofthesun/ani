@@ -152,10 +152,13 @@
 				<div class="wrap recent-news">
 					<h1>Latest News</h2>
 					<div class="flex-direction flex-direction--row">
-						<?php global $post; // required
-						$args = array('numberposts'=>4, 'category_name'=>'Featured');
-						$custom_posts = get_posts($args);
-						foreach($custom_posts as $post) : setup_postdata($post); ?>
+						<?php $query = new WP_Query( array(
+						    'posts_per_page' => 4,
+						    'no_found_rows'  => true,
+						    'tag'            => 'Featured'
+						) );
+
+						if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 						<div class="col-xs-12 col-sm-2 col-md-3">
 							<div class="recent-news__category"><?php exclude_post_categories("3"); ?></div>
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('square'); ?></a>
@@ -168,7 +171,7 @@
 								?>
 							</p>
 						</div>
-					<?php	endforeach;?>
+					<?php	endwhile; endif;?>
 					<?php wp_reset_postdata(); // reset the query ?>
 					<a name="contact"></a>
 					</div>
