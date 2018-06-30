@@ -44,7 +44,25 @@
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+		<svg xmlns="http://www.w3.org/2000/svg" style="position:relative;height:0;">
+		   <defs>
+		      <filter id="colors">
 
+		         <feColorMatrix result="base" in="SourceGraphic" result="1" type="matrix" values="0.3333 0.3333 0.3333 0 0
+		            0.3333 0.3333 0.3333 0 0
+		            0.3333 0.3333 0.3333 0 0
+		            0      0      0      1 0"></feColorMatrix>
+
+		         <feColorMatrix color-interpolation-filters="sRGB" result="2" in="SourceGraphic" type="matrix"
+		         values=".61  0        0        0 0
+		            		 0        .65  0        0 0
+		            		 0        0        .79        0 0
+		            		 0        0        0        1 0 "></feColorMatrix>
+										 <feBlend mode="multiply" in="1" in2="2" result="12"/>
+
+		      </filter>
+		   </defs>
+		</svg>
 		<div id="container">
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">

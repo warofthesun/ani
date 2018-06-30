@@ -550,20 +550,20 @@ $title-lineheight: $title-pad + 1;
 	margin-top: 2em;
 
 		&__image {
-
+			width: 100%;
 			&--full {
 				height: 60vh;
 				display: flex;
-				//background-image: url('../images/header.jpg');
 				background-size: cover;
 				background-repeat: no-repeat;
 				max-width: 1600px;
 				margin:0 auto;
+				filter: url('#colors');
 			}
 		}
 
 		&__content {
-
+			width: 100%;
 			p {
 				font-family: $display;
 				font-weight: 300;
@@ -575,11 +575,13 @@ $title-lineheight: $title-pad + 1;
 
 			&--left {
 				align-self: center;
-				margin-top: -10vh;
+				margin-top: -65vh;
 			}
 
 			.content-boxes {
 				margin-top: -15vh;
+				z-index: 99;
+				position: relative;
 
 				&__header {
 					padding: 0 1em;

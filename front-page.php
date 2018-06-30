@@ -1,6 +1,6 @@
 <!--front page-->
 <?php get_header('front'); ?>
-			<section class="hero">
+			<section class="hero row">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<?php
 							$attachment_id = get_field('hero_image');
@@ -10,11 +10,11 @@
 							// width = $image[1];
 							// height = $image[2];
 						?>
-				<div class="hero__image hero__image--full" style="background-image:url('<?php echo $image[0]; ?>')">
+				<div class="hero__image hero__image--full" style="background-image:url('<?php echo $image[0]; ?>');"></div>
 					<div class="hero__content hero__content--left wrap">
 					<p class="highlight highlight--wrapping"><?php the_field('hero_title'); ?></p>
 					</div>
-				</div>
+
 				<div class="hero__content">
 					<div class="content-boxes wrap">
 						<div class="col-xs-12 col-sm-3">
