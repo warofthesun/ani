@@ -1,14 +1,17 @@
 <!--page-->
 <?php get_header(); ?>
 
-			<div id="content">
+			<div id="content" class="row wrap">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-				<div id="inner__content" class="wrap  row">
+					<?php if( get_field('number_of_columns') == 'one' ): ?>
+					<div id="inner__content" class="wrap row">
+						<?php else : ?>
+					<div id="inner__content" class="wrap row col-xs-12 col-md-6">
+						<?php endif; ?>
 					<?php if ( is_page('clinic-staff') ) { ?>
-					  <main id="main" class="col-xs-12 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					 <main id="main" class="col-xs-12 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 					<? } else { ?>
-					  <main id="main" class="col-xs-12 col-sm-10 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					 <main id="main" class="col-xs-12 col-sm-10 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 					<?php } ?>
 
 
@@ -22,7 +25,7 @@
 										elseif ( is_page('info') ) {
 										include 'partials/info.php';
 										} else {
-									  the_content();
+									 the_content();
 									}
 									?>
 
@@ -33,6 +36,11 @@
 						</main>
 
 				</div>
+				<?php if( get_field('number_of_columns') == 'two' ): ?>
+				<div id="inner__content--right" class="col-xs-12 col-md-6">
+					<?php the_field('column_two_content'); ?>
+				</div>
+			<?php endif; ?>
 				<?php if ( get_field( 'include_bottom_section_tf' ) ): include 'partials/bottom-section.php'; ?>
 				<?php else: endif; ?>
 
