@@ -16,7 +16,7 @@
             <li>
               <a href="#<?php $page_link = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $page_link ); ?>"><?php the_sub_field('header'); ?></a>
             </li>
-          <?php elseif( get_row_layout() == 'distinctions' ): ?>
+            <?php elseif( get_row_layout() == 'distinctions' ): ?>
 
             <li>
               <a href="#<?php $page_link = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $page_link ); ?>"><?php the_sub_field('header'); ?></a>
@@ -24,9 +24,15 @@
 
             <?php elseif( get_row_layout() == 'in-house_procedures' ): ?>
 
-              <li>
-                <a href="#<?php $page_link = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $page_link ); ?>"><?php the_sub_field('header'); ?></a>
-              </li>
+            <li>
+              <a href="#<?php $page_link = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $page_link ); ?>"><?php the_sub_field('header'); ?></a>
+            </li>
+
+            <?php elseif( get_row_layout() == 'fees' ): ?>
+
+            <li>
+              <a href="#<?php $page_link = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $page_link ); ?>"><?php the_sub_field('header'); ?></a>
+            </li>
 
 
         <?php endif; endwhile; else :
