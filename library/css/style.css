@@ -2078,7 +2078,9 @@ and more scalable.
   margin-bottom: 1em;
   margin-top: -1em;
   -webkit-transition: all .5s;
-  transition: all .5s; }
+  transition: all .5s;
+  margin-left: auto;
+  margin-right: auto; }
   #mobile-nav.show {
     margin-top: 0em;
     padding: .5em;
