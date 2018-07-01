@@ -3,15 +3,15 @@
 
 			<div id="content" class="row wrap">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					<?php if( get_field('number_of_columns') == 'one' ): ?>
-					<div id="inner__content" class="wrap row">
-						<?php else : ?>
+					<?php if( get_field('number_of_columns') == 'two' ): ?>
 					<div id="inner__content" class="wrap row col-xs-12 col-md-6">
+						<?php else : ?>
+					<div id="inner__content" class="wrap row">
 						<?php endif; ?>
 					<?php if ( is_page('clinic-staff') ) { ?>
 					 <main id="main" class="col-xs-12 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 					<? } else { ?>
-					 <main id="main" class="col-xs-12 col-sm-10 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					 <main id="main" class="col-xs-12 col-sm-10" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 					<?php } ?>
 
 

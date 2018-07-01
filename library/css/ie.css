@@ -215,6 +215,19 @@ NAVIGATION STYLES
       -ms-flex-direction: row;
           flex-direction: row; }
 
+#inner__content ul.content__flexible .fees ul.fees--repeater {
+  margin: 0; }
+  #inner__content ul.content__flexible .fees ul.fees--repeater li.description div {
+    text-align: left !important;
+    border: 0; }
+  #inner__content ul.content__flexible .fees ul.fees--repeater li div:first-child {
+    width: 10%; }
+  #inner__content ul.content__flexible .fees ul.fees--repeater li div:nth-child(2) {
+    width: 60%; }
+  #inner__content ul.content__flexible .fees ul.fees--repeater li div:nth-child(3), #inner__content ul.content__flexible .fees ul.fees--repeater li div:nth-child(4) {
+    width: 15%;
+    text-align: right; }
+
 .page-title {
   margin-left: auto;
   margin-right: 0;

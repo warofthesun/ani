@@ -42,6 +42,33 @@
             <?php the_sub_field('content'); ?>
           </li>
         <?php endif; ?>
+      <?php elseif( get_row_layout() == 'fees' ): ?>
+
+        <li class="fees">
+          <a name="<?php $page_link = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $page_link ); ?>"></a>
+          <h2><?php the_sub_field('header'); ?></h2>
+          <h3><?php the_sub_field('sub-header'); ?></h3>
+          <?php the_sub_field('upper_content'); ?>
+            <?php if( have_rows('fees-repeater') ): ?>
+              <ul class="fees--repeater">
+                <li class="row description">
+                  <div>CPT</div>
+                  <div>CPT Description</div>
+                  <div>Medicare Limiting Charge</div>
+                  <div>Prompt Pay</div>
+                </li>
+                <?php while ( have_rows('fees-repeater') ) : the_row(); ?>
+                <li class="row">
+                  <div><?php the_sub_field('cpt'); ?></div>
+                  <div><?php the_sub_field('cpt_description'); ?></div>
+                  <div><?php the_sub_field('medicare_limiting_charge'); ?></div>
+                  <div><?php the_sub_field('prompt_pay'); ?></div>
+                </li>
+                <?php endwhile; ?>
+              </ul>
+          <?php the_sub_field('content'); ?>
+        </li>
+      <?php endif; ?>
 
           <?php elseif( get_row_layout() == 'in-house_procedures' ): ?>
 

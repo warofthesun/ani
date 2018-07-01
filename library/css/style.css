@@ -1834,6 +1834,47 @@ img {
                 color: #16BBF7;
                 font-weight: bold;
                 font-style: italic; }
+      #inner__content ul.content__flexible .fees ul.fees--repeater {
+        list-style: none;
+        margin-left: -3em;
+        margin-right: -3em; }
+        #inner__content ul.content__flexible .fees ul.fees--repeater li {
+          padding: 0;
+          margin: 0;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row; }
+          #inner__content ul.content__flexible .fees ul.fees--repeater li.description {
+            font-size: 0.8em;
+            text-align: left;
+            -webkit-box-align: end;
+                -ms-flex-align: end;
+                    align-items: flex-end; }
+            #inner__content ul.content__flexible .fees ul.fees--repeater li.description div {
+              text-align: left !important;
+              border: 0; }
+              #inner__content ul.content__flexible .fees ul.fees--repeater li.description div::before {
+                content: "" !important; }
+          #inner__content ul.content__flexible .fees ul.fees--repeater li div {
+            border-right: 1px solid #16BBF7;
+            padding: 0.5em;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box; }
+            #inner__content ul.content__flexible .fees ul.fees--repeater li div:first-child {
+              width: 15%;
+              font-style: italic; }
+            #inner__content ul.content__flexible .fees ul.fees--repeater li div:nth-child(2) {
+              width: 55%; }
+            #inner__content ul.content__flexible .fees ul.fees--repeater li div:nth-child(3), #inner__content ul.content__flexible .fees ul.fees--repeater li div:nth-child(4) {
+              width: 15%;
+              text-align: right; }
+              #inner__content ul.content__flexible .fees ul.fees--repeater li div:nth-child(3):before, #inner__content ul.content__flexible .fees ul.fees--repeater li div:nth-child(4):before {
+                content: "$"; }
+            #inner__content ul.content__flexible .fees ul.fees--repeater li div:nth-child(4) {
+              border-right: 0; }
+          #inner__content ul.content__flexible .fees ul.fees--repeater li:nth-child(even) {
+            background-color: rgba(22, 187, 247, 0.1); }
 
 .social {
   display: -webkit-box;
@@ -3046,6 +3087,18 @@ NAVIGATION STYLES
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row; }
+  #inner__content ul.content__flexible .fees ul.fees--repeater {
+    margin: 0; }
+    #inner__content ul.content__flexible .fees ul.fees--repeater li.description div {
+      text-align: left !important;
+      border: 0; }
+    #inner__content ul.content__flexible .fees ul.fees--repeater li div:first-child {
+      width: 10%; }
+    #inner__content ul.content__flexible .fees ul.fees--repeater li div:nth-child(2) {
+      width: 60%; }
+    #inner__content ul.content__flexible .fees ul.fees--repeater li div:nth-child(3), #inner__content ul.content__flexible .fees ul.fees--repeater li div:nth-child(4) {
+      width: 15%;
+      text-align: right; }
   .page-title {
     margin-left: auto;
     margin-right: 0;
