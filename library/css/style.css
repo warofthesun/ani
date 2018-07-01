@@ -2683,7 +2683,8 @@ p.category {
 			but it's up to you. Feel free to change it up.
 			*/ }
   .entry__content p {
-    margin: 0 0 1.5em; }
+    margin: 0 0 1.5em;
+    line-height: 1.9em; }
   .entry__content ul {
     list-style-type: disc; }
     .entry__content ul li {
