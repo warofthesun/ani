@@ -48,18 +48,20 @@
 		   <defs>
 		      <filter id="colors">
 
-		         <feColorMatrix result="base" in="SourceGraphic" result="1" type="matrix" values="0.3333 0.3333 0.3333 0 0
+		         <feColorMatrix result="base" in="SourceGraphic" result="1" type="matrix"
+		         values="0.9 0.3333 0.3333 0 0
+		            0.3333 0.5 0.3333 0 0
 		            0.3333 0.3333 0.3333 0 0
-		            0.3333 0.3333 0.3333 0 0
-		            0      0      0      1 0"></feColorMatrix>
+		            0      0      0      1 0">
+             </feColorMatrix>
 
 		         <feColorMatrix color-interpolation-filters="sRGB" result="2" in="SourceGraphic" type="matrix"
-		         values=".61  0        0        0 0
-		            		 0        .65  0        0 0
-		            		 0        0        .79        0 0
-		            		 0        0        0        1 0 "></feColorMatrix>
-										 <feBlend mode="multiply" in="1" in2="2" result="12"/>
-
+						 values="0.3333 0.3333 0.3333 0 0
+		            0.3333 0.3333 0.3333 0 0
+		            0.3333 0.3333 0.5 0 0
+		            0      0      0      1 0">
+		     		 </feColorMatrix>
+						 <feBlend mode="multiply" in="1" in2="2" result="12"/>
 		      </filter>
 		   </defs>
 		</svg>
