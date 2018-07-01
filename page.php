@@ -1,7 +1,7 @@
 <!--page-->
 <?php get_header(); ?>
 
-			<div id="content" class="row wrap">
+			<div id="content" class="row">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<?php if( get_field('number_of_columns') == 'two' ): ?>
 					<div id="inner__content" class="wrap row col-xs-12 col-md-6">
