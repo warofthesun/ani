@@ -2,10 +2,10 @@
 <?php get_header(); ?>
 
 			<div id="content" class="row">
-				<div class="wrap">
+				<div class="wrap row">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<?php if( get_field('number_of_columns') == 'two' ): ?>
-					<div id="inner__content" class="wrap row col-xs-12 col-md-6">
+					<div id="inner__content" class="row col-xs-12 col-md-6">
 						<?php else : ?>
 					<div id="inner__content" class="wrap row">
 						<?php endif; ?>
@@ -42,11 +42,12 @@
 					<?php the_field('column_two_content'); ?>
 				</div>
 				<?php endif; ?>
+				</div>
 				<?php if ( get_field( 'include_bottom_section_tf' ) ): include 'partials/bottom-section.php'; ?>
 				<?php else: endif; ?>
 
 				<?php endwhile; endif; ?>
-				</div>
+
 			</div>
 
 <?php get_footer(); ?>
