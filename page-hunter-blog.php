@@ -9,7 +9,7 @@
 			<div id="content" class="row">
 
 					<div id="inner__content" class="wrap row">
-						<?php $custom_query = new WP_Query('pagename=dr-hunter');
+						<?php $custom_query = new WP_Query('pagename=drhunter');
 						while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 						<?php if( get_field('include_blog_sidebar') ) : ?>
 					 <main id="main" class="col-xs-12 col-sm-8 col-lg-9" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
@@ -51,7 +51,7 @@
 						</article>
 						<?php endwhile; endif; ?>
 						</main>
-						<?php $custom_query = new WP_Query('pagename=dr-hunter');
+						<?php $custom_query = new WP_Query('pagename=drhunter');
 						while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 						<?php if( get_field('include_blog_sidebar') ) : ?>
 							<?php get_sidebar('drhunter'); ?>

@@ -1,4 +1,4 @@
-<!--front page-->
+<!--dr hunter-->
 <?php get_header('front'); ?>
 			<section class="hero row">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

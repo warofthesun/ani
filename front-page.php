@@ -161,7 +161,7 @@
 
 						if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 						<div class="col-xs-12 col-sm-2 col-md-3">
-							<div class="recent-news__category"><?php exclude_post_categories("3"); ?></div>
+							<div class="recent-news__category"><?php $category = get_the_category(); echo '<a class="category" href="'.get_category_link($category[0]->term_id ).'">'.$category[0]->cat_name.'</a>'; ?></div>
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('square'); ?></a>
 							<div class="recent-news__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
 							<!--div class="recent-news__date"><?php //the_date(); ?></div-->
