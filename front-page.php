@@ -164,7 +164,7 @@
 							<div class="recent-news__category"><?php exclude_post_categories("3"); ?></div>
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('square'); ?></a>
 							<div class="recent-news__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
-							<div class="recent-news__date"><?php the_date(); ?></div>
+							<!--div class="recent-news__date"><?php //the_date(); ?></div-->
 							<p>
 								<?php
 								$content = get_the_excerpt();
