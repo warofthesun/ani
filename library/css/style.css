@@ -2189,6 +2189,8 @@ POSTS & CONTENT STYLES
       -ms-flex-item-align: center;
           align-self: center;
       margin-top: -65vh; }
+    .hero__content--medium p {
+      font-size: 3em; }
     .hero__content .content-boxes {
       margin-top: -15vh;
       z-index: 99;
@@ -2291,6 +2293,16 @@ POSTS & CONTENT STYLES
           color: #16BBF7; }
       .hero__content .content-boxes > div {
         padding: 0; }
+    .hero__content--single .content-boxes {
+      min-height: 10vh !important; }
+      .hero__content--single .content-boxes p {
+        line-height: 1.5em; }
+      .hero__content--single .content-boxes > div {
+        border-radius: 10px 10px 0 0 !important; }
+      .hero__content--single .content-boxes__content {
+        background-color: #0678a1;
+        border-top: 0px solid #fff;
+        height: auto !important; }
 
 .flex-direction {
   display: -webkit-box;
@@ -2302,7 +2314,10 @@ POSTS & CONTENT STYLES
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .flex-direction--column {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2397,6 +2412,35 @@ POSTS & CONTENT STYLES
         margin: 0;
         color: #fff;
         font-size: 1.1em; }
+      .content--secondary .content-boxes__content--white {
+        background-color: white !important; }
+    .content--secondary .content-boxes .ecs-event-list {
+      margin: 0; }
+      .content--secondary .content-boxes .ecs-event-list h4.entry-title a {
+        font-size: 0.7em;
+        color: #16BBF7; }
+      .content--secondary .content-boxes .ecs-event-list h4.entry-title:after {
+        content: "\f0a9";
+        font-family: fontawesome;
+        margin-left: .2em;
+        font-size: .5em;
+        color: #66D7FF; }
+      .content--secondary .content-boxes .ecs-event-list .ecs-event {
+        border-bottom: 1px solid #0678a1;
+        padding-bottom: 2em;
+        padding-top: 1em; }
+        .content--secondary .content-boxes .ecs-event-list .ecs-event p {
+          color: #052A38; }
+        .content--secondary .content-boxes .ecs-event-list .ecs-event .duration {
+          color: #0678a1;
+          font-weight: bold;
+          display: inline-block;
+          margin-top: 1em; }
+        .content--secondary .content-boxes .ecs-event-list .ecs-event:first-child {
+          padding-top: 0; }
+        .content--secondary .content-boxes .ecs-event-list .ecs-event:last-child {
+          border-bottom: 0;
+          padding-bottom: 0; }
     .content--secondary .content-boxes > div:first-child {
       border-radius: 10px 0px 0 0; }
     .content--secondary .content-boxes > div:last-child {
@@ -2470,23 +2514,6 @@ POSTS & CONTENT STYLES
             color: #5c6b80; }
     .content__full-width--centered.making-an-appointment h4, .content__full-width--centered.making-an-appointment .h4, .content__full-width--centered.making-an-appointment p {
       margin: 0; }
-  .content.staff > a {
-    color: #475691;
-    text-align: right;
-    text-decoration: none;
-    font-size: .9em;
-    font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    -webkit-transition: all 1s;
-    transition: all 1s; }
-    .content.staff > a:after {
-      content: "\f0a9";
-      font-family: fontawesome;
-      margin-left: .2em; }
-    .content.staff > a:hover:after {
-      content: "\f061";
-      font-family: fontawesome;
-      margin-left: .2em; }
   .content.staff .content-block {
     height: 400px;
     display: -webkit-box;
@@ -2581,6 +2608,24 @@ POSTS & CONTENT STYLES
 
 .blog-page:before {
   content: "\f1ea"; }
+
+a.see-all {
+  color: #475691;
+  text-align: right;
+  text-decoration: none;
+  font-size: .9em;
+  font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  -webkit-transition: all 1s;
+  transition: all 1s; }
+  a.see-all:after {
+    content: "\f0a9";
+    font-family: fontawesome;
+    margin-left: .2em; }
+  a.see-all:hover:after {
+    content: "\f061";
+    font-family: fontawesome;
+    margin-left: .2em; }
 
 #content {
   margin-top: 0em; }

@@ -78,6 +78,7 @@
 				</div>
 			</section>
 			<section class="content__full-width content__full-width--lt-blue content__full-width--centered">
+				<a name="about"></a>
 				<div class="wrap">
 					<h1><?php the_field('about_title'); ?></h2>
 					<?php the_field('about_content'); ?>
@@ -144,7 +145,7 @@
 				endif;//endwhile;
 				?>
 			<?php endwhile; ?>
-				<a href="/clinic-staff" class="col-xs-12">See All</a>
+				<a href="/clinic-staff" class="col-xs-12 see-all">See All</a>
 
 			<?php wp_reset_postdata(); // reset the query ?>
 			</section>
@@ -172,6 +173,7 @@
 							</p>
 						</div>
 					<?php	endwhile; endif;?>
+					<a href="/recent-news" class="col-xs-12 see-all">See All</a>
 					<?php wp_reset_postdata(); // reset the query ?>
 					<a name="contact"></a>
 					</div>
