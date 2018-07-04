@@ -718,7 +718,7 @@ $title-lineheight: $title-pad + 1;
 						font-weight: bold;
 					}
 
-					p {
+					p, ul {
 						font-size: 1.1em;
 						line-height: 1.2em;
 						color: $white;
@@ -726,6 +726,20 @@ $title-lineheight: $title-pad + 1;
 						font-weight: normal;
 						font-family: $sans-serif;
 						margin:0;
+					}
+
+					ul {
+						li {
+							margin-bottom: .5em;
+
+							&::before {
+								content: "\f0f0";
+								font-family: fontawesome;
+								display: inline-block;
+								padding-right: .5rem;
+								color: $primary-md;
+							}
+						}
 					}
 				}
 
@@ -996,6 +1010,7 @@ $title-lineheight: $title-pad + 1;
 
 	&__full-width {
 		padding: 2em 0;
+		width: 100%;
 
 		&--lt-blue {
 			background-color: rgba($primary-lt, 0.1);

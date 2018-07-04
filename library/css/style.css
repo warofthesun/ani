@@ -2259,7 +2259,7 @@ POSTS & CONTENT STYLES
         .hero__content .content-boxes__content a {
           color: #fff;
           font-weight: bold; }
-        .hero__content .content-boxes__content p {
+        .hero__content .content-boxes__content p, .hero__content .content-boxes__content ul {
           font-size: 1.1em;
           line-height: 1.2em;
           color: #fff;
@@ -2267,6 +2267,14 @@ POSTS & CONTENT STYLES
           font-weight: normal;
           font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
           margin: 0; }
+        .hero__content .content-boxes__content ul li {
+          margin-bottom: .5em; }
+          .hero__content .content-boxes__content ul li::before {
+            content: "\f0f0";
+            font-family: fontawesome;
+            display: inline-block;
+            padding-right: .5rem;
+            color: #079cd3; }
       .hero__content .content-boxes > div:first-child {
         border-radius: 10px 0px 0 0; }
       .hero__content .content-boxes > div:last-child {
@@ -2454,7 +2462,8 @@ POSTS & CONTENT STYLES
     .content--secondary .content-boxes > div {
       padding: 0; }
   .content__full-width {
-    padding: 2em 0; }
+    padding: 2em 0;
+    width: 100%; }
     .content__full-width--lt-blue {
       background-color: rgba(102, 215, 255, 0.1); }
     .content__full-width--dk-blue {
