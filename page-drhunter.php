@@ -22,7 +22,7 @@
 					</div>
 				</div>
 			</section>
-			<div id="inner__content">
+			<div id="inner__content" class="flex-direction--column">
 			<?php if(get_field('include_events')) : ?>
 				<section class="content--secondary">
 					<div class="content-boxes wrap row">
