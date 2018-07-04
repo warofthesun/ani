@@ -39,6 +39,7 @@ img {
 
 	&__content {
 		display: flex;
+		flex-direction: column;
 
 		ul.info-nav {
 			list-style: none;
@@ -129,6 +130,7 @@ img {
 								&:first-child {
 									width: 8%;
 									font-family: $display;
+									min-width: 60px;
 
 
 									span {
@@ -139,6 +141,22 @@ img {
 										font-style: italic;
 									}
 								}
+							}
+						}
+					}
+				}
+
+				.education, .specialties {
+					ul {
+						list-style: none;
+						li {
+							padding: 0;
+							margin:0;
+							padding: .5em;
+							flex-direction: column;
+
+							&:nth-child(even) {
+								background-color: rgba($primary, 0.1);
 							}
 						}
 					}
@@ -357,6 +375,10 @@ h2, .h2 {
 	font-size: 1.75em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
+
+	&.reduced {
+		font-size: 1.25em;
+	}
 }
 
 h3, .h3 {

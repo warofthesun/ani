@@ -1770,7 +1770,11 @@ img {
   #inner__content {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
     #inner__content ul.info-nav {
       list-style: none;
       margin: 0;
@@ -1827,13 +1831,26 @@ img {
             width: 92%; }
             #inner__content ul.content__flexible .distinctions ul li div:first-child {
               width: 8%;
-              font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+              font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+              min-width: 60px; }
               #inner__content ul.content__flexible .distinctions ul li div:first-child span {
                 width: 65%;
                 display: inline-block;
                 color: #16BBF7;
                 font-weight: bold;
                 font-style: italic; }
+      #inner__content ul.content__flexible .education ul, #inner__content ul.content__flexible .specialties ul {
+        list-style: none; }
+        #inner__content ul.content__flexible .education ul li, #inner__content ul.content__flexible .specialties ul li {
+          padding: 0;
+          margin: 0;
+          padding: .5em;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column; }
+          #inner__content ul.content__flexible .education ul li:nth-child(even), #inner__content ul.content__flexible .specialties ul li:nth-child(even) {
+            background-color: rgba(22, 187, 247, 0.1); }
       #inner__content ul.content__flexible .fees ul.fees--repeater {
         list-style: none;
         margin-left: -3em;
@@ -2005,6 +2022,8 @@ h2, .h2 {
   font-size: 1.75em;
   line-height: 1.4em;
   margin-bottom: 0.375em; }
+  h2.reduced, .h2.reduced {
+    font-size: 1.25em; }
 
 h3, .h3 {
   font-size: 1.125em;

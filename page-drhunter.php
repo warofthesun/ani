@@ -12,9 +12,8 @@
 						?>
 				<div class="hero__image hero__image--full" style="background-image:url('<?php echo $image[0]; ?>');"></div>
 					<div class="hero__content hero__content--left hero__content--medium wrap">
-					<p class="highlight highlight--wrapping"><?php the_field('hero_title'); ?></p>
+						<p class="highlight highlight--wrapping"><?php the_field('hero_title'); ?></p>
 					</div>
-
 				<div class="hero__content hero__content--single">
 					<div class="content-boxes wrap">
 						<div class="col-xs-12">
@@ -23,27 +22,44 @@
 					</div>
 				</div>
 			</section>
+			<div id="inner__content">
 			<?php if(get_field('include_events')) : ?>
-			<section class="content--secondary">
-				<div class="content-boxes wrap row">
-					<div class="col-xs-12" style="border-radius:0px;">
-						<div class="content-boxes__header">
-							<p><?php the_field('secondary_box_one_title'); ?></p>
-							<?php if(get_field('secondary_box_one_link')) : ?>
-								<a href="<?php the_field('secondary_box_one_link'); ?>"><?php the_field('secondary_box_one_link_text'); ?></a>
-							<?php endif; ?>
+				<section class="content--secondary">
+					<div class="content-boxes wrap row">
+						<div class="col-xs-12" style="border-radius:0px;">
+							<div class="content-boxes__header">
+								<p><?php the_field('secondary_box_one_title'); ?></p>
+								<?php if(get_field('secondary_box_one_link')) : ?>
+									<a href="<?php the_field('secondary_box_one_link'); ?>"><?php the_field('secondary_box_one_link_text'); ?></a>
+								<?php endif; ?>
+							</div>
+							<div class="content-boxes__content content-boxes__content--white"><?php the_field('secondary_box_one_content'); ?></div>
 						</div>
-						<div class="content-boxes__content content-boxes__content--white"><?php the_field('secondary_box_one_content'); ?></div>
 					</div>
-				</div>
-			</section>
-		<?php endif; ?>
-			<section class="content__full-width content__full-width--lt-blue content__full-width--centered">
-				<div class="wrap">
-					<h1><?php the_field('about_title'); ?></h2>
-					<?php the_field('about_content'); ?>
-				</div>
-			</section>
+				</section>
+			<?php endif; ?>
+
+				<section class="content__full-width content__full-width--lt-blue content__full-width--centered">
+					<div class="wrap row" style="flex-direction:row;flex-wrap:wrap;">
+						<?php if (get_field('include_distinctions')) : ?>
+							<div class="col-xs-12 col-md-4">
+								<?php $custom_query = new WP_Query('pagename=info');
+								while($custom_query->have_posts()) : $custom_query->the_post(); include 'partials/distinctions.php'; endwhile; ?>
+							</div>
+							<div class="col-xs-12 col-md-4">
+						<?php else: ?>
+							<div class="col-xs-12 col-md-6">
+						<?php endif; ?>
+						<?php wp_reset_postdata(); ?>
+								<?php include 'partials/education.php'; ?>
+							</div>
+
+							<div class="col-xs-12 <?php if (get_field('include_distinctions')) : ?> col-md-4 <?php else : ?>col-md-6<?php endif; ?>">
+								<?php include 'partials/specialties.php'; ?>
+							</div>
+
+					</div>
+				</section>
 
 			<section class="content content__full-width content__full-width--centered">
 				<div class="wrap recent-news">
@@ -69,28 +85,12 @@
 					<?php	endwhile; endif;?>
 					<a href="/drhunter/blog" class="col-xs-12 see-all">See All</a>
 					<?php wp_reset_postdata(); // reset the query ?>
-					<a name="contact"></a>
 					</div>
 				</div>
 			</section>
-			<section class="content content__full-width content__full-width--dk-blue collapse--bottom">
-				<div class="contact wrap">
-					<h1 class="col-xs-12 ">Contact Us</h1>
-					<div class="flex-direction flex-direction--row">
+			</div>
+			<?php if ( get_field( 'include_bottom_section_tf' ) ): include 'partials/bottom-section.php'; else: endif; ?>
 
-							<div class="col-xs-12 col-md-5 collapse--top">
-								<?php the_field('contact_text'); ?>
-							</div>
-
-						<div class="col-xs-12 col-md-7" style="margin-top:-1em;">
-
-								<?php the_field('contact_form'); ?>
-							<?php endwhile; endif; ?>
-						</div>
-					</div>
-				</div>
-			</section>
-
-
+			<?php endwhile; endif; ?>
 
 <?php get_footer(); ?>
