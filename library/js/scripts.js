@@ -111,9 +111,9 @@ Uncomment  the below to exclude first section from animation
 */
 
 
-//sr.reveal('.post:not(:first-child)');
+sr.reveal('article:not(:first-child)');
 
-sr.reveal('.post');
+//sr.reveal('.post');
 
 
 
