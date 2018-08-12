@@ -18,21 +18,20 @@
 							)); ?>
 						</nav>
 					</div>
-					<?php $custom_query = new WP_Query('pagename=footer');
-					while($custom_query->have_posts()) : $custom_query->the_post(); ?>
-					<div class="col-xs-12 col-md-8" style="margin:0 auto;text-align:center;"><?php the_field('disclaimer'); ?></div>
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<div class="col-xs-12 col-md-8" style="margin:0 auto;text-align:center;"><?php the_field('disclaimer', 'options'); ?></div>
 					<div class="contact--info col-xs-12 col-md-8">
-						<?php the_field('address'); ?>
+						<?php the_field('address', 'options'); ?>
 						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 					</div>
 					<div class="col-xs-12 col-md-4 social">
 						<?php
 
 							// check if the repeater field has rows of data
-							if( have_rows('social_platforms') ):
+							if( have_rows('social_platforms', 'options') ):
 
 							 	// loop through the rows of data
-							    while ( have_rows('social_platforms') ) : the_row();
+							    while ( have_rows('social_platforms', 'options') ) : the_row();
 
 							        // display a sub field value
 
@@ -54,7 +53,7 @@
 
 					</div>
 				</div>
-				<?php endwhile; ?>
+			<?php endwhile; endif; ?>
 				<?php wp_reset_postdata(); // reset the query ?>
 			</footer>
 
