@@ -1252,6 +1252,8 @@ a.see-all {
 }
 #content {
 	margin-top: 0em;
+	display: flex;
+	flex-direction: row;
 
 	.article {
 		&__header {

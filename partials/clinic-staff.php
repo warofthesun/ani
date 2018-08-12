@@ -16,7 +16,7 @@ if( have_rows('staff') ):
      ?>
      <?php //if ( $i > 4 ) { break; } ?>
      <?php if ( get_sub_field( 'extra_info_tf' ) ): ?>
-       <div class="row">
+       <div class="row col-xs-12">
        <div class="col-xs-12 col-sm-6 content-block extra-info" style="background-image:url('<?php echo $image[0]; ?>')">
          <?php if ( get_sub_field( 'category' ) ): ?>
           <div class="staff__category col-xs-12"><?php the_sub_field('category'); ?></div>

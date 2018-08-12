@@ -503,5 +503,11 @@ function my_theme_register_required_plugins() {
 
 }
 
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page();
+
+}
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
