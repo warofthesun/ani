@@ -12,7 +12,11 @@
 							<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 								<section class="content content__full-width content__full-width--centered">
 									<div class="wrap recent-news">
-										<h1>Philanthropy</h2>
+										<a name="<?php $page_link = sanitize_title_for_query( get_field('section_header') ); echo esc_attr( $page_link ); ?>"></a>
+										<h2><?php the_field('section_header'); ?></h2>
+										<div>
+											<?php the_field('content_area'); ?>
+										</div>
 										<div class="flex-direction flex-direction--row">
 											<?php $query = new WP_Query( array(
 											    'posts_per_page' => 4,
