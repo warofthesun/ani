@@ -43,7 +43,8 @@
 														 <?php  endwhile; endif; endif; ?>
 
 											 <?php if( get_row_layout() == 'section_header_flex' ): ?>
-												 <h2><?php the_sub_field('section_header'); ?></h2>
+												 <a name="<?php $page_link = sanitize_title_for_query( get_sub_field('section_header') ); echo esc_attr( $page_link ); ?>"></a>
+							           <h2><?php the_sub_field('section_header'); ?></h2>
 											 <?php endif; ?>
 
 											    <?php  endwhile; endif;  ?>
