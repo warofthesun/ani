@@ -47,6 +47,9 @@
 							           <h2><?php the_sub_field('section_header'); ?></h2>
 											 <?php endif; ?>
 
+											 <?php if( get_row_layout() == 'content_area_flex' ): ?>
+												 <?php the_sub_field('content_area'); ?>
+											 <?php endif; ?>
 											    <?php  endwhile; endif;  ?>
 
 								</section> <?php // end article section ?>

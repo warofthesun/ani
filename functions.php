@@ -512,13 +512,13 @@ if( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> true
 	));
-
+  /*
   acf_add_options_sub_page(array(
 		'page_title' 	=> 'Patient FAQs',
 		'menu_title'	=> 'Patient FAQs',
 		'parent_slug'	=> 'theme-settings',
 	));
-
+  */
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Theme Footer Settings',
 		'menu_title'	=> 'Footer',
