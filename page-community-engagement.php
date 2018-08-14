@@ -13,11 +13,37 @@
 
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+								<section class="content content__full-width content__full-width--centered">
+									<div class="wrap recent-news">
+										<h1>Philanthropy</h2>
+										<div class="flex-direction flex-direction--row">
+											<?php $query = new WP_Query( array(
+											    'posts_per_page' => 4,
+											    'no_found_rows'  => true,
+											    'category_name'            => 'community-engagement'
+											) );
 
+											if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+											<div class="col-xs-12 col-sm-2 col-md-3">
+												<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('square'); ?></a>
+												<div class="recent-news__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
+												<p>
+													<?php
+													$content = get_the_excerpt();
+													echo wp_trim_words( $content , '10' );
+													?>
+												</p>
+											</div>
+										<?php	endwhile; endif;?>
+										<a href="/drhunter/blog" class="col-xs-12 see-all">See All</a>
+										<?php wp_reset_postdata(); // reset the query ?>
+										</div>
+									</div>
+								</section>
 
 								<section class="entry__content " itemprop="articleBody">
 
-									<?php the_content(); ?>
+
 
 									<?php
 									if( have_rows('community_engagement') ): while ( have_rows('community_engagement') ) : the_row();
