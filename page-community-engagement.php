@@ -24,6 +24,8 @@
 
 										// check if the repeater field has rows of data
 											if( get_row_layout() == 'faqs' ): ?>
+											<a name="<?php $page_link = sanitize_title_for_query( get_sub_field('section_header') ); echo esc_attr( $page_link ); ?>"></a>
+											<h2><?php the_sub_field('section_header'); ?></h2>
 											<?php if( have_rows('faq_repeater') ): while ( have_rows('faq_repeater') ) : the_row(); ?>
 										     <div id="faq_container">
 
@@ -48,6 +50,8 @@
 											 <?php endif; ?>
 
 											 <?php if( get_row_layout() == 'content_area_flex' ): ?>
+												 <a name="<?php $page_link = sanitize_title_for_query( get_sub_field('section_header') ); echo esc_attr( $page_link ); ?>"></a>
+							           <h2><?php the_sub_field('section_header'); ?></h2>
 												 <?php the_sub_field('content_area'); ?>
 											 <?php endif; ?>
 											    <?php  endwhile; endif;  ?>
