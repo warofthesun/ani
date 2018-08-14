@@ -7,10 +7,7 @@
 
 					<div id="inner__content" class="wrap row">
 
-
-					 <main id="main" class="col-xs-12 col-sm-10" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
-
+					 <main id="main" class="col-xs-12" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 								<section class="content content__full-width content__full-width--centered">
@@ -20,11 +17,11 @@
 											<?php $query = new WP_Query( array(
 											    'posts_per_page' => 4,
 											    'no_found_rows'  => true,
-											    'category_name'            => 'community-engagement'
+											    'category_name'  => 'community-engagement'
 											) );
 
 											if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-											<div class="col-xs-12 col-sm-2 col-md-3">
+											<div class="col-xs-12 col-sm-6">
 												<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('square'); ?></a>
 												<div class="recent-news__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
 												<p>
@@ -35,7 +32,7 @@
 												</p>
 											</div>
 										<?php	endwhile; endif;?>
-										<a href="/drhunter/blog" class="col-xs-12 see-all">See All</a>
+										<a href="/community-engagement/blog" class="col-xs-12 see-all">See All</a>
 										<?php wp_reset_postdata(); // reset the query ?>
 										</div>
 									</div>

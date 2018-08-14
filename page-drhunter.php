@@ -72,7 +72,7 @@
 						) );
 
 						if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-						<div class="col-xs-12 col-sm-2 col-md-3">
+						<div class="col-xs-12 col-sm-6 col-md-3">
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('square'); ?></a>
 							<div class="recent-news__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
 							<p>
