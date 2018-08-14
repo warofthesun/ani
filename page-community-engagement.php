@@ -42,6 +42,10 @@
 												     </div>
 														 <?php  endwhile; endif; endif; ?>
 
+											 <?php if( get_row_layout() == 'section_header_flex' ): ?>
+												 <h2><?php the_sub_field('section_header'); ?></h2>
+											 <?php endif; ?>
+
 											    <?php  endwhile; endif;  ?>
 
 								</section> <?php // end article section ?>

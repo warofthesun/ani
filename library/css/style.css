@@ -1743,39 +1743,6 @@ and will be used across all viewports.
 /*********************
 GENERAL STYLES
 *********************/
-#faq_container {
-  border: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-  padding: 10px 15px; }
-
-.faq_question {
-  margin: 0px;
-  padding: 0px 0px 5px 0px;
-  display: inline-block;
-  cursor: pointer;
-  font-weight: bold;
-  display: table; }
-
-.question {
-  margin-bottom: 5px;
-  display: table-cell;
-  width: 100%; }
-
-.faq_answer_container {
-  height: 0px;
-  overflow: hidden;
-  padding: 0px; }
-
-.accordion-button-icon {
-  display: table-cell;
-  line-height: inherit;
-  opacity: .5;
-  filter: alpha(opacity=50);
-  padding-left: 15px;
-  vertical-align: middle; }
-  .accordion-button-icon.svg-inline--fa.fa-w-14 {
-    width: inherit; }
-
 body {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
@@ -1957,6 +1924,50 @@ img {
       margin-left: 0; }
     .social__icon--container:last-child {
       margin-right: 0; }
+
+#faq_container {
+  margin-bottom: 10px;
+  padding: 0; }
+
+.faq {
+  border: 1px solid #eaedf2;
+  padding: 1em; }
+  .faq.open {
+    border: 1px solid #fff;
+    -webkit-box-shadow: 0px 0px 5px #eaedf2;
+            box-shadow: 0px 0px 5px #eaedf2; }
+    .faq.open .faq_question {
+      margin-bottom: 1em;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #cbd2df; }
+
+.faq_question {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  display: table; }
+
+.question {
+  margin-bottom: 5px;
+  display: table-cell;
+  width: 100%; }
+
+.faq_answer_container {
+  height: 0px;
+  overflow: hidden;
+  padding: 0px; }
+
+.accordion-button-icon {
+  display: table-cell;
+  line-height: inherit;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  padding-left: 15px;
+  vertical-align: middle; }
+  .accordion-button-icon.svg-inline--fa.fa-w-14 {
+    width: inherit; }
 
 /********************
 WORDPRESS BODY CLASSES
