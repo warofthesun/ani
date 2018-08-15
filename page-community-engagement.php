@@ -10,7 +10,7 @@
 					 <main id="main" class="col-xs-12" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-								<section class="content content__full-width content__full-width--centered">
+								<section class="content">
 									<div class="wrap recent-news">
 										<a name="<?php $page_link = sanitize_title_for_query( get_field('section_header') ); echo esc_attr( $page_link ); ?>"></a>
 										<h2><?php the_field('section_header'); ?></h2>
