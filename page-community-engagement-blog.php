@@ -33,8 +33,8 @@
 									<div class="col-xs-12 col-md-4 article-info">
 										<?php printf( '<p class="byline entry-meta vcard">' . __( '', 'startertheme' ).' %1$s', '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time></p>'); ?>
 										<p class="category">
-											<?php //use the id number of DrHunter category to remove the word "DrHunter" from title ?>
-											<?php exclude_post_categories("8"); ?>
+											<?php //use the id number of Community Engagement category to remove the word "Community Engagement" from title ?>
+											<?php exclude_post_categories("11"); ?>
 										</p>
 									</div>
 								</div>
@@ -54,7 +54,7 @@
 						<?php $custom_query = new WP_Query('pagename=community-engagement');
 						while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 						<?php if( get_field('include_blog_sidebar') ) : ?>
-							<?php get_sidebar('communityengagement'); ?>
+							<?php get_sidebar('community'); ?>
 						<?php endif; endwhile;?>
 
 

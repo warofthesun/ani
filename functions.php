@@ -229,8 +229,8 @@ function starter_register_sidebars() {
 	));
 
   register_sidebar(array(
-		'id' => 'communityengagement',
-		'name' => __( 'Community Engagement', 'startertheme' ),
+		'id' => 'community',
+		'name' => __( 'Community', 'startertheme' ),
 		'description' => __( 'Optional Sidebar for Community Engagement Blog page', 'startertheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
