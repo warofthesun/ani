@@ -54,7 +54,7 @@
 						<?php $custom_query = new WP_Query('pagename=community-engagement');
 						while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 						<?php if( get_field('include_blog_sidebar') ) : ?>
-							<?php get_sidebar('drhunter'); ?>
+							<?php get_sidebar('communityengagement'); ?>
 						<?php endif; endwhile;?>
 
 
