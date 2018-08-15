@@ -1743,6 +1743,14 @@ and will be used across all viewports.
 /*********************
 GENERAL STYLES
 *********************/
+:target::before {
+  content: "";
+  display: block;
+  height: 60px;
+  /* fixed header height*/
+  margin: -60px 0 0;
+  /* negative fixed header height */ }
+
 body {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;

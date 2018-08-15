@@ -42,10 +42,7 @@
 									</div>
 								</section>
 
-								<section class="entry__content " itemprop="articleBody">
-
-
-
+								<section itemprop="articleBody">
 									<?php
 									if( have_rows('community_engagement') ): while ( have_rows('community_engagement') ) : the_row();
 
