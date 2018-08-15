@@ -1746,9 +1746,9 @@ GENERAL STYLES
 :target::before {
   content: "";
   display: block;
-  height: 60px;
+  height: 30px;
   /* fixed header height*/
-  margin: -60px 0 0;
+  margin: -30px 0 0;
   /* negative fixed header height */ }
 
 body {
