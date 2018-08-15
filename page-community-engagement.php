@@ -73,6 +73,21 @@
 														 </section>
 														 <?php  endwhile; endif; endif; ?>
 
+														 <?php // check if the repeater field has rows of data
+				 											if( get_row_layout() == 'medications' ): ?>
+				 											<section>
+						 											<a name="<?php $page_link = sanitize_title_for_query( get_sub_field('section_header') ); echo esc_attr( $page_link ); ?>"></a>
+						 											<h2><?php the_sub_field('section_header'); ?></h2>
+																	<div class="row medications">
+							 											<?php if( have_rows('medications_repeater') ): while ( have_rows('medications_repeater') ) : the_row(); ?>
+																			<div class="col-xs-4 col-sm-3">
+					 										     			<h3><?php the_sub_field('medication') ?></h3><?php the_sub_field('details') ?>
+																			</div>
+																		<?php endwhile; endif; ?>
+																 	</div>
+ 														 	</section>
+				 														 <?php endif; ?>
+
 											 <?php if( get_row_layout() == 'section_header_flex' ): ?>
 												 <section>
 													 <a name="<?php $page_link = sanitize_title_for_query( get_sub_field('section_header') ); echo esc_attr( $page_link ); ?>"></a>

@@ -311,7 +311,22 @@ img {
 	}
 }
 
+.medications {
+  h3 {
+    margin: 0;
+  }
+  ul {
+    margin-top: 0;
+    margin-left: 1.5em;
 
+    li {
+      margin-left: 1em;
+      list-style-type:disc;
+      font-size: .8em;
+      font-style: italic;
+    }
+  }
+}
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
