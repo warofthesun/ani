@@ -19,7 +19,7 @@
 							)); ?>
 						</nav>
 					</div>
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<?php if (have_posts()) : the_post(); ?>
 					<div class="col-xs-12 col-md-8" style="margin:0 auto;text-align:center;"><?php the_field('disclaimer', 'options'); ?></div>
 					<div class="contact--info col-xs-12 col-md-8">
 						<?php the_field('address', 'options'); ?>
@@ -54,7 +54,7 @@
 
 					</div>
 				</div>
-			<?php endwhile; endif; ?>
+			<?php endif; ?>
 				<?php wp_reset_postdata(); // reset the query ?>
 			</footer>
 
