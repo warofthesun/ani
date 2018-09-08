@@ -124,7 +124,11 @@
 
 							<?php else: // field_name returned false ?>
 
+								<?php if ( $i < 2 ) : ?>
 								<div class="col-xs-12 col-sm-3 content-block" style="background-image:url('<?php echo $image[0]; ?>')">
+
+								<?php endif; ?>
+
 									<?php if ( get_sub_field( 'category' ) ): ?>
 	 								 <div class="staff__category col-xs-12"><?php the_sub_field('category'); ?></div>
 	 							 <?php endif; ?>
@@ -145,7 +149,7 @@
 				endif;//endwhile;
 				?>
 			<?php endwhile; ?>
-				<a href="/clinic-staff" class="col-xs-12 see-all">See All</a>
+				<!--a href="/clinic-staff" class="col-xs-12 see-all">See All</a-->
 
 			<?php wp_reset_postdata(); // reset the query ?>
 			</section>
