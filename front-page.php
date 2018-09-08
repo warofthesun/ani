@@ -124,7 +124,7 @@
 
 							<?php else: // field_name returned false ?>
 
-								<?php if ( $i < 2 ) : ?>
+								<?php if ( $i < 3 ) : ?>
 								<div class="col-xs-12 col-sm-3 content-block" style="background-image:url('<?php echo $image[0]; ?>')">
 
 								<?php endif; ?>
