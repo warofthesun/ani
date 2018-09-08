@@ -30,8 +30,8 @@ $gray:              #eaedf2;
 $text-color:        #5c6b80;
 $meta-gray:         #9fa6b4;
 
-$primary:           #16BBF7;
-$primary-lt:        #66D7FF;
+$primary:           #62926a;
+$primary-lt:        lighten($primary, 20%);
 $primary-md:        darken($primary, 10%);
 $primary-dk:        darken($primary, 20%);
 $secondary:         #475691;

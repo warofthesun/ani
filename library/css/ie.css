@@ -174,7 +174,7 @@ NAVIGATION STYLES
   border-radius: 0 0 5px 5px; }
   .nav ul.sub-menu li:hover,
   .nav ul.children li:hover {
-    background: rgba(22, 187, 247, 0.7); }
+    background: rgba(98, 146, 106, 0.7); }
     .nav ul.sub-menu li:hover a,
     .nav ul.children li:hover a {
       color: #fff;
@@ -294,7 +294,7 @@ NAVIGATION STYLES
     -webkit-box-shadow: 1px 2px 3px rgba(5, 42, 56, 0.3);
             box-shadow: 1px 2px 3px rgba(5, 42, 56, 0.3); }
     .header__navigation .nav ul .sub-menu li:hover {
-      background-color: rgba(22, 187, 247, 0.3); }
+      background-color: rgba(98, 146, 106, 0.3); }
   .header__navigation .nav li {
     border-bottom: 0;
     /* showing sub-menus */ }
@@ -508,7 +508,7 @@ FOOTER STYLES
     text-align: left;
     border-right: 0px;
     font-weight: normal;
-    border-left: 1px solid #66D7FF; }
+    border-left: 1px solid #9dbda2; }
     #inner__footer ul.sub-menu li a {
       border-bottom: 0px;
       text-transform: uppercase;
