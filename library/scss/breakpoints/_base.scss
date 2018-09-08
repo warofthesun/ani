@@ -906,8 +906,8 @@ $title-lineheight: $title-pad + 1;
 					}
 
 					&__content {
-						background-color: rgba($primary-dk, 1);
-						border-top: 0px solid $white;
+						background-color: rgba($primary, 1);
+						border-top: 1px solid $white;
 						height: auto !important;
 					}
 				}
@@ -987,7 +987,7 @@ $title-lineheight: $title-pad + 1;
 				}
 
 				a {
-					color: $link-color;
+					color: $primary-dk;
 					display: flex;
 					margin-left: auto;
 					align-items: center;
@@ -1001,6 +1001,7 @@ $title-lineheight: $title-pad + 1;
 						content: "\f0a9";
 						font-family: fontawesome;
 						margin-left: .2em;
+            color: $primary-dk;
 
 					}
 				}
@@ -1010,6 +1011,7 @@ $title-lineheight: $title-pad + 1;
 						content: "\f061";
 						font-family: fontawesome;
 						margin-left: .2em;
+            text-shadow: 1px 1px 1px $primary-lt;
 
 					}
 				}
@@ -1116,6 +1118,10 @@ $title-lineheight: $title-pad + 1;
 
 		&--dk-blue {
 			background-color: $black;
+
+      h1 {
+        color: lighten($primary, 55%);
+      }
 
 			p, label {
 				color: #EBFAFF;
@@ -1338,12 +1344,6 @@ a.see-all {
 	    margin-bottom: 1.5em;
 	    padding-bottom: 1.5em;
 			text-transform: capitalize;
-
-			& .sample-page {
-				&:before {
-					content: "\f073";
-				}
-			}
 
 			& .blog-page {
 				&:before {
