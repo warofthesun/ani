@@ -1,6 +1,6 @@
 <!--front page-->
 <?php get_header('front'); ?>
-			<section class="hero row">
+			<section class="hero row reveal">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<?php
 							$attachment_id = get_field('hero_image');
@@ -52,7 +52,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="content--secondary">
+			<section class="content--secondary reveal">
 				<div class="content-boxes wrap row">
 					<div class="col-xs-12 col-sm-4">
 						<div class="content-boxes__header">
@@ -77,7 +77,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="content__full-width content__full-width--lt-blue content__full-width--centered">
+			<section class="content__full-width content__full-width--lt-blue content__full-width--centered reveal">
 				<a name="about"></a>
 				<div class="wrap">
 					<h1><?php the_field('about_title'); ?></h2>
@@ -85,7 +85,7 @@
 				</div>
 			</section>
 
-			<section class="content staff wrap row">
+			<section class="content staff wrap row reveal">
 				<h1 class="col-xs-12">Our Staff</h1>
 				<?php $custom_query = new WP_Query('pagename=clinic-staff');
 				while($custom_query->have_posts()) : $custom_query->the_post(); ?>
@@ -125,7 +125,7 @@
 							<?php else: // field_name returned false ?>
 
 								<?php if ( $i < 3 ) : ?>
-									
+
 								<div class="col-xs-12 col-sm-3 content-block" style="background-image:url('<?php echo $image[0]; ?>')">
 
 								<?php endif; ?>
@@ -154,7 +154,7 @@
 
 			<?php wp_reset_postdata(); // reset the query ?>
 			</section>
-			<section class="content content__full-width content__full-width--centered">
+			<section class="content content__full-width content__full-width--centered reveal">
 				<div class="wrap recent-news">
 					<h1>Latest News</h2>
 					<div class="flex-direction flex-direction--row">
@@ -184,7 +184,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="content content__full-width content__full-width--dk-blue collapse--bottom">
+			<section class="content content__full-width content__full-width--dk-blue collapse--bottom reveal">
 				<div class="contact wrap">
 					<h1 class="col-xs-12 ">Contact Us</h1>
 					<div class="flex-direction flex-direction--row">

@@ -34,7 +34,6 @@
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
-		<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 		<script>
     	window.sr = ScrollReveal({ duration: 600, reset: false, easing: 'ease-in', scale: .98, distance:'50px'});
     </script>
@@ -59,7 +58,7 @@
 						</p>
 					</div>
 						<div class="col-xs-12 col-sm-8 row">
-							
+
 						</div>
 					<div class="col-xs-12 header__navigation">
 						<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
