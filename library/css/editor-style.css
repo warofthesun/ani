@@ -111,11 +111,11 @@ more here: http://www.newnet-soft.com/blog/csstypography
     -webkit-hyphenate-after: 3;
     hyphenate-lines: 3; }
   body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
-    color: #475691;
+    color: #62926a;
     /* on hover */
     /* on click */ }
     body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:visited:hover, body#tinymce.wp-editor a:visited:focus {
-      color: #384472; }
+      color: #507756; }
     body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited:link {
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
   body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5 {
