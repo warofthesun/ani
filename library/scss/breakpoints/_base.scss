@@ -1385,6 +1385,21 @@ a.see-all {
 	}
 }
 
+blockquote {
+  margin: 0;
+  padding: 1em 2em;;
+  border-left: 0px solid $accent;
+  font-style: italic;
+  font-size: 1.1em;
+  color: $secondary;
+  background: lighten($secondary, 55%);
+  line-height: 1.7em;
+  border-radius: 5px;
+
+  &:before {}
+
+}
+
 		.hentry {
 			background-color: $white;
 			border-radius: 3px;
@@ -1542,17 +1557,6 @@ a.see-all {
 				&:last-child {
 					border-right: 0;
 				}
-			}
-
-			blockquote {
-				margin: 0 0 1.5em 0.75em;
-				padding: 0 0 0 0.75em;
-				border-left: 3px solid $accent;
-				font-style: italic;
-				color: $meta-gray;
-
-				&:before {}
-
 			}
 
 			dl {}

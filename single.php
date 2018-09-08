@@ -20,7 +20,7 @@
 											<?php printf( '<p class="category">' . __('', 'startertheme' ) . '%1$s</p>' , get_the_category_list(', ') ); ?>
 										</div>
 									</div>
-									<?php the_post_thumbnail('featured-image'); ?>
+									<?php the_post_thumbnail('featured-half'); ?>
 								</header>
 
                 <section class="entry-content " itemprop="articleBody">

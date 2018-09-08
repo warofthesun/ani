@@ -2751,6 +2751,17 @@ a.see-all {
       font-weight: 100;
       margin-right: .5em; }
 
+blockquote {
+  margin: 0;
+  padding: 1em 2em;
+  border-left: 0px solid #F82F5D;
+  font-style: italic;
+  font-size: 1.1em;
+  color: #475691;
+  background: #f6f7fb;
+  line-height: 1.7em;
+  border-radius: 5px; }
+
 .hentry {
   background-color: #fff;
   border-radius: 3px;
@@ -2854,12 +2865,6 @@ p.category {
     border-right: 1px solid #eaedf2; }
     .entry__content th:last-child {
       border-right: 0; }
-  .entry__content blockquote {
-    margin: 0 0 1.5em 0.75em;
-    padding: 0 0 0 0.75em;
-    border-left: 3px solid #F82F5D;
-    font-style: italic;
-    color: #9fa6b4; }
   .entry__content dd {
     margin-left: 0;
     font-size: 0.9em;
