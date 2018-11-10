@@ -185,7 +185,6 @@ NAVIGATION STYLES
 				height: auto;
 			}
 		}
-
 	}
 
 	&__navigation {
@@ -205,7 +204,7 @@ NAVIGATION STYLES
 					>a {
 						&::after {
 							content: " \f107";
-							font-family: fontawesome;
+							font-family: "Font Awesome 5 Free";
 						}
 					}
 				}

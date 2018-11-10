@@ -1798,7 +1798,7 @@ img {
           color: #36456b; }
           #inner__content ul.info-nav li a::after {
             content: "\f103";
-            font-family: fontawesome;
+            font-family: "Font Awesome 5 Free";
             position: relative;
             bottom: -2px;
             right: -.5em; }
@@ -2170,13 +2170,13 @@ and more scalable.
       text-align: center;
       width: 100%;
       display: inline;
-      font-family: fontawesome; }
+      font-family: "Font Awesome 5 Free"; }
   #mobile-nav:after {
     content: "\f107";
     text-align: center;
     width: 100%;
     display: inline;
-    font-family: fontawesome; }
+    font-family: "Font Awesome 5 Free"; }
 
 .nav {
   border-bottom: 0;
@@ -2307,7 +2307,7 @@ POSTS & CONTENT STYLES
           font-weight: normal; }
           .hero__content .content-boxes__header p:hover:after {
             content: "\f061";
-            font-family: fontawesome;
+            font-family: "Font Awesome 5 Free";
             width: 100%;
             text-align: right;
             text-shadow: 1px 1px 1px #5b72ac;
@@ -2317,14 +2317,14 @@ POSTS & CONTENT STYLES
           .hero__content .content-boxes__header p:before {
             float: left;
             margin-right: 0.2em;
-            font-family: fontawesome;
+            font-family: "Font Awesome 5 Free";
             font-size: 2em;
             text-shadow: 0px 0px 0px;
             -webkit-transition: all .5s;
             transition: all .5s; }
           .hero__content .content-boxes__header p:after {
             content: "\f0a9";
-            font-family: fontawesome;
+            font-family: "Font Awesome 5 Free";
             width: 100%;
             text-align: right;
             text-shadow: 0px 0px 0px;
@@ -2351,7 +2351,7 @@ POSTS & CONTENT STYLES
           margin-bottom: .5em; }
           .hero__content .content-boxes__content ul li::before {
             content: "\f0f0";
-            font-family: fontawesome;
+            font-family: "Font Awesome 5 Free";
             display: inline-block;
             padding-right: .5rem;
             color: #252f49; }
@@ -2372,7 +2372,7 @@ POSTS & CONTENT STYLES
       .hero__content .content-boxes > div:nth-child(3) {
         background-color: #475b8d; }
         .hero__content .content-boxes > div:nth-child(3) .content-boxes__header p:before {
-          content: "\f041";
+          content: "\f3c5";
           color: #36456b; }
       .hero__content .content-boxes > div:nth-child(4) {
         background-color: #5b72ac; }
@@ -2480,12 +2480,12 @@ POSTS & CONTENT STYLES
         transition: all 1s; }
         .content--secondary .content-boxes__header a:after {
           content: "\f0a9";
-          font-family: fontawesome;
+          font-family: "Font Awesome 5 Free";
           margin-left: .2em;
           color: #141927; }
       .content--secondary .content-boxes__header a:hover:after {
         content: "\f061";
-        font-family: fontawesome;
+        font-family: "Font Awesome 5 Free";
         margin-left: .2em;
         text-shadow: 1px 1px 1px #5b72ac; }
     .content--secondary .content-boxes__content {
@@ -2511,7 +2511,7 @@ POSTS & CONTENT STYLES
         color: #36456b; }
       .content--secondary .content-boxes .ecs-event-list h4.entry-title:after {
         content: "\f0a9";
-        font-family: fontawesome;
+        font-family: "Font Awesome 5 Free";
         margin-left: .2em;
         font-size: .5em;
         color: #5b72ac; }
@@ -2594,7 +2594,7 @@ POSTS & CONTENT STYLES
           width: 1.2em; }
         .content__full-width--centered.making-an-appointment ul li:before {
           content: "\f0f6";
-          font-family: fontawesome;
+          font-family: "Font Awesome 5 Free";
           color: #36456b;
           font-size: 1.5em;
           -webkit-transition: all .5s;
@@ -2700,7 +2700,8 @@ POSTS & CONTENT STYLES
     font-size: 1em; }
 
 .blog-page:before {
-  content: "\f1ea"; }
+  content: "\f1ea";
+  font-family: "Font Awesome 5 Free"; }
 
 a.see-all {
   color: #62926a;
@@ -2713,11 +2714,11 @@ a.see-all {
   transition: all 1s; }
   a.see-all:after {
     content: "\f0a9";
-    font-family: fontawesome;
+    font-family: "Font Awesome 5 Free";
     margin-left: .2em; }
   a.see-all:hover:after {
     content: "\f061";
-    font-family: fontawesome;
+    font-family: "Font Awesome 5 Free";
     margin-left: .2em; }
 
 #content {
@@ -2750,7 +2751,7 @@ a.see-all {
   #content h1, #content .h1 {
     text-align: center; }
     #content h1:before, #content .h1:before {
-      font-family: fontawesome;
+      font-family: "Font Awesome 5 Free";
       font-weight: 100;
       margin-right: .5em; }
 
@@ -3007,7 +3008,7 @@ PAGE NAVI STYLES
 SIDEBARS & ASIDES
 *********************/
 .widgettitle:before {
-  font-family: fontawesome;
+  font-family: "Font Awesome 5 Free";
   color: #5b72ac;
   margin-right: .5em;
   width: 1em;
@@ -3289,7 +3290,7 @@ NAVIGATION STYLES
       position: relative; }
       .header__navigation ul li.menu-item-has-children > a::after {
         content: " \f107";
-        font-family: fontawesome; }
+        font-family: "Font Awesome 5 Free"; }
       .header__navigation ul li:after {
         content: " |"; }
       .header__navigation ul li:last-child::after {

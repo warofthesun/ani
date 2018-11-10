@@ -75,7 +75,7 @@ img {
 
 					&::after {
 						content: "\f103";
-						font-family: fontawesome;
+						font-family: "Font Awesome 5 Free";
 						position: relative;
 						bottom: -2px;
 						right: -.5em;
@@ -576,7 +576,7 @@ and more scalable.
 			text-align: center;
 			width: 100%;
 			display: inline;
-			font-family: fontawesome;
+			font-family: "Font Awesome 5 Free";
 
 		}
 	}
@@ -586,7 +586,7 @@ and more scalable.
 		text-align: center;
 		width: 100%;
 		display: inline;
-		font-family: fontawesome;
+		font-family: "Font Awesome 5 Free";
 
 	}
 
@@ -774,7 +774,7 @@ $title-lineheight: $title-pad + 1;
 						&:hover {
 							&:after {
 								content: "\f061";
-								font-family: fontawesome;
+								font-family: "Font Awesome 5 Free";
 								width: 100%;
 								text-align: right;
 								text-shadow: 1px 1px 1px $primary-lt;
@@ -786,7 +786,7 @@ $title-lineheight: $title-pad + 1;
 						&:before {
 							float: left;
 							margin-right: 0.2em;
-							font-family: fontawesome;
+							font-family: "Font Awesome 5 Free";
 							font-size: 2em;
 							text-shadow: 0px 0px 0px;
 							transition: all .5s;
@@ -794,7 +794,7 @@ $title-lineheight: $title-pad + 1;
 
 						&:after {
 							content: "\f0a9";
-							font-family: fontawesome;
+							font-family: "Font Awesome 5 Free";
 							width: 100%;
 							text-align: right;
 							text-shadow: 0px 0px 0px;
@@ -833,7 +833,7 @@ $title-lineheight: $title-pad + 1;
 
 							&::before {
 								content: "\f0f0";
-								font-family: fontawesome;
+								font-family: "Font Awesome 5 Free";
 								display: inline-block;
 								padding-right: .5rem;
 								color: $primary-md;
@@ -873,7 +873,7 @@ $title-lineheight: $title-pad + 1;
 					background-color: darken($primary-lt, 10%);
 					.content-boxes__header {
 						p:before {
-							content: "\f041";
+							content: "\f3c5";
 							color: $primary;
 						}
 					}
@@ -1000,7 +1000,7 @@ $title-lineheight: $title-pad + 1;
 
 					&:after {
 						content: "\f0a9";
-						font-family: fontawesome;
+						font-family: "Font Awesome 5 Free";
 						margin-left: .2em;
             color: $primary-dk;
 
@@ -1010,7 +1010,7 @@ $title-lineheight: $title-pad + 1;
 				a:hover {
 					&:after {
 						content: "\f061";
-						font-family: fontawesome;
+						font-family: "Font Awesome 5 Free";
 						margin-left: .2em;
             text-shadow: 1px 1px 1px $primary-lt;
 
@@ -1052,7 +1052,7 @@ $title-lineheight: $title-pad + 1;
 
 					&:after {
 						content: "\f0a9";
-						font-family: fontawesome;
+						font-family: "Font Awesome 5 Free";
 						margin-left: .2em;
 						font-size: .5em;
 						color: $primary-lt;
@@ -1166,7 +1166,7 @@ $title-lineheight: $title-pad + 1;
 
 						&:before {
 							content: "\f0f6";
-							font-family: fontawesome;
+							font-family: "Font Awesome 5 Free";
 							color: $primary;
 							font-size: 1.5em;
 							transition: all .5s;
@@ -1306,6 +1306,7 @@ $title-lineheight: $title-pad + 1;
 .blog-page {
 	&:before {
 		content: "\f1ea";
+    font-family: "Font Awesome 5 Free";
 	}
 }
 
@@ -1320,7 +1321,7 @@ a.see-all {
 
 	&:after {
 		content: "\f0a9";
-		font-family: fontawesome;
+		font-family: "Font Awesome 5 Free";
 		margin-left: .2em;
 
 	}
@@ -1328,7 +1329,7 @@ a.see-all {
 	&:hover {
 		&:after {
 			content: "\f061";
-			font-family: fontawesome;
+			font-family: "Font Awesome 5 Free";
 			margin-left: .2em;
 
 		}
@@ -1379,7 +1380,7 @@ a.see-all {
 		text-align: center;
 
 		&:before {
-			font-family: fontawesome;
+			font-family: "Font Awesome 5 Free";
 			font-weight: 100;
 			margin-right: .5em;
 		}
@@ -1789,7 +1790,7 @@ SIDEBARS & ASIDES
 
 .widgettitle {
 	&:before {
-		font-family: fontawesome;
+		font-family: "Font Awesome 5 Free";
 		color: $primary-lt;
 		margin-right: .5em;
 		width: 1em;

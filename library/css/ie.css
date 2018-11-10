@@ -271,7 +271,7 @@ NAVIGATION STYLES
     position: relative; }
     .header__navigation ul li.menu-item-has-children > a::after {
       content: " \f107";
-      font-family: fontawesome; }
+      font-family: "Font Awesome 5 Free"; }
     .header__navigation ul li:after {
       content: " |"; }
     .header__navigation ul li:last-child::after {
