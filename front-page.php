@@ -86,7 +86,7 @@
 			</section>
 
 			<section class="content staff wrap row reveal">
-				<h1 class="col-xs-12">Our Staff</h1>
+				<h1 class="col-xs-12">Clinic Staff</h1>
 				<?php $custom_query = new WP_Query('pagename=clinic-staff');
 				while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 
