@@ -312,5 +312,40 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
+//add_filter('acf/fields/flexible_content/layout_title/name=community_engagement', 'my_acf_fields_flexible_content_layout_title', 10, 4);
+//function my_acf_fields_flexible_content_layout_title( $title, $field, $layout, $i ) {
+//
+//    // Remove layout name from title.
+//    // $title = '';
+//
+//    // load text sub field
+//    if( $text = get_sub_field('section_header') ) {
+//        $title = '<b>' . esc_html($text) . '</b>';
+//    }
+//    return $title;
+//}
+
+/*************************************************************/
+/*   Friendly Block Titles                                  */
+/***********************************************************/
+
+function my_layout_title($title, $field, $layout, $i) {
+  if( $text = get_sub_field('section_header') ) {
+          $title =  esc_html($text);
+      } elseif($value = get_sub_field('layout_title')) {
+		return $value;
+	} else {
+		foreach($layout['sub_fields'] as $sub) {
+			if($sub['name'] == 'layout_title') {
+				$key = $sub['key'];
+				if(array_key_exists($i, $field['value']) && $value = $field['value'][$i][$key])
+					return $value;
+			}
+		}
+	}
+	return $title;
+}
+add_filter('acf/fields/flexible_content/layout_title', 'my_layout_title', 10, 4);
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

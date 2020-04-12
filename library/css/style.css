@@ -1720,7 +1720,7 @@ select {
   border: 0;
   padding: 0 1em;
   background-color: #36456b;
-  color: #5b72ac; }
+  color: #d5edf8; }
 
 /*********************
 BASE (MOBILE) SIZE
@@ -2162,9 +2162,10 @@ and more scalable.
   margin-left: auto;
   margin-right: auto; }
   #mobile-nav.show {
-    margin-top: 0em;
+    margin-top: -2em;
     padding: .5em;
-    background-color: white; }
+    background-color: white;
+    z-index: 99; }
     #mobile-nav.show:after {
       content: "\f106";
       text-align: center;
@@ -2181,9 +2182,6 @@ and more scalable.
 .nav {
   border-bottom: 0;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2192,12 +2190,22 @@ and more scalable.
   height: 0;
   -webkit-transition: all .5s;
   transition: all .5s;
+  display: none;
+  background-color: #fff;
+  z-index: 98;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */ }
   .nav.show {
     opacity: 1;
-    height: 100%; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    z-index: 99; }
+    .nav.show li {
+      background-color: #fff; }
   .nav li {
     border-bottom: 1px solid white;
     text-align: center;
@@ -2262,13 +2270,14 @@ POSTS & CONTENT STYLES
     .hero__content p {
       font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 300;
-      font-size: 4em;
+      font-size: 2.5em;
       line-height: 1.2;
       color: #36456b; }
     .hero__content--left {
       -ms-flex-item-align: center;
           align-self: center;
-      margin-top: -65vh; }
+      margin-top: -75vh;
+      padding-left: 10vw; }
     .hero__content--medium p {
       font-size: 3em; }
     .hero__content .content-boxes {
@@ -2328,12 +2337,12 @@ POSTS & CONTENT STYLES
             width: 100%;
             text-align: right;
             text-shadow: 0px 0px 0px;
-            color: rgba(20, 25, 39, 0.2); }
+            color: rgba(213, 237, 248, 0.2); }
       .hero__content .content-boxes__content {
         background-color: rgba(20, 25, 39, 0.2);
         height:  calc(100% - 4.7em);
         padding: 1em;
-        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
         -webkit-box-shadow: 0px -3px 5px -3px rgba(20, 25, 39, 0.6);
                 box-shadow: 0px -3px 5px -3px rgba(20, 25, 39, 0.6); }
         .hero__content .content-boxes__content a {
@@ -2355,10 +2364,6 @@ POSTS & CONTENT STYLES
             display: inline-block;
             padding-right: .5rem;
             color: #252f49; }
-      .hero__content .content-boxes > div:first-child {
-        border-radius: 10px 0px 0 0; }
-      .hero__content .content-boxes > div:last-child {
-        border-radius: 0px 10px 0 0; }
       .hero__content .content-boxes > div:nth-child(1) {
         background-color: #36456b; }
         .hero__content .content-boxes > div:nth-child(1) .content-boxes__header p:before {
@@ -2373,7 +2378,7 @@ POSTS & CONTENT STYLES
         background-color: #475b8d; }
         .hero__content .content-boxes > div:nth-child(3) .content-boxes__header p:before {
           content: "\f3c5";
-          color: #36456b; }
+          color: #5b72ac; }
       .hero__content .content-boxes > div:nth-child(4) {
         background-color: #5b72ac; }
         .hero__content .content-boxes > div:nth-child(4) .content-boxes__header p:before {
@@ -2464,7 +2469,7 @@ POSTS & CONTENT STYLES
             -ms-flex-align: center;
                 align-items: center; }
       .content--secondary .content-boxes__header a {
-        color: #141927;
+        color: #d5edf8;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -2473,7 +2478,7 @@ POSTS & CONTENT STYLES
             -ms-flex-align: center;
                 align-items: center;
         text-decoration: none;
-        font-size: .9em;
+        font-size: .7em;
         font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-weight: bold;
         -webkit-transition: all 1s;
@@ -2482,7 +2487,7 @@ POSTS & CONTENT STYLES
           content: "\f0a9";
           font-family: "Font Awesome 5 Free";
           margin-left: .2em;
-          color: #141927; }
+          color: #5b72ac; }
       .content--secondary .content-boxes__header a:hover:after {
         content: "\f061";
         font-family: "Font Awesome 5 Free";
@@ -2622,6 +2627,7 @@ POSTS & CONTENT STYLES
     margin-bottom: 1.5em;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-x: center;
     padding: 1em; }
     .content.staff .content-block .staff__category {
       color: #36456b;
@@ -2640,8 +2646,6 @@ POSTS & CONTENT STYLES
               justify-content: flex-start;
       margin-top: -2.6em;
       margin-left: -1em; }
-    .content.staff .content-block.extra-info {
-      height: 636px; }
     .content.staff .content-block > div {
       height: 100%;
       -webkit-box-pack: end;
@@ -2701,7 +2705,9 @@ POSTS & CONTENT STYLES
 
 .blog-page:before {
   content: "\f1ea";
-  font-family: "Font Awesome 5 Free"; }
+  font-family: "Font Awesome 5 Free";
+  font-size: .8em;
+  margin-right: .3em; }
 
 a.see-all {
   color: #62926a;
@@ -3056,6 +3062,8 @@ FOOTER STYLES
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
+  #inner__footer h4 {
+    color: #d5edf8; }
   #inner__footer .col-1, #inner__footer .col-2 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3298,6 +3306,9 @@ NAVIGATION STYLES
       .header__navigation ul li a:hover {
         text-decoration: none; }
   .header__navigation .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -3308,18 +3319,25 @@ NAVIGATION STYLES
         -ms-flex-pack: end;
             justify-content: flex-end; }
     .header__navigation .nav ul {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.97);
       -webkit-box-shadow: 1px 2px 3px rgba(5, 42, 56, 0.3);
               box-shadow: 1px 2px 3px rgba(5, 42, 56, 0.3); }
       .header__navigation .nav ul .sub-menu li:hover {
         background-color: rgba(54, 69, 107, 0.3); }
-    .header__navigation .nav li {
+    .header__navigation .nav > li {
       border-bottom: 0;
       /* showing sub-menus */ }
-      .header__navigation .nav li:hover > ul {
+      .header__navigation .nav > li:hover > ul {
         top: 48px;
         visibility: visible !important; }
-      .header__navigation .nav li:hover, .header__navigation .nav li:focus {
+      .header__navigation .nav > li .menu-item-has-children:hover ul.sub-menu {
+        visibility: visible; }
+        .header__navigation .nav > li .menu-item-has-children:hover ul.sub-menu li a {
+          color: #62926a;
+          text-shadow: 0 0 0; }
+          .header__navigation .nav > li .menu-item-has-children:hover ul.sub-menu li a:hover {
+            color: #36456b; }
+      .header__navigation .nav > li:hover, .header__navigation .nav > li:focus {
         color: #507756; }
   /* .menu is clearfixed inside mixins.scss */
   .menu {
@@ -3346,6 +3364,10 @@ POSTS & CONTENT STYLES
 *********************/
   .hero {
     min-height: 80vh; }
+    .hero__content p {
+      font-size: 4em; }
+    .hero__content--left {
+      padding-left: 0; }
     .hero__content .content-boxes {
       min-height: 30vh;
       display: -webkit-box;
@@ -3356,6 +3378,13 @@ POSTS & CONTENT STYLES
           -ms-flex-direction: row;
               flex-direction: row;
       border-radius: 10px 10px 0 0; }
+      .hero__content .content-boxes__content {
+        border-bottom: 0px solid #fff;
+        border-top: 1px solid #fff; }
+      .hero__content .content-boxes > div:first-child {
+        border-radius: 10px 0px 0 0; }
+      .hero__content .content-boxes > div:last-child {
+        border-radius: 0px 10px 0 0; }
   .article-info {
     text-align: right; }
   /* entry content */
@@ -3375,6 +3404,8 @@ POSTS & CONTENT STYLES
       display: block;
       clear: both; }
   /* end .entry-content */
+  .content.staff .content-block.extra-info {
+    height: 636px; }
   /*********************
 FOOTER STYLES
 *********************/

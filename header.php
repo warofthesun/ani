@@ -34,6 +34,7 @@
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
+		<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 		<script>
     	window.sr = ScrollReveal({ duration: 600, reset: false, easing: 'ease-in', scale: .98, distance:'50px'});
     </script>

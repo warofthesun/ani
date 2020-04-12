@@ -567,9 +567,10 @@ and more scalable.
 	margin-right: auto;
 
 	&.show {
-		margin-top: 0em;
+    margin-top:-2em;
 		padding: .5em;
 		background-color: white;
+    z-index: 99;
 
 		&:after {
 			content: "\f106";
@@ -597,15 +598,24 @@ and more scalable.
 .nav {
 	border-bottom: 0;
 	margin: 0;
-	display: flex;
 	flex-direction: column;
 	opacity: 0;
 	height: 0;
 	transition: all .5s;
+  display: none;
+  background-color: $white;
+  z-index: 98;
 
 	&.show {
 		opacity: 1;
+    display: flex;
 		height: 100%;
+    position: absolute;
+    z-index: 99;
+
+    li {
+      background-color: $white;
+    }
 	}
 
 	li {
@@ -729,7 +739,7 @@ $title-lineheight: $title-pad + 1;
 			p {
 				font-family: $display;
 				font-weight: 300;
-				font-size: 4em;
+				font-size: 2.5em;
 				line-height: 1.2;
 				color: $primary;
 				//text-shadow: 1px 1px 0 rgba($primary-dk,0.8);
@@ -737,7 +747,8 @@ $title-lineheight: $title-pad + 1;
 
 			&--left {
 				align-self: center;
-				margin-top: -65vh;
+				margin-top: -75vh;
+        padding-left: 10vw;
 			}
 
 			&--medium {
@@ -798,7 +809,7 @@ $title-lineheight: $title-pad + 1;
 							width: 100%;
 							text-align: right;
 							text-shadow: 0px 0px 0px;
-							color: rgba($primary-dk, 0.2);
+							color: rgba($alert-blue, 0.2);
 						}
 
 					}
@@ -809,7 +820,7 @@ $title-lineheight: $title-pad + 1;
 					$header-height:4.7em;
 					height: unquote(" calc(100% - #{$header-height})");
 					padding: 1em;
-					border-top: 1px solid $white;
+					border-bottom: 1px solid $white;
 					box-shadow: 0px -3px 5px -3px rgba($primary-dk, 0.6);
 
 					a {
@@ -842,13 +853,6 @@ $title-lineheight: $title-pad + 1;
 					}
 				}
 
-				>div:first-child {
-					border-radius: 10px 0px 0 0;
-				}
-				>div:last-child {
-					border-radius: 0px 10px 0 0;
-				}
-
 				>div:nth-child(1) {
 					background-color: darken($primary-lt, 20%);
 					.content-boxes__header {
@@ -874,7 +878,7 @@ $title-lineheight: $title-pad + 1;
 					.content-boxes__header {
 						p:before {
 							content: "\f3c5";
-							color: $primary;
+							color: $primary-lt;
 						}
 					}
 				}
@@ -988,12 +992,12 @@ $title-lineheight: $title-pad + 1;
 				}
 
 				a {
-					color: $primary-dk;
+					color: $alert-blue;
 					display: flex;
 					margin-left: auto;
 					align-items: center;
 					text-decoration: none;
-					font-size: .9em;
+					font-size: .7em;
 					font-family: $display;
 					font-weight: bold;
 					transition: all 1s;
@@ -1002,7 +1006,7 @@ $title-lineheight: $title-pad + 1;
 						content: "\f0a9";
 						font-family: "Font Awesome 5 Free";
 						margin-left: .2em;
-            color: $primary-dk;
+            color: $primary-lt;
 
 					}
 				}
@@ -1204,6 +1208,7 @@ $title-lineheight: $title-pad + 1;
 			margin-bottom: 1.5em;
 			background-repeat: no-repeat;
 			background-size: cover;
+      background-position-x: center;
 			padding: 1em;
 
 			.staff__category {
@@ -1218,10 +1223,6 @@ $title-lineheight: $title-pad + 1;
 				justify-content: flex-start;
 				margin-top: -2.6em;
 				margin-left: -1em;
-			}
-
-			&.extra-info {
-				height: 636px;
 			}
 
 			>div {
@@ -1307,6 +1308,8 @@ $title-lineheight: $title-pad + 1;
 	&:before {
 		content: "\f1ea";
     font-family: "Font Awesome 5 Free";
+    font-size: .8em;
+    margin-right: .3em;
 	}
 }
 
@@ -1874,6 +1877,10 @@ FOOTER STYLES
 		flex-direction: row;
 		display: flex;
 		flex-wrap: wrap;
+
+    h4 {
+      color: $alert-blue;
+    }
 
 		.col-1, .col-2 {
 			display: flex;

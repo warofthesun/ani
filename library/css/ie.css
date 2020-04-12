@@ -280,6 +280,9 @@ NAVIGATION STYLES
       text-decoration: none; }
 
 .header__navigation .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -290,18 +293,25 @@ NAVIGATION STYLES
       -ms-flex-pack: end;
           justify-content: flex-end; }
   .header__navigation .nav ul {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.97);
     -webkit-box-shadow: 1px 2px 3px rgba(5, 42, 56, 0.3);
             box-shadow: 1px 2px 3px rgba(5, 42, 56, 0.3); }
     .header__navigation .nav ul .sub-menu li:hover {
       background-color: rgba(54, 69, 107, 0.3); }
-  .header__navigation .nav li {
+  .header__navigation .nav > li {
     border-bottom: 0;
     /* showing sub-menus */ }
-    .header__navigation .nav li:hover > ul {
+    .header__navigation .nav > li:hover > ul {
       top: 48px;
       visibility: visible !important; }
-    .header__navigation .nav li:hover, .header__navigation .nav li:focus {
+    .header__navigation .nav > li .menu-item-has-children:hover ul.sub-menu {
+      visibility: visible; }
+      .header__navigation .nav > li .menu-item-has-children:hover ul.sub-menu li a {
+        color: #62926a;
+        text-shadow: 0 0 0; }
+        .header__navigation .nav > li .menu-item-has-children:hover ul.sub-menu li a:hover {
+          color: #36456b; }
+    .header__navigation .nav > li:hover, .header__navigation .nav > li:focus {
       color: #507756; }
 
 /* .menu is clearfixed inside mixins.scss */
@@ -330,6 +340,10 @@ POSTS & CONTENT STYLES
 *********************/
 .hero {
   min-height: 80vh; }
+  .hero__content p {
+    font-size: 4em; }
+  .hero__content--left {
+    padding-left: 0; }
   .hero__content .content-boxes {
     min-height: 30vh;
     display: -webkit-box;
@@ -340,6 +354,13 @@ POSTS & CONTENT STYLES
         -ms-flex-direction: row;
             flex-direction: row;
     border-radius: 10px 10px 0 0; }
+    .hero__content .content-boxes__content {
+      border-bottom: 0px solid #fff;
+      border-top: 1px solid #fff; }
+    .hero__content .content-boxes > div:first-child {
+      border-radius: 10px 0px 0 0; }
+    .hero__content .content-boxes > div:last-child {
+      border-radius: 0px 10px 0 0; }
 
 .article-info {
   text-align: right; }
@@ -362,6 +383,9 @@ POSTS & CONTENT STYLES
     clear: both; }
 
 /* end .entry-content */
+.content.staff .content-block.extra-info {
+  height: 636px; }
+
 /*********************
 FOOTER STYLES
 *********************/
