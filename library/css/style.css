@@ -1978,15 +1978,19 @@ img {
   .accordion-button-icon.svg-inline--fa.fa-w-14 {
     width: inherit; }
 
+.medications > div {
+  margin-bottom: 1em; }
+
 .medications h3 {
   margin: 0; }
 
 .medications ul {
   margin-top: 0;
-  margin-left: 1.5em; }
+  margin-left: .5em; }
   .medications ul li {
-    margin-left: 1em;
-    list-style-type: disc;
+    margin-left: .1em;
+    margin-bottom: .5em;
+    list-style-type: none;
     font-size: .8em;
     font-style: italic; }
 
@@ -3157,6 +3161,14 @@ FOOTER STYLES
           content: " | ";
           margin-left: .5em; }
 
+.footer-links .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: transparent; }
+
 /*
 	if you checked out the link above:
 	http://www.alistapart.com/articles/organizing-mobile/
@@ -3534,7 +3546,7 @@ FOOTER STYLES
   #inner__footer ul {
     margin: 0; }
     #inner__footer ul li {
-      text-align: left;
+      text-align: center;
       min-width: 180px;
       font-weight: bold;
       font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;

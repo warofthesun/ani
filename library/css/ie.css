@@ -511,7 +511,7 @@ FOOTER STYLES
 #inner__footer ul {
   margin: 0; }
   #inner__footer ul li {
-    text-align: left;
+    text-align: center;
     min-width: 180px;
     font-weight: bold;
     font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;

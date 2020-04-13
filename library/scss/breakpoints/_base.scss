@@ -320,16 +320,20 @@ img {
 }
 
 .medications {
+  >div {
+    margin-bottom: 1em;
+  }
   h3 {
     margin: 0;
   }
   ul {
     margin-top: 0;
-    margin-left: 1.5em;
+    margin-left: .5em;
 
     li {
-      margin-left: 1em;
-      list-style-type:disc;
+      margin-left: .1em;
+      margin-bottom: .5em;
+      list-style-type:none;
       font-size: .8em;
       font-style: italic;
     }
@@ -2005,6 +2009,13 @@ FOOTER STYLES
 	}
 }
 
+.footer-links {
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+  }
+}
 	/*
 	if you checked out the link above:
 	http://www.alistapart.com/articles/organizing-mobile/

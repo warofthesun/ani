@@ -1,4 +1,4 @@
-<!--page-community-engagement-->
+<!--page-patient-resources-->
 <?php get_header(); ?>
 
 			<div id="content">
@@ -10,38 +10,39 @@
 					 <main id="main" class="col-xs-12" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-								<section class="content">
-									<div class="wrap recent-news">
-										<a name="<?php $page_link = sanitize_title_for_query( get_field('section_header') ); echo esc_attr( $page_link ); ?>"></a>
-										<h2><?php the_field('section_header'); ?></h2>
-										<div>
-											<?php the_field('content_area'); ?>
-										</div>
-										<div class="flex-direction flex-direction--row">
-											<?php $query = new WP_Query( array(
-											    'posts_per_page' => 4,
-											    'no_found_rows'  => true,
-											    'category_name'  => 'community-engagement'
-											) );
-
-											if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-											<div class="col-xs-12 col-sm-6">
-												<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('square'); ?></a>
-												<div class="recent-news__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
-												<p>
-													<?php
-													$content = get_the_excerpt();
-													echo wp_trim_words( $content , '10' );
-													?>
-												</p>
+								<?php if(get_field('include_philanthropy_section') ) : ?>
+									<section class="content">
+										<div class="wrap recent-news">
+											<a name="<?php $page_link = sanitize_title_for_query( get_field('section_header') ); echo esc_attr( $page_link ); ?>"></a>
+											<h2><?php the_field('section_header'); ?></h2>
+											<div>
+												<?php the_field('content_area'); ?>
 											</div>
-										<?php	endwhile; endif;?>
-										<a href="/community-engagement/blog" class="col-xs-12 see-all">See All</a>
-										<?php wp_reset_postdata(); // reset the query ?>
-										</div>
-									</div>
-								</section>
+											<div class="flex-direction flex-direction--row">
+												<?php $query = new WP_Query( array(
+												    'posts_per_page' => 4,
+												    'no_found_rows'  => true,
+												    'category_name'  => 'community-engagement'
+												) );
 
+												if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+												<div class="col-xs-12 col-sm-6">
+													<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('square'); ?></a>
+													<div class="recent-news__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
+													<p>
+														<?php
+														$content = get_the_excerpt();
+														echo wp_trim_words( $content , '10' );
+														?>
+													</p>
+												</div>
+											<?php	endwhile; endif;?>
+											<a href="/community-engagement/blog" class="col-xs-12 see-all">See All</a>
+											<?php wp_reset_postdata(); // reset the query ?>
+											</div>
+										</div>
+									</section>
+								<?php endif; ?>
 								<section itemprop="articleBody">
 									<?php
 									if( have_rows('community_engagement') ): while ( have_rows('community_engagement') ) : the_row();
@@ -77,7 +78,7 @@
 						 											<h2><?php the_sub_field('section_header'); ?></h2>
 																	<div class="row medications">
 							 											<?php if( have_rows('medications_repeater') ): while ( have_rows('medications_repeater') ) : the_row(); ?>
-																			<div class="col-xs-4 col-sm-3">
+																			<div class="col-xs-12 col-sm-6 col-md-4">
 					 										     			<h3><?php the_sub_field('medication') ?></h3><?php the_sub_field('details') ?>
 																			</div>
 																		<?php endwhile; endif; ?>

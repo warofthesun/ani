@@ -70,8 +70,8 @@ add_image_size( 'featured-half', 780, 450, true );
 add_image_size( 'ani-thumb-600', 600, 150, true );
 add_image_size( 'ani-thumb-300', 300, 100, true );
 add_image_size( 'gallery-image', 680, 450, true );
-add_image_size( 'square', 400, 400, true );
-add_image_size( 'staff-image', 350, 450, true );
+add_image_size( 'square', 800, 800, true );
+add_image_size( 'staff-image', 700, 900, true );
 
 /*
 to add more sizes, simply copy a line from above
