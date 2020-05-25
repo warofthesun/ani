@@ -1,16 +1,3 @@
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Base Mobile Stylesheet
-
-Be light and don't over style since everything here will be
-loaded by mobile devices. You want to keep it as minimal as
-possible. This is called at the top of the main stylsheet
-and will be used across all viewports.
-
-******************************************************************/
-
 /*********************
 GENERAL STYLES
 *********************/
@@ -1133,7 +1120,7 @@ $title-lineheight: $title-pad + 1;
       }
 
 			p, label {
-				color: #EBFAFF;
+				color: lighten($primary, 85%);
 			}
 		}
 

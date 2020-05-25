@@ -291,23 +291,23 @@ add_action('wp_enqueue_scripts', 'starter_fonts');
 if( function_exists('acf_add_options_page') ) {
 
   acf_add_options_page(array(
-		'page_title' 	=> 'Theme Settings',
-		'menu_title'	=> 'Theme Settings',
-		'menu_slug' 	=> 'theme-settings',
+		'page_title' 	=> 'ANI Info',
+		'menu_title'	=> 'ANI Info',
+		'menu_slug' 	=> 'ani-info',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> true
 	));
-  /*
+
   acf_add_options_sub_page(array(
-		'page_title' 	=> 'Patient FAQs',
-		'menu_title'	=> 'Patient FAQs',
-		'parent_slug'	=> 'theme-settings',
+		'page_title' 	=> 'Clinic Staff',
+		'menu_title'	=> 'Clinic Staff',
+		'parent_slug'	=> 'ani-info',
 	));
-  */
+
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Theme Footer Settings',
 		'menu_title'	=> 'Footer',
-		'parent_slug'	=> 'theme-settings',
+		'parent_slug'	=> 'ani-info',
 	));
 
 }

@@ -1,10 +1,14 @@
-<section class="content staff wrap row">
+<section class="content staff wrap row reveal">
+  <?php if ( is_page('clinic-staff') ) {
+  } else { ?>
+   <h1 class="col-xs-12">Clinic Staff</h1>
+ <?php  } ?>
 <?php
 // check if the repeater field has rows of data
-if( have_rows('staff') ):
+if( have_rows('staff', 'option') ):
   $i=0;
   // loop through the rows of data
-    while ( have_rows('staff') ) : the_row(); ?>
+    while ( have_rows('staff', 'option') ) : the_row(); ?>
 
     <?php
        $attachment_id = get_sub_field('photo');
@@ -22,7 +26,6 @@ if( have_rows('staff') ):
           <div class="staff__category col-xs-12"><?php the_sub_field('category'); ?></div>
         <?php endif; ?>
         <div>
-
           <div class="staff__name"><span class="highlight highlight--wrapping"><?php the_sub_field('first_name'); ?></br><?php the_sub_field('last_name'); ?></span></div>
           <div class="staff__role"><span class="highlight highlight--wrapping"><?php the_sub_field('role'); ?></span></div>
           <div class="staff__qualifications"><span class="highlight highlight--wrapping"><?php the_sub_field('qualifications'); ?></span></div>
@@ -31,7 +34,6 @@ if( have_rows('staff') ):
       <div class="col-xs-12 col-sm-6 content-block extra-info"><?php the_sub_field('extra_info'); ?></div>
       </div>
       <?php else: // field_name returned false ?>
-
         <div class="col-xs-12 col-sm-4 content-block" style="background-image:url('<?php echo $image[0]; ?>');">
           <?php if ( get_sub_field( 'category' ) ): ?>
            <div class="staff__category col-xs-12"><?php the_sub_field('category'); ?></div>
