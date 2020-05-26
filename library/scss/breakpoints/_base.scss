@@ -720,7 +720,7 @@ $title-lineheight: $title-pad + 1;
 				background-repeat: no-repeat;
 				max-width: 1600px;
 				margin:0 auto;
-				filter: url('#colors');
+				//filter: url('#colors');
 			}
 		}
 
@@ -740,6 +740,10 @@ $title-lineheight: $title-pad + 1;
 				align-self: center;
 				margin-top: -75vh;
         padding-left: 10vw;
+
+        &__drhunter {
+          margin-top: -60vh;
+        }
 			}
 
 			&--medium {
@@ -750,6 +754,10 @@ $title-lineheight: $title-pad + 1;
 				margin-top: -15vh;
 				z-index: 99;
 				position: relative;
+
+        &__drhunter {
+          margin-top: 2vh;
+        }
 
 				&__header {
 					padding: 0 1em;
@@ -813,6 +821,14 @@ $title-lineheight: $title-pad + 1;
 					padding: 1em;
 					border-bottom: 1px solid $white;
 					box-shadow: 0px -3px 5px -3px rgba($primary-dk, 0.6);
+
+          &--drhunter {
+            background-color: $white !important;
+
+            a, p, ul {
+              color: $text-color !important;
+            }
+          }
 
 					a {
 						color: $white;
@@ -909,6 +925,23 @@ $title-lineheight: $title-pad + 1;
 				}
 			}
 		}
+
+    &__title {
+      &--line-two, &--line-three {
+        &:before {
+          content: "\a";
+          white-space: pre;
+        }
+      }
+
+      &--line-two {
+        font-size: 0.9em;
+      }
+
+      &--line-three {
+        font-size: 0.7em;
+      }
+    }
 }
 
 .flex-direction {

@@ -2212,9 +2212,7 @@ POSTS & CONTENT STYLES
       background-size: cover;
       background-repeat: no-repeat;
       max-width: 1600px;
-      margin: 0 auto;
-      -webkit-filter: url("#colors");
-              filter: url("#colors"); }
+      margin: 0 auto; }
   .hero__content {
     width: 100%; }
     .hero__content p {
@@ -2228,12 +2226,16 @@ POSTS & CONTENT STYLES
           align-self: center;
       margin-top: -75vh;
       padding-left: 10vw; }
+      .hero__content--left__drhunter {
+        margin-top: -60vh; }
     .hero__content--medium p {
       font-size: 3em; }
     .hero__content .content-boxes {
       margin-top: -15vh;
       z-index: 99;
       position: relative; }
+      .hero__content .content-boxes__drhunter {
+        margin-top: 2vh; }
       .hero__content .content-boxes__header {
         padding: 0 1em;
         height: 4.7em;
@@ -2295,6 +2297,10 @@ POSTS & CONTENT STYLES
         border-bottom: 1px solid #fff;
         -webkit-box-shadow: 0px -3px 5px -3px rgba(20, 25, 39, 0.6);
                 box-shadow: 0px -3px 5px -3px rgba(20, 25, 39, 0.6); }
+        .hero__content .content-boxes__content--drhunter {
+          background-color: #fff !important; }
+          .hero__content .content-boxes__content--drhunter a, .hero__content .content-boxes__content--drhunter p, .hero__content .content-boxes__content--drhunter ul {
+            color: #141927 !important; }
         .hero__content .content-boxes__content a {
           color: #fff;
           font-weight: bold; }
@@ -2346,6 +2352,13 @@ POSTS & CONTENT STYLES
         background-color: #36456b;
         border-top: 1px solid #fff;
         height: auto !important; }
+  .hero__title--line-two:before, .hero__title--line-three:before {
+    content: "\a";
+    white-space: pre; }
+  .hero__title--line-two {
+    font-size: 0.9em; }
+  .hero__title--line-three {
+    font-size: 0.7em; }
 
 .flex-direction {
   display: -webkit-box;

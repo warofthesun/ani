@@ -11,13 +11,21 @@
 							// height = $image[2];
 						?>
 				<div class="hero__image hero__image--full" style="background-image:url('<?php echo $image[0]; ?>');"></div>
-					<div class="hero__content hero__content--left hero__content--medium wrap">
-						<p class="highlight highlight--wrapping"><?php the_field('hero_title'); ?></p>
+					<div class="hero__content hero__content--left hero__content--left__drhunter hero__content--medium wrap">
+						<p class="highlight highlight--wrapping">
+							<?php the_field('hero_title'); ?>
+							<?php if(get_field('hero_title_line_two') ) : ?>
+								<span class="hero__title--line-two"><?php the_field('hero_title_line_two'); ?></span>
+							<?php endif; ?>
+							<?php if(get_field('hero_title_line_three') ) : ?>
+								<span class="hero__title--line-three"><?php the_field('hero_title_line_three'); ?></span>
+							<?php endif; ?>
+						</p>
 					</div>
 				<div class="hero__content hero__content--single">
-					<div class="content-boxes wrap">
+					<div class="content-boxes content-boxes__drhunter wrap">
 						<div class="col-xs-12">
-							<div class="content-boxes__content"><?php the_field('bio'); ?></div>
+							<div class="content-boxes__content content-boxes__content--drhunter"><?php the_field('bio'); ?></div>
 						</div>
 					</div>
 				</div>

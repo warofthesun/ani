@@ -62,6 +62,44 @@
             "new_lines": "br"
         },
         {
+            "key": "field_5ecc5ce992597",
+            "label": "Hero Title Line Two",
+            "name": "hero_title_line_two",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ecc5cf792598",
+            "label": "Hero Title Line Three",
+            "name": "hero_title_line_three",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5b39383f41ee2",
             "label": "Bio",
             "name": "bio",
@@ -545,5 +583,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1586730895
+    "modified": 1590451524
 }
