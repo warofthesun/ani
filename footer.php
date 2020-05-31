@@ -24,34 +24,44 @@
 					<div class="contact--info col-xs-12 col-md-8">
 						<?php the_field('address', 'options'); ?>
 						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
-					</div>
-					<div class="col-xs-12 col-md-4 social">
 						<?php
+							$images = get_field('partner_logos', 'option');
+							$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+							if( $images ): ?>
+							<div>
+								<?php if( have_rows('social_platforms', 'options') ): while ( have_rows('social_platforms', 'options') ) : the_row(); ?>
+										<a href="<?php the_sub_field('site_link'); ?>" class="social social__icon--container"><i class="fab fa-<?php the_sub_field('site_name'); ?>"></i></a>
+								<?php  endwhile; else : endif; ?>
+							</div>
+						<?php endif; ?>
+					</div>
+					<?php
+						$images = get_field('partner_logos', 'option');
+						$size = 'medium'; // (thumbnail, medium, large, full or custom size) ?>
+					<div class="col-xs-12 col-md-4 social <?php	if( $images ): ?>partnership-gallery<?php endif; ?>">
+						<div>
 
-							// check if the repeater field has rows of data
-							if( have_rows('social_platforms', 'options') ):
-
-							 	// loop through the rows of data
-							    while ( have_rows('social_platforms', 'options') ) : the_row();
-
-							        // display a sub field value
-
-											 ?>
-											<a href="<?php the_sub_field('site_link'); ?>" class="social social__icon--container"><i class="fab fa-<?php the_sub_field('site_name'); ?>"></i></a>
-
-											<?php  endwhile;
-
-							else :
-
-							    // no rows found
-
-							endif;
-
-							?>
-
-
-
-
+							<?php	if( $images ): ?>
+							<div class="partnership">
+								<h3 class="partnership_headline"><?php the_field('partner_logo_headline', 'option'); ?></h3>
+								<div class="partnership_gallery">
+								    <ul class="logos">
+								        <?php foreach( $images as $image_id ): ?>
+								            <li class="images">
+								                <?php echo wp_get_attachment_image( $image_id, $size ); ?>
+								            </li>
+								        <?php endforeach; ?>
+								    </ul>
+								</div>
+							</div>
+						<?php else : ?>
+							<div>
+								<?php if( have_rows('social_platforms', 'options') ): while ( have_rows('social_platforms', 'options') ) : the_row(); ?>
+										<a href="<?php the_sub_field('site_link'); ?>" class="social social__icon--container"><i class="fab fa-<?php the_sub_field('site_name'); ?>"></i></a>
+								<?php  endwhile; else : endif; ?>
+							</div>
+							<?php endif; ?>
+						</div>
 					</div>
 				</div>
 			<?php endif; ?>
@@ -59,11 +69,7 @@
 			</footer>
 
 		</div>
-
-		<?php // all js scripts are loaded in library/starter.php ?>
 		<?php wp_footer(); ?>
-
-
 	</body>
 
 </html> <!-- end of site. what a ride! -->
