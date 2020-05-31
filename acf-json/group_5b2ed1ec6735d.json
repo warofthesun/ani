@@ -1,10 +1,10 @@
 {
     "key": "group_5b2ed1ec6735d",
-    "title": "Info Page",
+    "title": "Flexible Page",
     "fields": [
         {
             "key": "field_5b2ed20059bc0",
-            "label": "Info Page Content",
+            "label": "Page Content",
             "name": "info_page_content",
             "type": "flexible_content",
             "instructions": "",
@@ -607,6 +607,13 @@
                 "operator": "==",
                 "value": "290"
             }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "448"
+            }
         ]
     ],
     "menu_order": 0,
@@ -619,5 +626,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1586731093
+    "modified": 1590955104
 }

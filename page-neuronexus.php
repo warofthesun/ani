@@ -25,6 +25,9 @@
 										<?php include 'partials/clinic-staff.php'; }
 										elseif ( is_page('info') ) {
 										include 'partials/info.php';
+										}
+										elseif ( is_page('neuronexus') ) {
+										include 'partials/info.php';
 										} else {
 									 the_content();
 									}
