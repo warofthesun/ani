@@ -12,7 +12,7 @@
 						?>
 				<div class="hero__image hero__image--full" style="background-image:url('<?php echo $image[0]; ?>');"></div>
 					<div class="hero__content hero__content--left wrap">
-					<p class="highlight highlight--wrapping"><?php the_field('hero_title'); ?></p>
+					<p><?php the_field('hero_title'); ?></p>
 					</div>
 
 				<div class="hero__content">

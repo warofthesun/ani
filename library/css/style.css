@@ -2258,7 +2258,7 @@ POSTS & CONTENT STYLES
     width: 100%; }
     .hero__content p {
       font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: 300;
+      font-weight: bold;
       font-size: 2.5em;
       line-height: 1.2;
       color: #36456b; }
